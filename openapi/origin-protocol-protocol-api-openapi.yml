@@ -1,0 +1,2394 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account protocol API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: protocol
+paths:
+  /api/v2/protocol/protocol-fees:
+    get:
+      responses:
+        '200':
+          description: Protocol fees
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  revenue:
+                    type: object
+                    properties:
+                      now:
+                        type: number
+                      oneDayAgo:
+                        type: number
+                      twoDaysAgo:
+                        type: number
+                      oneWeekAgo:
+                        type: number
+                      twoWeeksAgo:
+                        type: number
+                      thirtyDaysAgo:
+                        type: number
+                      sixtyDaysAgo:
+                        type: number
+                      ninetyDaysAgo:
+                        type: number
+                    required:
+                    - now
+                    - oneDayAgo
+                    - twoDaysAgo
+                    - oneWeekAgo
+                    - twoWeeksAgo
+                    - thirtyDaysAgo
+                    - sixtyDaysAgo
+                    - ninetyDaysAgo
+                    additionalProperties: false
+                  days:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        date:
+                          type: number
+                        revenue:
+                          type: number
+                      required:
+                      - date
+                      - revenue
+                      additionalProperties: false
+                required:
+                - revenue
+                - days
+                additionalProperties: false
+      operationId: getApiV2ProtocolProtocol-fees
+      tags:
+      - protocol
+      parameters: []
+      description: Get protocol fees
+  /api/v2/protocol/cumulative_fees:
+    get:
+      responses:
+        '200':
+          description: Cumulative protocol fees
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  oethETH:
+                    type: number
+                  oethUSD:
+                    type: number
+                  ousdETH:
+                    type: number
+                  ousdUSD:
+                    type: number
+                  superOethbETH:
+                    type: number
+                  superOethbUSD:
+                    type: number
+                  osETH:
+                    type: number
+                  osUSD:
+                    type: number
+                  armWethStethETH:
+                    type: number
+                  armWethStethUSD:
+                    type: number
+                  armWsOsETH:
+                    type: number
+                  armWsOsUSD:
+                    type: number
+                  armWethEethETH:
+                    type: number
+                  armWethEethUSD:
+                    type: number
+                  armSusdeUsdeETH:
+                    type: number
+                  armSusdeUsdeUSD:
+                    type: number
+                  totalETH:
+                    type: number
+                  totalUSD:
+                    type: number
+                required:
+                - oethETH
+                - oethUSD
+                - ousdETH
+                - ousdUSD
+                - superOethbETH
+                - superOethbUSD
+                - osETH
+                - osUSD
+                - armWethStethETH
+                - armWethStethUSD
+                - armWsOsETH
+                - armWsOsUSD
+                - armWethEethETH
+                - armWethEethUSD
+                - armSusdeUsdeETH
+                - armSusdeUsdeUSD
+                - totalETH
+                - totalUSD
+                additionalProperties: false
+      operationId: getApiV2ProtocolCumulative_fees
+      tags:
+      - protocol
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get cumulative protocol fees
+  /api/v2/protocol/daily_fees:
+    get:
+      responses:
+        '200':
+          description: Daily protocol fees
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: number
+                  date:
+                    type: string
+                  oeth:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  ousd:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  superOethb:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  os:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armWethSteth:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armWsOs:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armWethEeth:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armSusdeUsde:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  total:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                  avg7:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                  avg14:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                  avg30:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                required:
+                - timestamp
+                - date
+                - oeth
+                - ousd
+                - superOethb
+                - os
+                - armWethSteth
+                - armWsOs
+                - armWethEeth
+                - armSusdeUsde
+                - total
+                - avg7
+                - avg14
+                - avg30
+                additionalProperties: false
+      operationId: getApiV2ProtocolDaily_fees
+      tags:
+      - protocol
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get daily protocol fees
+  /api/v2/protocol/daily_revenue:
+    get:
+      responses:
+        '200':
+          description: Daily protocol revenue
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: number
+                    date:
+                      type: string
+                    oeth:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    ousd:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    superOethb:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    os:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    armWethSteth:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    armWsOs:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    armWethEeth:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    armSusdeUsde:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            address:
+                              type: string
+                            name:
+                              type: string
+                            chainId:
+                              type: number
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                          required:
+                          - id
+                          - address
+                          - name
+                          - chainId
+                          - decimals
+                          - symbol
+                          additionalProperties: false
+                        color:
+                          type: string
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      - token
+                      - color
+                      additionalProperties: false
+                    total:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      additionalProperties: false
+                    avg7:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      additionalProperties: false
+                    avg14:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      additionalProperties: false
+                    avg30:
+                      type: object
+                      properties:
+                        amount:
+                          type: number
+                        amountETH:
+                          type: number
+                        amountUSD:
+                          type: number
+                      required:
+                      - amount
+                      - amountETH
+                      - amountUSD
+                      additionalProperties: false
+                  required:
+                  - timestamp
+                  - date
+                  - oeth
+                  - ousd
+                  - superOethb
+                  - os
+                  - armWethSteth
+                  - armWsOs
+                  - armWethEeth
+                  - armSusdeUsde
+                  - total
+                  - avg7
+                  - avg14
+                  - avg30
+                  additionalProperties: false
+      operationId: getApiV2ProtocolDaily_revenue
+      tags:
+      - protocol
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get daily protocol revenue
+  /api/v2/protocol/cumulative_revenue:
+    get:
+      responses:
+        '200':
+          description: Cumulative protocol revenue
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  oethETH:
+                    type: number
+                  oethUSD:
+                    type: number
+                  ousdETH:
+                    type: number
+                  ousdUSD:
+                    type: number
+                  superOethbETH:
+                    type: number
+                  superOethbUSD:
+                    type: number
+                  osETH:
+                    type: number
+                  osUSD:
+                    type: number
+                  armWethStethETH:
+                    type: number
+                  armWethStethUSD:
+                    type: number
+                  armWsOsETH:
+                    type: number
+                  armWsOsUSD:
+                    type: number
+                  armWethEethETH:
+                    type: number
+                  armWethEethUSD:
+                    type: number
+                  armSusdeUsdeETH:
+                    type: number
+                  armSusdeUsdeUSD:
+                    type: number
+                  totalETH:
+                    type: number
+                  totalUSD:
+                    type: number
+                required:
+                - oethETH
+                - oethUSD
+                - ousdETH
+                - ousdUSD
+                - superOethbETH
+                - superOethbUSD
+                - osETH
+                - osUSD
+                - armWethStethETH
+                - armWethStethUSD
+                - armWsOsETH
+                - armWsOsUSD
+                - armWethEethETH
+                - armWethEethUSD
+                - armSusdeUsdeETH
+                - armSusdeUsdeUSD
+                - totalETH
+                - totalUSD
+                additionalProperties: false
+      operationId: getApiV2ProtocolCumulative_revenue
+      tags:
+      - protocol
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get cumulative protocol revenue
+  /api/v2/protocol/daily_total_supply:
+    get:
+      responses:
+        '200':
+          description: Daily total supply
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: number
+                  date:
+                    type: string
+                  oeth:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  ousd:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  superOethb:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  os:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armWethSteth:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armWsOs:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armWethEeth:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  armSusdeUsde:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                      token:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          address:
+                            type: string
+                          name:
+                            type: string
+                          chainId:
+                            type: number
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                        required:
+                        - id
+                        - address
+                        - name
+                        - chainId
+                        - decimals
+                        - symbol
+                        additionalProperties: false
+                      color:
+                        type: string
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    - token
+                    - color
+                    additionalProperties: false
+                  total:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                  avg7:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                  avg14:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                  avg30:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                      amountETH:
+                        type: number
+                      amountUSD:
+                        type: number
+                    required:
+                    - amount
+                    - amountETH
+                    - amountUSD
+                    additionalProperties: false
+                required:
+                - timestamp
+                - date
+                - oeth
+                - ousd
+                - superOethb
+                - os
+                - armWethSteth
+                - armWsOs
+                - armWethEeth
+                - armSusdeUsde
+                - total
+                - avg7
+                - avg14
+                - avg30
+                additionalProperties: false
+      operationId: getApiV2ProtocolDaily_total_supply
+      tags:
+      - protocol
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get daily total supply
+  /api/v2/protocol/contributors:
+    get:
+      responses:
+        '200':
+          description: Contributors data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+      operationId: getApiV2ProtocolContributors
+      tags:
+      - protocol
+      parameters:
+      - in: query
+        name: force
+        schema:
+          default: 'false'
+          type: string
+        required: true
+      description: Get contributors
+  /api/v2/protocol/products_stats:
+    get:
+      responses:
+        '200':
+          description: Product stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  oeth:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      fees:
+                        type: number
+                      totalSupply:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      apy:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      yield:
+                        type: number
+                      cumulativeFees:
+                        type: number
+                      cumulativeYield:
+                        type: number
+                      amoSupply:
+                        type: number
+                      tvl:
+                        type: number
+                      rateWrapped:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - fees
+                    - totalSupply
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - apy
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - yield
+                    - cumulativeFees
+                    - cumulativeYield
+                    - amoSupply
+                    - tvl
+                    - rateWrapped
+                    additionalProperties: false
+                  ousd:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      fees:
+                        type: number
+                      totalSupply:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      apy:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      yield:
+                        type: number
+                      cumulativeFees:
+                        type: number
+                      cumulativeYield:
+                        type: number
+                      amoSupply:
+                        type: number
+                      tvl:
+                        type: number
+                      rateWrapped:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - fees
+                    - totalSupply
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - apy
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - yield
+                    - cumulativeFees
+                    - cumulativeYield
+                    - amoSupply
+                    - tvl
+                    - rateWrapped
+                    additionalProperties: false
+                  superOethb:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      fees:
+                        type: number
+                      totalSupply:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      apy:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      yield:
+                        type: number
+                      cumulativeFees:
+                        type: number
+                      cumulativeYield:
+                        type: number
+                      amoSupply:
+                        type: number
+                      tvl:
+                        type: number
+                      rateWrapped:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - fees
+                    - totalSupply
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - apy
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - yield
+                    - cumulativeFees
+                    - cumulativeYield
+                    - amoSupply
+                    - tvl
+                    - rateWrapped
+                    additionalProperties: false
+                  os:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      fees:
+                        type: number
+                      totalSupply:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      apy:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      yield:
+                        type: number
+                      cumulativeFees:
+                        type: number
+                      cumulativeYield:
+                        type: number
+                      amoSupply:
+                        type: number
+                      tvl:
+                        type: number
+                      rateWrapped:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - fees
+                    - totalSupply
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - apy
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - yield
+                    - cumulativeFees
+                    - cumulativeYield
+                    - amoSupply
+                    - tvl
+                    - rateWrapped
+                    additionalProperties: false
+                  armWethSteth:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      address:
+                        type: string
+                      totalAssets:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      rateAsset:
+                        type: number
+                      totalAssetsCap:
+                        type: number
+                      totalSupply:
+                        type: number
+                      assets:
+                        type: array
+                        items:
+                          type: string
+                      assetSymbols:
+                        type: array
+                        items:
+                          type: string
+                      assetBalances:
+                        type: array
+                        items:
+                          type: number
+                      assetTotals:
+                        type: array
+                        items:
+                          type: number
+                      assetRates:
+                        type: array
+                        items:
+                          type: number
+                      outstandingAssets:
+                        type: array
+                        items:
+                          type: number
+                      ratesUSD:
+                        type: array
+                        items:
+                          type: number
+                      ratesETH:
+                        type: array
+                        items:
+                          type: number
+                      ratesNative:
+                        type: array
+                        items:
+                          type: number
+                      ratesAsset:
+                        type: array
+                        items:
+                          type: number
+                      assetsPerShare:
+                        type: number
+                      totalDeposits:
+                        type: number
+                      totalWithdrawals:
+                        type: number
+                      totalWithdrawalsClaimed:
+                        type: number
+                      marketAssets:
+                        type: number
+                      apr:
+                        type: number
+                      apy:
+                        type: number
+                      yield:
+                        type: number
+                      fees:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      baseApy:
+                        type: number
+                      baseApr:
+                        type: number
+                      baseYield:
+                        type: number
+                      incentiveYield:
+                        type: number
+                      incentiveApr:
+                        type: number
+                      incentiveApy:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - address
+                    - totalAssets
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - rateAsset
+                    - totalAssetsCap
+                    - totalSupply
+                    - assets
+                    - assetSymbols
+                    - assetBalances
+                    - assetTotals
+                    - assetRates
+                    - outstandingAssets
+                    - ratesUSD
+                    - ratesETH
+                    - ratesNative
+                    - ratesAsset
+                    - assetsPerShare
+                    - totalDeposits
+                    - totalWithdrawals
+                    - totalWithdrawalsClaimed
+                    - marketAssets
+                    - apr
+                    - apy
+                    - yield
+                    - fees
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - baseApy
+                    - baseApr
+                    - baseYield
+                    - incentiveYield
+                    - incentiveApr
+                    - incentiveApy
+                    additionalProperties: false
+                  armWsOs:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      address:
+                        type: string
+                      totalAssets:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      rateAsset:
+                        type: number
+                      totalAssetsCap:
+                        type: number
+                      totalSupply:
+                        type: number
+                      assets:
+                        type: array
+                        items:
+                          type: string
+                      assetSymbols:
+                        type: array
+                        items:
+                          type: string
+                      assetBalances:
+                        type: array
+                        items:
+                          type: number
+                      assetTotals:
+                        type: array
+                        items:
+                          type: number
+                      assetRates:
+                        type: array
+                        items:
+                          type: number
+                      outstandingAssets:
+                        type: array
+                        items:
+                          type: number
+                      ratesUSD:
+                        type: array
+                        items:
+                          type: number
+                      ratesETH:
+                        type: array
+                        items:
+                          type: number
+                      ratesNative:
+                        type: array
+                        items:
+                          type: number
+                      ratesAsset:
+                        type: array
+                        items:
+                          type: number
+                      assetsPerShare:
+                        type: number
+                      totalDeposits:
+                        type: number
+                      totalWithdrawals:
+                        type: number
+                      totalWithdrawalsClaimed:
+                        type: number
+                      marketAssets:
+                        type: number
+                      apr:
+                        type: number
+                      apy:
+                        type: number
+                      yield:
+                        type: number
+                      fees:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      baseApy:
+                        type: number
+                      baseApr:
+                        type: number
+                      baseYield:
+                        type: number
+                      incentiveYield:
+                        type: number
+                      incentiveApr:
+                        type: number
+                      incentiveApy:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - address
+                    - totalAssets
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - rateAsset
+                    - totalAssetsCap
+                    - totalSupply
+                    - assets
+                    - assetSymbols
+                    - assetBalances
+                    - assetTotals
+                    - assetRates
+                    - outstandingAssets
+                    - ratesUSD
+                    - ratesETH
+                    - ratesNative
+                    - ratesAsset
+                    - assetsPerShare
+                    - totalDeposits
+                    - totalWithdrawals
+                    - totalWithdrawalsClaimed
+                    - marketAssets
+                    - apr
+                    - apy
+                    - yield
+                    - fees
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - baseApy
+                    - baseApr
+                    - baseYield
+                    - incentiveYield
+                    - incentiveApr
+                    - incentiveApy
+                    additionalProperties: false
+                  armWethEeth:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      address:
+                        type: string
+                      totalAssets:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      rateAsset:
+                        type: number
+                      totalAssetsCap:
+                        type: number
+                      totalSupply:
+                        type: number
+                      assets:
+                        type: array
+                        items:
+                          type: string
+                      assetSymbols:
+                        type: array
+                        items:
+                          type: string
+                      assetBalances:
+                        type: array
+                        items:
+                          type: number
+                      assetTotals:
+                        type: array
+                        items:
+                          type: number
+                      assetRates:
+                        type: array
+                        items:
+                          type: number
+                      outstandingAssets:
+                        type: array
+                        items:
+                          type: number
+                      ratesUSD:
+                        type: array
+                        items:
+                          type: number
+                      ratesETH:
+                        type: array
+                        items:
+                          type: number
+                      ratesNative:
+                        type: array
+                        items:
+                          type: number
+                      ratesAsset:
+                        type: array
+                        items:
+                          type: number
+                      assetsPerShare:
+                        type: number
+                      totalDeposits:
+                        type: number
+                      totalWithdrawals:
+                        type: number
+                      totalWithdrawalsClaimed:
+                        type: number
+                      marketAssets:
+                        type: number
+                      apr:
+                        type: number
+                      apy:
+                        type: number
+                      yield:
+                        type: number
+                      fees:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      baseApy:
+                        type: number
+                      baseApr:
+                        type: number
+                      baseYield:
+                        type: number
+                      incentiveYield:
+                        type: number
+                      incentiveApr:
+                        type: number
+                      incentiveApy:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - address
+                    - totalAssets
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - rateAsset
+                    - totalAssetsCap
+                    - totalSupply
+                    - assets
+                    - assetSymbols
+                    - assetBalances
+                    - assetTotals
+                    - assetRates
+                    - outstandingAssets
+                    - ratesUSD
+                    - ratesETH
+                    - ratesNative
+                    - ratesAsset
+                    - assetsPerShare
+                    - totalDeposits
+                    - totalWithdrawals
+                    - totalWithdrawalsClaimed
+                    - marketAssets
+                    - apr
+                    - apy
+                    - yield
+                    - fees
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - baseApy
+                    - baseApr
+                    - baseYield
+                    - incentiveYield
+                    - incentiveApr
+                    - incentiveApy
+                    additionalProperties: false
+                  armSusdeUsde:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      timestamp:
+                        type: number
+                      date:
+                        type: string
+                      address:
+                        type: string
+                      totalAssets:
+                        type: number
+                      rateUSD:
+                        type: number
+                      rateETH:
+                        type: number
+                      rateNative:
+                        type: number
+                      rateAsset:
+                        type: number
+                      totalAssetsCap:
+                        type: number
+                      totalSupply:
+                        type: number
+                      assets:
+                        type: array
+                        items:
+                          type: string
+                      assetSymbols:
+                        type: array
+                        items:
+                          type: string
+                      assetBalances:
+                        type: array
+                        items:
+                          type: number
+                      assetTotals:
+                        type: array
+                        items:
+                          type: number
+                      assetRates:
+                        type: array
+                        items:
+                          type: number
+                      outstandingAssets:
+                        type: array
+                        items:
+                          type: number
+                      ratesUSD:
+                        type: array
+                        items:
+                          type: number
+                      ratesETH:
+                        type: array
+                        items:
+                          type: number
+                      ratesNative:
+                        type: array
+                        items:
+                          type: number
+                      ratesAsset:
+                        type: array
+                        items:
+                          type: number
+                      assetsPerShare:
+                        type: number
+                      totalDeposits:
+                        type: number
+                      totalWithdrawals:
+                        type: number
+                      totalWithdrawalsClaimed:
+                        type: number
+                      marketAssets:
+                        type: number
+                      apr:
+                        type: number
+                      apy:
+                        type: number
+                      yield:
+                        type: number
+                      fees:
+                        type: number
+                      apy7:
+                        type: number
+                      apy14:
+                        type: number
+                      apy30:
+                        type: number
+                      bestApy:
+                        type: number
+                      bestApyTrailingDays:
+                        type: number
+                      baseApy:
+                        type: number
+                      baseApr:
+                        type: number
+                      baseYield:
+                        type: number
+                      incentiveYield:
+                        type: number
+                      incentiveApr:
+                        type: number
+                      incentiveApy:
+                        type: number
+                    required:
+                    - id
+                    - timestamp
+                    - date
+                    - address
+                    - totalAssets
+                    - rateUSD
+                    - rateETH
+                    - rateNative
+                    - rateAsset
+                    - totalAssetsCap
+                    - totalSupply
+                    - assets
+                    - assetSymbols
+                    - assetBalances
+                    - assetTotals
+                    - assetRates
+                    - outstandingAssets
+                    - ratesUSD
+                    - ratesETH
+                    - ratesNative
+                    - ratesAsset
+                    - assetsPerShare
+                    - totalDeposits
+                    - totalWithdrawals
+                    - totalWithdrawalsClaimed
+                    - marketAssets
+                    - apr
+                    - apy
+                    - yield
+                    - fees
+                    - apy7
+                    - apy14
+                    - apy30
+                    - bestApy
+                    - bestApyTrailingDays
+                    - baseApy
+                    - baseApr
+                    - baseYield
+                    - incentiveYield
+                    - incentiveApr
+                    - incentiveApy
+                    additionalProperties: false
+                required:
+                - oeth
+                - ousd
+                - superOethb
+                - os
+                - armWethSteth
+                - armWsOs
+                - armWethEeth
+                - armSusdeUsde
+                additionalProperties: false
+      operationId: getApiV2ProtocolProducts_stats
+      tags:
+      - protocol
+      parameters: []
+      description: Get products stats

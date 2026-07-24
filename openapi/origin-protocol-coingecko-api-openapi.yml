@@ -1,0 +1,584 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account coingecko API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: coingecko
+paths:
+  /api/v2/coingecko/networks:
+    get:
+      responses:
+        '200':
+          description: Coingecko networks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    type:
+                      type: string
+                    attributes:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        coingecko_asset_platform_id:
+                          type: string
+                      required:
+                      - name
+                      - coingecko_asset_platform_id
+                      additionalProperties: false
+                  required:
+                  - id
+                  - type
+                  - attributes
+                  additionalProperties: false
+      operationId: getApiV2CoingeckoNetworks
+      tags:
+      - coingecko
+      parameters: []
+      description: Get coingecko networks
+  /api/v2/coingecko/pools/{network}/token/{token}:
+    get:
+      responses:
+        '200':
+          description: Pool details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    type:
+                      type: string
+                    attributes:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        address:
+                          type: string
+                        base_token_price_usd:
+                          type: string
+                        quote_token_price_usd:
+                          type: string
+                        base_token_price_native_currency:
+                          type: string
+                        quote_token_price_native_currency:
+                          type: string
+                        base_token_price_quote_token:
+                          type: string
+                        quote_token_price_base_token:
+                          type: string
+                        pool_created_at:
+                          type: string
+                        reserve_in_usd:
+                          type: string
+                        fdv_usd:
+                          type: string
+                        market_cap_usd:
+                          type: string
+                        price_change_percentage:
+                          type: object
+                          properties: {}
+                          additionalProperties: false
+                        transactions:
+                          type: object
+                          properties: {}
+                          additionalProperties: false
+                        volume_usd:
+                          type: object
+                          properties: {}
+                          additionalProperties: false
+                      required:
+                      - name
+                      - address
+                      - base_token_price_usd
+                      - quote_token_price_usd
+                      - base_token_price_native_currency
+                      - quote_token_price_native_currency
+                      - base_token_price_quote_token
+                      - quote_token_price_base_token
+                      - pool_created_at
+                      - reserve_in_usd
+                      - fdv_usd
+                      - market_cap_usd
+                      - price_change_percentage
+                      - transactions
+                      - volume_usd
+                      additionalProperties: false
+                    relationships:
+                      type: object
+                      properties:
+                        base_token:
+                          type: object
+                          properties:
+                            data:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                type:
+                                  type: string
+                              required:
+                              - id
+                              - type
+                              additionalProperties: false
+                          required:
+                          - data
+                          additionalProperties: false
+                        quote_token:
+                          type: object
+                          properties:
+                            data:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                type:
+                                  type: string
+                              required:
+                              - id
+                              - type
+                              additionalProperties: false
+                          required:
+                          - data
+                          additionalProperties: false
+                        dexbase_token:
+                          type: object
+                          properties:
+                            data:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                type:
+                                  type: string
+                              required:
+                              - id
+                              - type
+                              additionalProperties: false
+                          required:
+                          - data
+                          additionalProperties: false
+                      required:
+                      - base_token
+                      - quote_token
+                      - dexbase_token
+                      additionalProperties: false
+                  required:
+                  - id
+                  - type
+                  - attributes
+                  - relationships
+                  additionalProperties: false
+      operationId: getApiV2CoingeckoPoolsByNetworkTokenByToken
+      tags:
+      - coingecko
+      parameters:
+      - in: path
+        name: network
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      description: Get pools for a token and a chain
+  /api/v2/coingecko/ohlcvs/{network}/token/{token}:
+    get:
+      responses:
+        '200':
+          description: Ohlcvs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      minimum: -9007199254740991
+                      maximum: 9007199254740991
+                    pool:
+                      type: string
+                    network:
+                      type: string
+                    base_token:
+                      type: string
+                    quote_token:
+                      type: string
+                    timestamp:
+                      type: integer
+                      minimum: -9007199254740991
+                      maximum: 9007199254740991
+                    open:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    high:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    low:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    close:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    volume:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                  required:
+                  - id
+                  - pool
+                  - network
+                  - base_token
+                  - quote_token
+                  - timestamp
+                  - open
+                  - high
+                  - low
+                  - close
+                  - volume
+                  additionalProperties: false
+                  description: Ohlcvs
+      operationId: getApiV2CoingeckoOhlcvsByNetworkTokenByToken
+      tags:
+      - coingecko
+      parameters:
+      - in: path
+        name: network
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      description: Get ohlcvs for a token
+  /api/v2/coingecko/ohlcvs/{tokenId}:
+    get:
+      responses:
+        '200':
+          description: Ohlcvs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      minimum: -9007199254740991
+                      maximum: 9007199254740991
+                    pool:
+                      type: string
+                    network:
+                      type: string
+                    base_token:
+                      type: string
+                    quote_token:
+                      type: string
+                    timestamp:
+                      type: integer
+                      minimum: -9007199254740991
+                      maximum: 9007199254740991
+                    open:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    high:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    low:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    close:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                    volume:
+                      type: number
+                      minimum: -140737488355328
+                      maximum: 140737488355327
+                  required:
+                  - id
+                  - pool
+                  - network
+                  - base_token
+                  - quote_token
+                  - timestamp
+                  - open
+                  - high
+                  - low
+                  - close
+                  - volume
+                  additionalProperties: false
+                  description: Ohlcvs
+      operationId: getApiV2CoingeckoOhlcvsByTokenId
+      tags:
+      - coingecko
+      parameters:
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      description: Get ohlcvs for a tokenId
+  /api/v2/coingecko/watchlist:
+    get:
+      responses:
+        '200':
+          description: Watchlist
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    address:
+                      type: string
+                    network:
+                      type: string
+                    symbol:
+                      type: string
+                    watchlisted:
+                      anyOf:
+                      - type: boolean
+                      - type: 'null'
+                  required:
+                  - id
+                  - address
+                  - network
+                  - symbol
+                  - watchlisted
+                  additionalProperties: false
+                  description: Tokens
+      operationId: getApiV2CoingeckoWatchlist
+      tags:
+      - coingecko
+      parameters:
+      - in: query
+        name: all
+        schema:
+          type: string
+          enum:
+          - 'true'
+          - 'false'
+      description: Get watchlist
+    post:
+      responses:
+        '200':
+          description: Token added to watchlist
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  address:
+                    type: string
+                  network:
+                    type: string
+                  symbol:
+                    type: string
+                  watchlisted:
+                    anyOf:
+                    - type: boolean
+                    - type: 'null'
+                required:
+                - id
+                - address
+                - network
+                - symbol
+                - watchlisted
+                additionalProperties: false
+                description: Tokens
+      operationId: postApiV2CoingeckoWatchlist
+      tags:
+      - coingecko
+      parameters: []
+      description: Add token to watchlist
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                network:
+                  type: string
+                symbol:
+                  type: string
+                watchlisted:
+                  anyOf:
+                  - type: boolean
+                  - type: 'null'
+              required:
+              - address
+              - network
+              - symbol
+              additionalProperties: false
+  /api/v2/coingecko/watchlist/{tokenId}:
+    patch:
+      responses:
+        '200':
+          description: Token added to watchlist
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  address:
+                    type: string
+                  network:
+                    type: string
+                  symbol:
+                    type: string
+                  watchlisted:
+                    anyOf:
+                    - type: boolean
+                    - type: 'null'
+                required:
+                - id
+                - address
+                - network
+                - symbol
+                - watchlisted
+                additionalProperties: false
+                description: Tokens
+      operationId: patchApiV2CoingeckoWatchlistByTokenId
+      tags:
+      - coingecko
+      parameters:
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      description: Add or remove token from watchlist
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                isWatchlisted:
+                  type: boolean
+              required:
+              - isWatchlisted
+              additionalProperties: false
+    delete:
+      responses:
+        '200':
+          description: Token removed from watchlist
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  address:
+                    type: string
+                  network:
+                    type: string
+                  symbol:
+                    type: string
+                  watchlisted:
+                    anyOf:
+                    - type: boolean
+                    - type: 'null'
+                required:
+                - id
+                - address
+                - network
+                - symbol
+                - watchlisted
+                additionalProperties: false
+                description: Tokens
+      operationId: deleteApiV2CoingeckoWatchlistByTokenId
+      tags:
+      - coingecko
+      parameters:
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      description: Remove token from watchlist
+  /api/v2/coingecko/price/{token}:
+    get:
+      responses:
+        '200':
+          description: Token price call data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  action:
+                    type: string
+                    const: eth_call
+                  to:
+                    type: string
+                  data:
+                    type: string
+                  tag:
+                    type: string
+                    const: latest
+                  chain:
+                    type: number
+                required:
+                - action
+                - to
+                - data
+                - tag
+                - chain
+                additionalProperties: false
+      operationId: getApiV2CoingeckoPriceByToken
+      tags:
+      - coingecko
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+          enum:
+          - woeth
+          - wousd
+          - wsuperoethb
+          - wos
+        required: true
+      description: Get token price call data

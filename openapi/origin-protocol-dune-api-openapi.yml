@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account dune API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: dune
+paths:
+  /api/v2/dune:
+    get:
+      responses:
+        '200':
+          description: Dune query results
+          content:
+            application/json:
+              schema: {}
+        '500':
+          description: Error fetching Dune results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2Dune
+      tags:
+      - dune
+      parameters:
+      - in: query
+        name: queryId
+        schema:
+          type: string
+          minLength: 1
+        required: true
+      - in: query
+        name: filters
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: limit
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: offset
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: columns
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: sort_by
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: sample_count
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: cache_ttl
+        schema:
+          type: string
+        required: false
+      description: Get Dune Analytics query results

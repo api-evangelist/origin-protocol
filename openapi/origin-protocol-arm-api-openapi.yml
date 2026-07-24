@@ -1,0 +1,838 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account arm API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: arm
+paths:
+  /api/v2/arm/daily_stats/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM daily stats
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    timestamp:
+                      type: number
+                    date:
+                      type: string
+                    address:
+                      type: string
+                    totalAssets:
+                      type: number
+                    rateUSD:
+                      type: number
+                    rateETH:
+                      type: number
+                    rateNative:
+                      type: number
+                    rateAsset:
+                      type: number
+                    totalAssetsCap:
+                      type: number
+                    totalSupply:
+                      type: number
+                    assets:
+                      type: array
+                      items:
+                        type: string
+                    assetSymbols:
+                      type: array
+                      items:
+                        type: string
+                    assetBalances:
+                      type: array
+                      items:
+                        type: number
+                    assetTotals:
+                      type: array
+                      items:
+                        type: number
+                    assetRates:
+                      type: array
+                      items:
+                        type: number
+                    outstandingAssets:
+                      type: array
+                      items:
+                        type: number
+                    ratesUSD:
+                      type: array
+                      items:
+                        type: number
+                    ratesETH:
+                      type: array
+                      items:
+                        type: number
+                    ratesNative:
+                      type: array
+                      items:
+                        type: number
+                    ratesAsset:
+                      type: array
+                      items:
+                        type: number
+                    assetsPerShare:
+                      type: number
+                    totalDeposits:
+                      type: number
+                    totalWithdrawals:
+                      type: number
+                    totalWithdrawalsClaimed:
+                      type: number
+                    marketAssets:
+                      type: number
+                    apr:
+                      type: number
+                    apy:
+                      type: number
+                    yield:
+                      type: number
+                    fees:
+                      type: number
+                    apy7:
+                      type: number
+                    apy14:
+                      type: number
+                    apy30:
+                      type: number
+                    bestApy:
+                      type: number
+                    bestApyTrailingDays:
+                      type: number
+                    baseApy:
+                      type: number
+                    baseApr:
+                      type: number
+                    baseYield:
+                      type: number
+                    incentiveYield:
+                      type: number
+                    incentiveApr:
+                      type: number
+                    incentiveApy:
+                      type: number
+                  required:
+                  - id
+                  - timestamp
+                  - date
+                  - address
+                  - totalAssets
+                  - rateUSD
+                  - rateETH
+                  - rateNative
+                  - rateAsset
+                  - totalAssetsCap
+                  - totalSupply
+                  - assets
+                  - assetSymbols
+                  - assetBalances
+                  - assetTotals
+                  - assetRates
+                  - outstandingAssets
+                  - ratesUSD
+                  - ratesETH
+                  - ratesNative
+                  - ratesAsset
+                  - assetsPerShare
+                  - totalDeposits
+                  - totalWithdrawals
+                  - totalWithdrawalsClaimed
+                  - marketAssets
+                  - apr
+                  - apy
+                  - yield
+                  - fees
+                  - apy7
+                  - apy14
+                  - apy30
+                  - bestApy
+                  - bestApyTrailingDays
+                  - baseApy
+                  - baseApr
+                  - baseYield
+                  - incentiveYield
+                  - incentiveApr
+                  - incentiveApy
+                  additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmDaily_statsByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get ARM daily stats
+  /api/v2/arm/daily_protocol_revenue/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM daily protocol revenue
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: number
+                    date:
+                      type: string
+                    amount:
+                      type: number
+                    rateETH:
+                      type: number
+                    rateUSD:
+                      type: number
+                    rateNative:
+                      type: number
+                    rateAsset1:
+                      type: number
+                    avg7:
+                      type: number
+                    avg14:
+                      type: number
+                    avg30:
+                      type: number
+                  required:
+                  - timestamp
+                  - date
+                  - amount
+                  - rateETH
+                  - rateUSD
+                  - rateNative
+                  - rateAsset1
+                  - avg7
+                  - avg14
+                  - avg30
+                  additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmDaily_protocol_revenueByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get ARM daily protocol revenue
+  /api/v2/arm/trading-volume/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM trading volume
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: number
+                    date:
+                      type: string
+                    dailyTradingVolume:
+                      type: number
+                    tradingVolume:
+                      type: number
+                    tradingVolumeUSD:
+                      type: number
+                    currency:
+                      type: string
+                    rateUSD:
+                      type: number
+                    rateETH:
+                      type: number
+                    rateNative:
+                      type: number
+                    rateLiquidityAsset:
+                      type: number
+                  required:
+                  - timestamp
+                  - date
+                  - dailyTradingVolume
+                  - tradingVolume
+                  - tradingVolumeUSD
+                  - currency
+                  - rateUSD
+                  - rateETH
+                  - rateNative
+                  - rateLiquidityAsset
+                  additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmTrading-volumeByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get ARM trading volume
+  /api/v2/arm/swaps/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM swaps
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    amountBase:
+                      type: number
+                    amountLiquidity:
+                      type: number
+                    armAction:
+                      type: string
+                      enum:
+                      - buy
+                      - sell
+                    armId:
+                      type: string
+                    baseAsset:
+                      type: string
+                    baseSymbol:
+                      type: string
+                    id:
+                      type: string
+                    liquidityAsset:
+                      type: string
+                    liquiditySymbol:
+                      type: string
+                    price:
+                      type: number
+                    rateToLiquidity:
+                      type: number
+                    spread:
+                      type: number
+                    timestamp:
+                      type: string
+                    txHash:
+                      type: string
+                  required:
+                  - amountBase
+                  - amountLiquidity
+                  - armAction
+                  - armId
+                  - baseAsset
+                  - baseSymbol
+                  - id
+                  - liquidityAsset
+                  - liquiditySymbol
+                  - price
+                  - rateToLiquidity
+                  - spread
+                  - timestamp
+                  - txHash
+                  additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmSwapsByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get ARM swaps
+  /api/v2/arm/withdrawal_requests/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM withdrawal requests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    account:
+                      type: string
+                    amount:
+                      type: string
+                    queued:
+                      type: string
+                    requestId:
+                      type: string
+                    claimed:
+                      type: boolean
+                    timestamp:
+                      type: string
+                    claimableAt:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    claimedAt:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    txHash:
+                      type: string
+                    claimable:
+                      type: boolean
+                  required:
+                  - id
+                  - account
+                  - amount
+                  - queued
+                  - requestId
+                  - claimed
+                  - timestamp
+                  - txHash
+                  - claimable
+                  additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmWithdrawal_requestsByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: address
+        schema:
+          type: string
+      description: Get ARM withdrawal requests
+  /api/v2/arm/withdrawal_stats/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM withdrawal stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  minimumDelayMs:
+                    type: number
+                  averageWithdrawalTimeMs:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  medianWithdrawalTimeMs:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  p95WithdrawalTimeMs:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  currentlyQueued:
+                    type: number
+                  currentlyPending:
+                    type: number
+                  currentlyClaimable:
+                    type: number
+                  vaultAvailability:
+                    type: number
+                  withdrawableBalance:
+                    type: number
+                required:
+                - minimumDelayMs
+                - averageWithdrawalTimeMs
+                - medianWithdrawalTimeMs
+                - p95WithdrawalTimeMs
+                - currentlyQueued
+                - currentlyPending
+                - currentlyClaimable
+                - vaultAvailability
+                - withdrawableBalance
+                additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmWithdrawal_statsByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      description: Get ARM withdrawal stats
+  /api/v2/arm/lending-market-daily-apy/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM lending market apy
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: number
+                    apy:
+                      type: number
+                  required:
+                  - timestamp
+                  - apy
+                  additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmLending-market-daily-apyByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get ARM lending market apy
+  /api/v2/arm/all-arms-trading-volume-usd:
+    get:
+      responses:
+        '200':
+          description: Total USD trading volume for all arms
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getApiV2ArmAll-arms-trading-volume-usd
+      tags:
+      - arm
+      parameters: []
+      description: Get total USD trading volume for all arms
+  /api/v2/arm/coingecko/{token}:
+    get:
+      responses:
+        '200':
+          description: ARM price call data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  action:
+                    type: string
+                    const: eth_call
+                  to:
+                    type: string
+                  data:
+                    type: string
+                  tag:
+                    type: string
+                    const: latest
+                  chain:
+                    type: number
+                required:
+                - action
+                - to
+                - data
+                - tag
+                - chain
+                additionalProperties: false
+        '404':
+          description: ARM not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ArmCoingeckoByToken
+      tags:
+      - arm
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+          enum:
+          - arm-weth-steth
+          - arm-ws-os
+          - arm-weth-eeth
+          - arm-susde-usde
+        required: true
+      description: Get ARM price call data
+  /api/v2/historical_trades:
+    get:
+      responses:
+        '200':
+          description: ARM trades
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    base_volume:
+                      type: number
+                    price:
+                      type: number
+                    target_volume:
+                      type: number
+                    trade_id:
+                      type: number
+                    trade_timestamp:
+                      type: number
+                    type:
+                      type: string
+                  required:
+                  - base_volume
+                  - price
+                  - target_volume
+                  - trade_id
+                  - trade_timestamp
+                  - type
+                  additionalProperties: false
+      operationId: getApiV2Historical_trades
+      tags:
+      - arm
+      parameters:
+      - in: query
+        name: ticker_id
+        schema:
+          type: string
+          enum:
+          - stETH_WETH
+          - WETH_eETH
+          - wS_OS
+          - sUSDe_USDe
+        required: true
+      - in: query
+        name: type
+        schema:
+          type: string
+          enum:
+          - buy
+          - sell
+        required: true
+      - in: query
+        name: limit
+        schema:
+          type: number
+        required: false
+      - in: query
+        name: start_time
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: end_time
+        schema:
+          type: string
+        required: false
+      description: Get ARM historical trades
+  /api/v2/tickers:
+    get:
+      responses:
+        '200':
+          description: ARM tickers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ticker_id:
+                      type: string
+                    liquidity_in_usd:
+                      type: number
+                    ask:
+                      type: number
+                    base_currency:
+                      type: string
+                    base_volume:
+                      type: number
+                    bid:
+                      type: number
+                    high:
+                      type: number
+                    last_price:
+                      type: number
+                    low:
+                      type: number
+                    pool_id:
+                      type: string
+                    target_currency:
+                      type: string
+                    target_volume:
+                      type: number
+                  required:
+                  - ticker_id
+                  - liquidity_in_usd
+                  - ask
+                  - base_currency
+                  - base_volume
+                  - bid
+                  - high
+                  - last_price
+                  - low
+                  - pool_id
+                  - target_currency
+                  - target_volume
+                  additionalProperties: false
+        '404':
+          description: No ARM tickers found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2Tickers
+      tags:
+      - arm
+      parameters:
+      - in: query
+        name: chainId
+        schema:
+          default: 1
+          type: number
+        required: true
+      description: Get ARM tickers

@@ -1,0 +1,1541 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account merkl API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: merkl
+paths:
+  /api/v2/merkl/campaign/{tokenId}:
+    get:
+      responses:
+        '200':
+          description: Merkl rewards
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  computeChainId:
+                    type: number
+                  distributionChainId:
+                    type: number
+                  campaignId:
+                    type: string
+                  type:
+                    type: string
+                  subType:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  amount:
+                    type: string
+                  startTimestamp:
+                    anyOf:
+                    - type: string
+                    - type: number
+                  endTimestamp:
+                    anyOf:
+                    - type: string
+                    - type: number
+                  creatorAddress:
+                    type: string
+                  apr:
+                    type: number
+                  dailyRewards:
+                    type: number
+                  creator:
+                    type: object
+                    properties:
+                      address:
+                        type: string
+                      tags:
+                        type: array
+                        items:
+                          type: string
+                      creatorId:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                    required:
+                    - address
+                    additionalProperties: false
+                  params: {}
+                  description:
+                    type: string
+                  chain:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      name:
+                        type: string
+                      icon:
+                        type: string
+                      liveCampaigns:
+                        type: number
+                      endOfDisputePeriod:
+                        type: number
+                      explorers:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                            url:
+                              type: string
+                            chainId:
+                              type: number
+                          required:
+                          - type
+                          - url
+                          - chainId
+                          additionalProperties: {}
+                      lastClaimsOnchainFetchTimestamp:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                    required:
+                    - id
+                    - name
+                    - icon
+                    - liveCampaigns
+                    - endOfDisputePeriod
+                    - lastClaimsOnchainFetchTimestamp
+                    additionalProperties: {}
+                  rewardTokenId:
+                    type: string
+                  rewardToken:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                      chainId:
+                        type: number
+                      address:
+                        type: string
+                      decimals:
+                        type: number
+                      symbol:
+                        type: string
+                      icon:
+                        type: string
+                      verified:
+                        type: boolean
+                      isNative:
+                        type: boolean
+                      isTest:
+                        type: boolean
+                      type:
+                        type: string
+                        enum:
+                        - POINT
+                        - PRETGE
+                        - TOKEN
+                      price:
+                        anyOf:
+                        - type: number
+                        - type: 'null'
+                      updatedAt:
+                        anyOf:
+                        - type: number
+                        - type: 'null'
+                      priceSource:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                      displaySymbol:
+                        type: string
+                      underlyingTokenId:
+                        type: string
+                      priceAlertDismissedAt:
+                        type: number
+                      priceAlertCount:
+                        type: number
+                    required:
+                    - id
+                    - name
+                    - chainId
+                    - address
+                    - decimals
+                    - symbol
+                    - icon
+                    - verified
+                    - isNative
+                    - isTest
+                    - type
+                    additionalProperties: {}
+                  opportunityId:
+                    type: string
+                  distributionChain:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      name:
+                        type: string
+                      icon:
+                        type: string
+                      liveCampaigns:
+                        type: number
+                      endOfDisputePeriod:
+                        type: number
+                      explorers:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                            url:
+                              type: string
+                            chainId:
+                              type: number
+                          required:
+                          - type
+                          - url
+                          - chainId
+                          additionalProperties: {}
+                      lastClaimsOnchainFetchTimestamp:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                    required:
+                    - id
+                    - name
+                    - icon
+                    - liveCampaigns
+                    - endOfDisputePeriod
+                    - lastClaimsOnchainFetchTimestamp
+                    additionalProperties: {}
+                  distributionType:
+                    type: string
+                  campaignStatus:
+                    type: object
+                    properties:
+                      campaignId:
+                        type: string
+                      computedUntil:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      processingStarted:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      status:
+                        type: string
+                      preComputeProcessingStarted:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      preComputeStatus:
+                        type: string
+                      delay:
+                        type: number
+                      error:
+                        type: string
+                      details: {}
+                    required:
+                    - campaignId
+                    - computedUntil
+                    - processingStarted
+                    - status
+                    - preComputeProcessingStarted
+                    - preComputeStatus
+                    additionalProperties: {}
+                  createdAt:
+                    type: string
+                  rootCampaignId:
+                    anyOf:
+                    - type: string
+                    - type: 'null'
+                  parentCampaignId:
+                    anyOf:
+                    - type: string
+                    - type: 'null'
+                  childCampaignIds:
+                    type: array
+                    items:
+                      type: string
+                  dailyRewardsBreakdown:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        campaignId:
+                          type: string
+                        value:
+                          type: number
+                        maxValue:
+                          type: number
+                        timestamp:
+                          anyOf:
+                          - type: string
+                          - type: number
+                        token:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            name:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                            chainId:
+                              type: number
+                            address:
+                              type: string
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                            icon:
+                              type: string
+                            verified:
+                              type: boolean
+                            isNative:
+                              type: boolean
+                            isTest:
+                              type: boolean
+                            type:
+                              type: string
+                              enum:
+                              - POINT
+                              - PRETGE
+                              - TOKEN
+                            price:
+                              anyOf:
+                              - type: number
+                              - type: 'null'
+                            updatedAt:
+                              anyOf:
+                              - type: number
+                              - type: 'null'
+                            priceSource:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                            displaySymbol:
+                              type: string
+                            underlyingTokenId:
+                              type: string
+                            priceAlertDismissedAt:
+                              type: number
+                            priceAlertCount:
+                              type: number
+                          required:
+                          - id
+                          - name
+                          - chainId
+                          - address
+                          - decimals
+                          - symbol
+                          - icon
+                          - verified
+                          - isNative
+                          - isTest
+                          - type
+                          additionalProperties: {}
+                        amount:
+                          type: string
+                        distributionType:
+                          type: string
+                        onChainCampaignId:
+                          type: string
+                      required:
+                      - campaignId
+                      - value
+                      - timestamp
+                      - token
+                      - amount
+                      additionalProperties: {}
+                  pauseCompute:
+                    anyOf:
+                    - type: string
+                    - type: 'null'
+                  pausePrecompute:
+                    anyOf:
+                    - type: string
+                    - type: 'null'
+                  hasOverrides:
+                    type: boolean
+                  isPrivate:
+                    type: boolean
+                  campaignEncodingHash:
+                    type: string
+                required:
+                - id
+                - computeChainId
+                - distributionChainId
+                - campaignId
+                - type
+                - amount
+                - startTimestamp
+                - endTimestamp
+                - creatorAddress
+                - params
+                - chain
+                - rewardToken
+                - campaignStatus
+                - createdAt
+                - isPrivate
+                additionalProperties: {}
+      operationId: getApiV2MerklCampaignByTokenId
+      tags:
+      - merkl
+      parameters:
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      description: Get Merkl rewards
+  /api/v2/merkl/opportunity/{tokenId}:
+    get:
+      responses:
+        '200':
+          description: Merkl opportunity
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  type:
+                    type: string
+                  identifier:
+                    type: string
+                  chainId:
+                    type: number
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  howToSteps:
+                    type: array
+                    items:
+                      type: string
+                  status:
+                    type: string
+                    enum:
+                    - LIVE
+                    - NONE
+                    - PAST
+                    - SOON
+                  action:
+                    type: string
+                    enum:
+                    - BORROW
+                    - DROP
+                    - HOLD
+                    - INVALID
+                    - LEND
+                    - LONG
+                    - POOL
+                    - SHORT
+                    - STAKE
+                    - SWAP
+                  tags:
+                    type: array
+                    items:
+                      type: string
+                  mainProtocol:
+                    type: string
+                  depositUrl:
+                    type: string
+                  depositUrls:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        title:
+                          type: string
+                        url:
+                          type: string
+                        subtitle:
+                          type: string
+                        icon:
+                          type: string
+                        priority:
+                          type: number
+                      required:
+                      - id
+                      - title
+                      - url
+                      - priority
+                      additionalProperties: {}
+                  explorerAddress:
+                    type: string
+                  hidden:
+                    type: boolean
+                  tvl:
+                    type: number
+                  apr:
+                    type: number
+                  dailyRewards:
+                    type: number
+                  maxDailyRewards:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  liveCampaigns:
+                    type: number
+                  lastCampaignCreatedAt:
+                    type: number
+                  earliestCampaignStart:
+                    anyOf:
+                    - type: string
+                    - type: number
+                  latestCampaignStart:
+                    anyOf:
+                    - type: string
+                    - type: number
+                  earliestCampaignEnd:
+                    anyOf:
+                    - type: string
+                    - type: number
+                  latestCampaignEnd:
+                    anyOf:
+                    - type: string
+                    - type: number
+                  nativeApr:
+                    type: number
+                  maxApr:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  liveCampaignsForCreator:
+                    type: number
+                  soonCampaignsForCreator:
+                    type: number
+                  pastCampaignsForCreator:
+                    type: number
+                  distributionType:
+                    type: string
+                  tokens:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        chainId:
+                          type: number
+                        address:
+                          type: string
+                        decimals:
+                          type: number
+                        symbol:
+                          type: string
+                        icon:
+                          type: string
+                        verified:
+                          type: boolean
+                        isNative:
+                          type: boolean
+                        isTest:
+                          type: boolean
+                        type:
+                          type: string
+                          enum:
+                          - POINT
+                          - PRETGE
+                          - TOKEN
+                        price:
+                          anyOf:
+                          - type: number
+                          - type: 'null'
+                        updatedAt:
+                          anyOf:
+                          - type: number
+                          - type: 'null'
+                        priceSource:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        displaySymbol:
+                          type: string
+                        underlyingTokenId:
+                          type: string
+                        priceAlertDismissedAt:
+                          type: number
+                        priceAlertCount:
+                          type: number
+                      required:
+                      - id
+                      - name
+                      - chainId
+                      - address
+                      - decimals
+                      - symbol
+                      - icon
+                      - verified
+                      - isNative
+                      - isTest
+                      - type
+                      additionalProperties: {}
+                  chain:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      name:
+                        type: string
+                      icon:
+                        type: string
+                      liveCampaigns:
+                        type: number
+                      endOfDisputePeriod:
+                        type: number
+                      explorers:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                            url:
+                              type: string
+                            chainId:
+                              type: number
+                          required:
+                          - type
+                          - url
+                          - chainId
+                          additionalProperties: {}
+                      lastClaimsOnchainFetchTimestamp:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                    required:
+                    - id
+                    - name
+                    - icon
+                    - liveCampaigns
+                    - endOfDisputePeriod
+                    - lastClaimsOnchainFetchTimestamp
+                    additionalProperties: {}
+                  activePrograms:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        slug:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        description:
+                          type: string
+                        icon:
+                          type: string
+                      required:
+                      - id
+                      - name
+                      additionalProperties: {}
+                  protocol:
+                    anyOf:
+                    - type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        icon:
+                          type: string
+                        tags:
+                          type: array
+                          items:
+                            type: string
+                        description:
+                          type: string
+                        url:
+                          type: string
+                        dailyRewards:
+                          type: number
+                        numberOfLiveCampaigns:
+                          type: number
+                        opportunityLiveTags:
+                          type: array
+                          items:
+                            type: string
+                        banner:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        opportunityBannerLight:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        opportunityBannerDark:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                      required:
+                      - id
+                      - name
+                      - icon
+                      - tags
+                      - description
+                      - url
+                      - banner
+                      - opportunityBannerLight
+                      - opportunityBannerDark
+                      additionalProperties: {}
+                    - type: 'null'
+                  aprRecord:
+                    type: object
+                    properties:
+                      cumulated:
+                        type: number
+                      timestamp:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      breakdowns:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            identifier:
+                              type: string
+                            type:
+                              type: string
+                              enum:
+                              - CAMPAIGN
+                              - PROTOCOL
+                              - TOKEN
+                            value:
+                              type: number
+                            timestamp:
+                              anyOf:
+                              - type: string
+                              - type: number
+                            distributionType:
+                              type: string
+                          required:
+                          - identifier
+                          - type
+                          - value
+                          - timestamp
+                          additionalProperties: {}
+                    required:
+                    - cumulated
+                    - timestamp
+                    - breakdowns
+                    additionalProperties: {}
+                  nativeAprRecord:
+                    type: object
+                    properties:
+                      title:
+                        type: string
+                      description:
+                        type: string
+                      value:
+                        type: number
+                      timestamp:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      amount:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      rewardToken:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          name:
+                            anyOf:
+                            - type: string
+                            - type: 'null'
+                          chainId:
+                            type: number
+                          address:
+                            type: string
+                          decimals:
+                            type: number
+                          symbol:
+                            type: string
+                          icon:
+                            type: string
+                          verified:
+                            type: boolean
+                          isNative:
+                            type: boolean
+                          isTest:
+                            type: boolean
+                          type:
+                            type: string
+                            enum:
+                            - POINT
+                            - PRETGE
+                            - TOKEN
+                          price:
+                            anyOf:
+                            - type: number
+                            - type: 'null'
+                          updatedAt:
+                            anyOf:
+                            - type: number
+                            - type: 'null'
+                          priceSource:
+                            anyOf:
+                            - type: string
+                            - type: 'null'
+                          displaySymbol:
+                            type: string
+                          underlyingTokenId:
+                            type: string
+                          priceAlertDismissedAt:
+                            type: number
+                          priceAlertCount:
+                            type: number
+                        required:
+                        - id
+                        - name
+                        - chainId
+                        - address
+                        - decimals
+                        - symbol
+                        - icon
+                        - verified
+                        - isNative
+                        - isTest
+                        - type
+                        additionalProperties: {}
+                    required:
+                    - title
+                    - value
+                    - timestamp
+                    additionalProperties: {}
+                  tvlRecord:
+                    type: object
+                    properties:
+                      total:
+                        type: number
+                      timestamp:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      breakdowns:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            identifier:
+                              type: string
+                            type:
+                              type: string
+                              enum:
+                              - PROTOCOL
+                              - TOKEN
+                            value:
+                              type: number
+                          required:
+                          - identifier
+                          - type
+                          - value
+                          additionalProperties: {}
+                    required:
+                    - total
+                    - timestamp
+                    - breakdowns
+                    additionalProperties: {}
+                  rewardsRecord:
+                    type: object
+                    properties:
+                      total:
+                        type: number
+                      timestamp:
+                        anyOf:
+                        - type: string
+                        - type: number
+                      breakdowns:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            campaignId:
+                              type: string
+                            value:
+                              type: number
+                            maxValue:
+                              type: number
+                            timestamp:
+                              anyOf:
+                              - type: string
+                              - type: number
+                            token:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                name:
+                                  anyOf:
+                                  - type: string
+                                  - type: 'null'
+                                chainId:
+                                  type: number
+                                address:
+                                  type: string
+                                decimals:
+                                  type: number
+                                symbol:
+                                  type: string
+                                icon:
+                                  type: string
+                                verified:
+                                  type: boolean
+                                isNative:
+                                  type: boolean
+                                isTest:
+                                  type: boolean
+                                type:
+                                  type: string
+                                  enum:
+                                  - POINT
+                                  - PRETGE
+                                  - TOKEN
+                                price:
+                                  anyOf:
+                                  - type: number
+                                  - type: 'null'
+                                updatedAt:
+                                  anyOf:
+                                  - type: number
+                                  - type: 'null'
+                                priceSource:
+                                  anyOf:
+                                  - type: string
+                                  - type: 'null'
+                                displaySymbol:
+                                  type: string
+                                underlyingTokenId:
+                                  type: string
+                                priceAlertDismissedAt:
+                                  type: number
+                                priceAlertCount:
+                                  type: number
+                              required:
+                              - id
+                              - name
+                              - chainId
+                              - address
+                              - decimals
+                              - symbol
+                              - icon
+                              - verified
+                              - isNative
+                              - isTest
+                              - type
+                              additionalProperties: {}
+                            amount:
+                              type: string
+                            distributionType:
+                              type: string
+                            onChainCampaignId:
+                              type: string
+                          required:
+                          - campaignId
+                          - value
+                          - timestamp
+                          - token
+                          - amount
+                          additionalProperties: {}
+                    required:
+                    - total
+                    - timestamp
+                    - breakdowns
+                    additionalProperties: {}
+                  campaigns:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        computeChainId:
+                          type: number
+                        distributionChainId:
+                          type: number
+                        campaignId:
+                          type: string
+                        type:
+                          type: string
+                        subType:
+                          anyOf:
+                          - type: number
+                          - type: 'null'
+                        amount:
+                          type: string
+                        startTimestamp:
+                          anyOf:
+                          - type: string
+                          - type: number
+                        endTimestamp:
+                          anyOf:
+                          - type: string
+                          - type: number
+                        creatorAddress:
+                          type: string
+                        apr:
+                          type: number
+                        dailyRewards:
+                          type: number
+                        creator:
+                          type: object
+                          properties:
+                            address:
+                              type: string
+                            tags:
+                              type: array
+                              items:
+                                type: string
+                            creatorId:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                          required:
+                          - address
+                          additionalProperties: false
+                        params: {}
+                        description:
+                          type: string
+                        chain:
+                          type: object
+                          properties:
+                            id:
+                              type: number
+                            name:
+                              type: string
+                            icon:
+                              type: string
+                            liveCampaigns:
+                              type: number
+                            endOfDisputePeriod:
+                              type: number
+                            explorers:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  type:
+                                    type: string
+                                  url:
+                                    type: string
+                                  chainId:
+                                    type: number
+                                required:
+                                - type
+                                - url
+                                - chainId
+                                additionalProperties: {}
+                            lastClaimsOnchainFetchTimestamp:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                          required:
+                          - id
+                          - name
+                          - icon
+                          - liveCampaigns
+                          - endOfDisputePeriod
+                          - lastClaimsOnchainFetchTimestamp
+                          additionalProperties: {}
+                        rewardTokenId:
+                          type: string
+                        rewardToken:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            name:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                            chainId:
+                              type: number
+                            address:
+                              type: string
+                            decimals:
+                              type: number
+                            symbol:
+                              type: string
+                            icon:
+                              type: string
+                            verified:
+                              type: boolean
+                            isNative:
+                              type: boolean
+                            isTest:
+                              type: boolean
+                            type:
+                              type: string
+                              enum:
+                              - POINT
+                              - PRETGE
+                              - TOKEN
+                            price:
+                              anyOf:
+                              - type: number
+                              - type: 'null'
+                            updatedAt:
+                              anyOf:
+                              - type: number
+                              - type: 'null'
+                            priceSource:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                            displaySymbol:
+                              type: string
+                            underlyingTokenId:
+                              type: string
+                            priceAlertDismissedAt:
+                              type: number
+                            priceAlertCount:
+                              type: number
+                          required:
+                          - id
+                          - name
+                          - chainId
+                          - address
+                          - decimals
+                          - symbol
+                          - icon
+                          - verified
+                          - isNative
+                          - isTest
+                          - type
+                          additionalProperties: {}
+                        opportunityId:
+                          type: string
+                        distributionChain:
+                          type: object
+                          properties:
+                            id:
+                              type: number
+                            name:
+                              type: string
+                            icon:
+                              type: string
+                            liveCampaigns:
+                              type: number
+                            endOfDisputePeriod:
+                              type: number
+                            explorers:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  type:
+                                    type: string
+                                  url:
+                                    type: string
+                                  chainId:
+                                    type: number
+                                required:
+                                - type
+                                - url
+                                - chainId
+                                additionalProperties: {}
+                            lastClaimsOnchainFetchTimestamp:
+                              anyOf:
+                              - type: string
+                              - type: 'null'
+                          required:
+                          - id
+                          - name
+                          - icon
+                          - liveCampaigns
+                          - endOfDisputePeriod
+                          - lastClaimsOnchainFetchTimestamp
+                          additionalProperties: {}
+                        distributionType:
+                          type: string
+                        campaignStatus:
+                          type: object
+                          properties:
+                            campaignId:
+                              type: string
+                            computedUntil:
+                              anyOf:
+                              - type: string
+                              - type: number
+                            processingStarted:
+                              anyOf:
+                              - type: string
+                              - type: number
+                            status:
+                              type: string
+                            preComputeProcessingStarted:
+                              anyOf:
+                              - type: string
+                              - type: number
+                            preComputeStatus:
+                              type: string
+                            delay:
+                              type: number
+                            error:
+                              type: string
+                            details: {}
+                          required:
+                          - campaignId
+                          - computedUntil
+                          - processingStarted
+                          - status
+                          - preComputeProcessingStarted
+                          - preComputeStatus
+                          additionalProperties: {}
+                        createdAt:
+                          type: string
+                        rootCampaignId:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        parentCampaignId:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        childCampaignIds:
+                          type: array
+                          items:
+                            type: string
+                        dailyRewardsBreakdown:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              campaignId:
+                                type: string
+                              value:
+                                type: number
+                              maxValue:
+                                type: number
+                              timestamp:
+                                anyOf:
+                                - type: string
+                                - type: number
+                              token:
+                                type: object
+                                properties:
+                                  id:
+                                    type: string
+                                  name:
+                                    anyOf:
+                                    - type: string
+                                    - type: 'null'
+                                  chainId:
+                                    type: number
+                                  address:
+                                    type: string
+                                  decimals:
+                                    type: number
+                                  symbol:
+                                    type: string
+                                  icon:
+                                    type: string
+                                  verified:
+                                    type: boolean
+                                  isNative:
+                                    type: boolean
+                                  isTest:
+                                    type: boolean
+                                  type:
+                                    type: string
+                                    enum:
+                                    - POINT
+                                    - PRETGE
+                                    - TOKEN
+                                  price:
+                                    anyOf:
+                                    - type: number
+                                    - type: 'null'
+                                  updatedAt:
+                                    anyOf:
+                                    - type: number
+                                    - type: 'null'
+                                  priceSource:
+                                    anyOf:
+                                    - type: string
+                                    - type: 'null'
+                                  displaySymbol:
+                                    type: string
+                                  underlyingTokenId:
+                                    type: string
+                                  priceAlertDismissedAt:
+                                    type: number
+                                  priceAlertCount:
+                                    type: number
+                                required:
+                                - id
+                                - name
+                                - chainId
+                                - address
+                                - decimals
+                                - symbol
+                                - icon
+                                - verified
+                                - isNative
+                                - isTest
+                                - type
+                                additionalProperties: {}
+                              amount:
+                                type: string
+                              distributionType:
+                                type: string
+                              onChainCampaignId:
+                                type: string
+                            required:
+                            - campaignId
+                            - value
+                            - timestamp
+                            - token
+                            - amount
+                            additionalProperties: {}
+                        pauseCompute:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        pausePrecompute:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        hasOverrides:
+                          type: boolean
+                        isPrivate:
+                          type: boolean
+                        campaignEncodingHash:
+                          type: string
+                      required:
+                      - id
+                      - computeChainId
+                      - distributionChainId
+                      - campaignId
+                      - type
+                      - amount
+                      - startTimestamp
+                      - endTimestamp
+                      - creatorAddress
+                      - params
+                      - chain
+                      - rewardToken
+                      - campaignStatus
+                      - createdAt
+                      - isPrivate
+                      additionalProperties: {}
+                required:
+                - id
+                - type
+                - identifier
+                - chainId
+                - name
+                - description
+                - howToSteps
+                - status
+                - action
+                - tags
+                - tvl
+                - apr
+                - dailyRewards
+                - liveCampaigns
+                - lastCampaignCreatedAt
+                - tokens
+                - chain
+                - activePrograms
+                additionalProperties: {}
+      operationId: getApiV2MerklOpportunityByTokenId
+      tags:
+      - merkl
+      parameters:
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      description: Get Merkl opportunity
+  /api/v2/merkl/{user}/rewards/{tokenId}:
+    get:
+      responses:
+        '200':
+          description: Merkl rewards grouped by chain
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    chain:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                        name:
+                          type: string
+                      required:
+                      - id
+                      - name
+                      additionalProperties: false
+                    amountUSD:
+                      type: number
+                    claimedUSD:
+                      type: number
+                    pendingUSD:
+                      type: number
+                    claimableUSD:
+                      type: number
+                    rewards:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          token:
+                            type: object
+                            properties:
+                              chainId:
+                                type: number
+                              address:
+                                type: string
+                              decimals:
+                                type: number
+                              symbol:
+                                type: string
+                              type:
+                                type: string
+                                enum:
+                                - POINT
+                                - PRETGE
+                                - TOKEN
+                            required:
+                            - chainId
+                            - address
+                            - decimals
+                            - symbol
+                            additionalProperties: false
+                          amount:
+                            type: number
+                          claimed:
+                            type: number
+                          pending:
+                            type: number
+                          claimable:
+                            type: number
+                          proofs:
+                            type: array
+                            items:
+                              type: string
+                        required:
+                        - token
+                        - amount
+                        - claimed
+                        - pending
+                        - claimable
+                        - proofs
+                        additionalProperties: false
+                  required:
+                  - chain
+                  - amountUSD
+                  - claimedUSD
+                  - pendingUSD
+                  - claimableUSD
+                  - rewards
+                  additionalProperties: false
+      operationId: getApiV2MerklByUserRewardsByTokenId
+      tags:
+      - merkl
+      parameters:
+      - in: path
+        name: user
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: forceRefresh
+        schema:
+          type: string
+          enum:
+          - 'true'
+          - 'false'
+      description: Get available, claimed, and pending Merkl rewards for a user and a product id
+  /api/v2/merkl/{user}/rewards/{tokenId}/claim-transaction:
+    get:
+      responses:
+        '200':
+          description: Unsigned Merkl claim transactions grouped by chain
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transactions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        chainId:
+                          type: number
+                        from:
+                          type: string
+                        to:
+                          type: string
+                        value:
+                          type: string
+                          const: '0'
+                        data:
+                          type: string
+                      required:
+                      - chainId
+                      - from
+                      - to
+                      - value
+                      - data
+                      additionalProperties: false
+                required:
+                - transactions
+                additionalProperties: false
+      operationId: getApiV2MerklByUserRewardsByTokenIdClaim-transaction
+      tags:
+      - merkl
+      parameters:
+      - in: path
+        name: user
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: tokenId
+        schema:
+          type: string
+        required: true
+      description: Get Merkl reward claim transaction data for a user to sign in a dapp

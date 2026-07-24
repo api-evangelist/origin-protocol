@@ -1,0 +1,240 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account defillama API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: defillama
+paths:
+  /api/v2/defillama/protocols:
+    get:
+      responses:
+        '200':
+          description: DefiLlama protocols
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    name:
+                      type: string
+                    address:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    symbol:
+                      type: string
+                    url:
+                      type: string
+                    description:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    chain:
+                      type: string
+                    logo:
+                      type: string
+                    audits:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    audit_note:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    gecko_id:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    cmcId:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    category:
+                      type: string
+                    chains:
+                      type: array
+                      items:
+                        type: string
+                    oracles:
+                      type: array
+                      items: {}
+                    forkedFrom:
+                      type: array
+                      items: {}
+                    module:
+                      type: string
+                    twitter:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    audit_links:
+                      type: array
+                      items:
+                        type: string
+                    listedAt:
+                      type: number
+                    governanceID:
+                      type: array
+                      items:
+                        type: string
+                    github:
+                      type: array
+                      items:
+                        type: string
+                    treasury:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    methodology:
+                      type: string
+                    slug:
+                      type: string
+                    tvl:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    chainTvls:
+                      type: object
+                      propertyNames:
+                        type: string
+                      additionalProperties:
+                        type: number
+                    change_1h:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    change_1d:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    change_7d:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    tokenBreakdowns:
+                      type: object
+                      propertyNames:
+                        type: string
+                      additionalProperties: {}
+                    mcap:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    staking:
+                      type: number
+                  required:
+                  - id
+                  - name
+                  - address
+                  - symbol
+                  - url
+                  - description
+                  - logo
+                  - gecko_id
+                  - cmcId
+                  - category
+                  - chains
+                  - module
+                  - slug
+                  - tvl
+                  - chainTvls
+                  - change_1h
+                  - change_1d
+                  - change_7d
+                  - tokenBreakdowns
+                  - mcap
+                  additionalProperties: {}
+      operationId: getApiV2DefillamaProtocols
+      tags:
+      - defillama
+      parameters: []
+      description: Get DefiLlama protocols
+  /api/v2/defillama/protocols/apy:
+    get:
+      responses:
+        '200':
+          description: DefiLlama protocol APYs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    defillamaId:
+                      type: string
+                    name:
+                      type: string
+                    displayName:
+                      type: string
+                    slug:
+                      type: string
+                    category:
+                      type: string
+                    chains:
+                      type: array
+                      items:
+                        type: string
+                    logo:
+                      type: string
+                    tvlUsd:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    revenue24hUsd:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    revenue7dUsd:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    revenue30dUsd:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    annualizedRevenueUsd:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                    apy:
+                      anyOf:
+                      - type: number
+                      - type: 'null'
+                  required:
+                  - id
+                  - defillamaId
+                  - name
+                  - displayName
+                  - slug
+                  - category
+                  - chains
+                  - logo
+                  - tvlUsd
+                  - revenue24hUsd
+                  - revenue7dUsd
+                  - revenue30dUsd
+                  - annualizedRevenueUsd
+                  - apy
+                  additionalProperties: false
+      operationId: getApiV2DefillamaProtocolsApy
+      tags:
+      - defillama
+      parameters:
+      - in: query
+        name: protocols
+        schema:
+          type: string
+      description: Get DefiLlama protocol APYs computed from revenue and TVL

@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account cache API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: cache
+paths:
+  /cache/last-updated:
+    get:
+      responses:
+        '200':
+          description: Metadata for a cache key. `lastUpdated` is null when no metadata has been written yet.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  key:
+                    type: string
+                  lastUpdated:
+                    anyOf:
+                    - type: string
+                    - type: 'null'
+                required:
+                - key
+                - lastUpdated
+                additionalProperties: false
+      operationId: getCacheLast-updated
+      tags:
+      - cache
+      parameters:
+      - in: query
+        name: key
+        schema:
+          type: string
+          minLength: 1
+        required: true
+      description: Get cache key last updated metadata

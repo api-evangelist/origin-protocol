@@ -1,0 +1,187 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: account
+paths:
+  /api/v2/account/{address}/portfolio/history:
+    get:
+      responses:
+        '200':
+          description: Account portfolio history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  chainIds:
+                    type: array
+                    items:
+                      type: number
+                  limit:
+                    type: number
+                  points:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        t:
+                          type: string
+                        totalUsd:
+                          type: number
+                      required:
+                      - t
+                      - totalUsd
+                      additionalProperties: false
+                  summary:
+                    type: object
+                    properties:
+                      peak:
+                        type: number
+                      lowest:
+                        type: number
+                      totalReturnPct:
+                        anyOf:
+                        - type: number
+                        - type: 'null'
+                    required:
+                    - peak
+                    - lowest
+                    - totalReturnPct
+                    additionalProperties: false
+                required:
+                - address
+                - chainIds
+                - limit
+                - points
+                - summary
+                additionalProperties: false
+      operationId: getApiV2AccountByAddressPortfolioHistory
+      tags:
+      - account
+      parameters:
+      - in: path
+        name: address
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: limit
+        schema:
+          type: number
+      description: Get single-wallet portfolio value history across all supported chains
+  /api/v2/account/{address}/activity:
+    get:
+      responses:
+        '200':
+          description: Account activity
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  chainIds:
+                    type: array
+                    items:
+                      type: number
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        source:
+                          type: string
+                          enum:
+                          - otokenActivity
+                          - erc20Transfer
+                        type:
+                          type: string
+                        chainId:
+                          type: number
+                        timestamp:
+                          type: string
+                        txHash:
+                          type: string
+                        tokenAddress:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        from:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        to:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        amount:
+                          anyOf:
+                          - type: string
+                          - type: 'null'
+                        data:
+                          anyOf:
+                          - {}
+                          - type: 'null'
+                      required:
+                      - id
+                      - source
+                      - type
+                      - chainId
+                      - timestamp
+                      - txHash
+                      - tokenAddress
+                      - from
+                      - to
+                      - amount
+                      - data
+                      additionalProperties: false
+                  page:
+                    type: object
+                    properties:
+                      nextCursor:
+                        anyOf:
+                        - type: string
+                        - type: 'null'
+                      hasMore:
+                        type: boolean
+                    required:
+                    - nextCursor
+                    - hasMore
+                    additionalProperties: false
+                required:
+                - address
+                - chainIds
+                - items
+                - page
+                additionalProperties: false
+      operationId: getApiV2AccountByAddressActivity
+      tags:
+      - account
+      parameters:
+      - in: path
+        name: address
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: limit
+        schema:
+          type: number
+      - in: query
+        name: cursor
+        schema:
+          type: string
+      description: Get single-wallet activity feed across all supported chains

@@ -1,0 +1,1083 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account token API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: token
+paths:
+  /api/v2/{token}/withdrawal_requests:
+    get:
+      responses:
+        '200':
+          description: Token withdrawal requests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    withdrawer:
+                      type: string
+                    amount:
+                      type: string
+                    queued:
+                      type: string
+                    requestId:
+                      type: string
+                    claimed:
+                      type: boolean
+                    claimable:
+                      type: boolean
+                    timestamp:
+                      type: string
+                    claimableAt:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    claimedAt:
+                      anyOf:
+                      - type: string
+                      - type: 'null'
+                    txHash:
+                      type: string
+                  required:
+                  - id
+                  - withdrawer
+                  - amount
+                  - queued
+                  - requestId
+                  - claimed
+                  - claimable
+                  - timestamp
+                  - txHash
+                  additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenWithdrawal_requests
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: address
+        schema:
+          type: string
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get token withdrawal requests
+  /api/v2/{token}/withdrawal_stats:
+    get:
+      responses:
+        '200':
+          description: Token withdrawal stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  minimumDelayMs:
+                    type: number
+                  averageWithdrawalTimeMs:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  medianWithdrawalTimeMs:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  p95WithdrawalTimeMs:
+                    anyOf:
+                    - type: number
+                    - type: 'null'
+                  currentlyQueued:
+                    type: number
+                  currentlyPending:
+                    type: number
+                  currentlyClaimable:
+                    type: number
+                  vaultAvailability:
+                    type: number
+                  withdrawableBalance:
+                    type: number
+                required:
+                - minimumDelayMs
+                - averageWithdrawalTimeMs
+                - medianWithdrawalTimeMs
+                - p95WithdrawalTimeMs
+                - currentlyQueued
+                - currentlyPending
+                - currentlyClaimable
+                - vaultAvailability
+                - withdrawableBalance
+                additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenWithdrawal_stats
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get token withdrawal stats
+  /api/v2/{token}/apr/history:
+    get:
+      responses:
+        '200':
+          description: APR history
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    apr:
+                      type: number
+                    apy:
+                      type: number
+                    daily:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          apy:
+                            type: string
+                        required:
+                        - apy
+                        additionalProperties: false
+                  required:
+                  - apr
+                  - apy
+                  - daily
+                  additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenAprHistory
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get APR history
+  /api/v2/{token}/apr/trailing_history/{days}:
+    get:
+      responses:
+        '200':
+          description: APR trailing history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trailing_history:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        day:
+                          type: string
+                        trailing_apy:
+                          type: number
+                      required:
+                      - day
+                      - trailing_apy
+                      additionalProperties: false
+                required:
+                - trailing_history
+                additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenAprTrailing_historyByDays
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: days
+        schema:
+          type: number
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get APR trailing history
+  /api/v2/{token}/stats/{stat}:
+    get:
+      responses:
+        '200':
+          description: Token stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                required:
+                - data
+                additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenStatsByStat
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: stat
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get token stats
+  /api/v2/{token}/apr/trailing:
+    get:
+      responses:
+        '200':
+          description: APR trailing
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  apr:
+                    type: string
+                  apy:
+                    type: string
+                required:
+                - apr
+                - apy
+                additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenAprTrailing
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      - in: query
+        name: days
+        schema:
+          type: number
+      description: Get APR trailing
+  /api/v2/{token}/ratios:
+    get:
+      responses:
+        '200':
+          description: Token ratios
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  current_credits_per_token:
+                    type: string
+                  next_credits_per_token:
+                    type: string
+                required:
+                - current_credits_per_token
+                - next_credits_per_token
+                additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenRatios
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get token ratios
+  /api/v2/{token}/daily_stats:
+    get:
+      responses:
+        '200':
+          description: Token daily stats
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    timestamp:
+                      type: number
+                    date:
+                      type: string
+                    fees:
+                      type: number
+                    totalSupply:
+                      type: number
+                    rateUSD:
+                      type: number
+                    rateETH:
+                      type: number
+                    rateNative:
+                      type: number
+                    apy:
+                      type: number
+                    apy7:
+                      type: number
+                    apy14:
+                      type: number
+                    apy30:
+                      type: number
+                    bestApy:
+                      type: number
+                    bestApyTrailingDays:
+                      type: number
+                    yield:
+                      type: number
+                    cumulativeFees:
+                      type: number
+                    cumulativeYield:
+                      type: number
+                    amoSupply:
+                      type: number
+                    tvl:
+                      type: number
+                    rateWrapped:
+                      type: number
+                  required:
+                  - id
+                  - timestamp
+                  - date
+                  - fees
+                  - totalSupply
+                  - rateUSD
+                  - rateETH
+                  - rateNative
+                  - apy
+                  - apy7
+                  - apy14
+                  - apy30
+                  - bestApy
+                  - bestApyTrailingDays
+                  - yield
+                  - cumulativeFees
+                  - cumulativeYield
+                  - amoSupply
+                  - tvl
+                  - rateWrapped
+                  additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenDaily_stats
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get token daily stats
+  /api/v2/{token}/daily_protocol_revenue:
+    get:
+      responses:
+        '200':
+          description: Token daily protocol revenue
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: number
+                    date:
+                      type: string
+                    amount:
+                      type: number
+                    rateNative:
+                      type: number
+                    rateETH:
+                      type: number
+                    rateUSD:
+                      type: number
+                    avg7:
+                      type: number
+                    avg14:
+                      type: number
+                    avg30:
+                      type: number
+                  required:
+                  - timestamp
+                  - date
+                  - amount
+                  - rateNative
+                  - rateETH
+                  - rateUSD
+                  - avg7
+                  - avg14
+                  - avg30
+                  additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenDaily_protocol_revenue
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get token daily protocol revenue
+  /api/v2/{token}/morpho_collateral:
+    get:
+      responses:
+        '200':
+          description: Morpho collateral data
+          content:
+            application/json:
+              schema:
+                anyOf:
+                - type: object
+                  properties:
+                    token:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        address:
+                          type: string
+                        name:
+                          type: string
+                        chainId:
+                          type: number
+                        decimals:
+                          type: number
+                        symbol:
+                          type: string
+                      required:
+                      - id
+                      - address
+                      - name
+                      - chainId
+                      - decimals
+                      - symbol
+                      additionalProperties: false
+                    strategies:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          title:
+                            type: string
+                          description:
+                            type: string
+                          chainId:
+                            type: number
+                          network:
+                            type: string
+                          vaultAddress:
+                            type: string
+                          strategyAddress:
+                            type: string
+                          href:
+                            type: string
+                          amount:
+                            type: number
+                          liquidAmount:
+                            type: number
+                          markets:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                marketId:
+                                  type: string
+                                network:
+                                  type: string
+                                marketUrl:
+                                  type: string
+                                loanSymbol:
+                                  type: string
+                                collateralSymbol:
+                                  type: string
+                                lltv:
+                                  type: string
+                                risk:
+                                  type: string
+                                totalCollateralUsd:
+                                  type: number
+                                totalMarketSizeUsd:
+                                  type: number
+                                totalBorrowUsd:
+                                  type: number
+                                totalLiquidityUsd:
+                                  type: number
+                                supplyApy:
+                                  type: number
+                                rewardsApr:
+                                  type: number
+                                totalApy:
+                                  type: number
+                                ratio:
+                                  type: number
+                                strategyAmount:
+                                  type: number
+                              required:
+                              - marketId
+                              - network
+                              - marketUrl
+                              - loanSymbol
+                              - collateralSymbol
+                              - lltv
+                              - risk
+                              - totalCollateralUsd
+                              - totalMarketSizeUsd
+                              - totalBorrowUsd
+                              - totalLiquidityUsd
+                              - supplyApy
+                              - rewardsApr
+                              - totalApy
+                              - ratio
+                              - strategyAmount
+                              additionalProperties: false
+                        required:
+                        - id
+                        - title
+                        - description
+                        - chainId
+                        - network
+                        - vaultAddress
+                        - strategyAddress
+                        - href
+                        - amount
+                        - liquidAmount
+                        - markets
+                        additionalProperties: false
+                  required:
+                  - token
+                  - strategies
+                  additionalProperties: false
+                - type: object
+                  properties:
+                    token:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        address:
+                          type: string
+                        name:
+                          type: string
+                        chainId:
+                          type: number
+                        decimals:
+                          type: number
+                        symbol:
+                          type: string
+                      required:
+                      - id
+                      - address
+                      - name
+                      - chainId
+                      - decimals
+                      - symbol
+                      additionalProperties: false
+                    rows:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          tokenId:
+                            type: string
+                          tokenSymbol:
+                            type: string
+                          tokenAddress:
+                            type: string
+                          strategyId:
+                            type: string
+                          strategyTitle:
+                            type: string
+                          strategyChainId:
+                            type: number
+                          strategyNetwork:
+                            type: string
+                          strategyVaultAddress:
+                            type: string
+                          strategyAddress:
+                            type: string
+                          strategyHref:
+                            type: string
+                          strategyTotalUsd:
+                            type: number
+                          strategyLiquidUsd:
+                            type: number
+                          marketId:
+                            type: string
+                          marketUrl:
+                            type: string
+                          loanSymbol:
+                            type: string
+                          collateralSymbol:
+                            type: string
+                          lltv:
+                            type: string
+                          risk:
+                            type: string
+                          totalCollateralUsd:
+                            type: number
+                          totalMarketSizeUsd:
+                            type: number
+                          totalBorrowUsd:
+                            type: number
+                          totalLiquidityUsd:
+                            type: number
+                          supplyApy:
+                            type: number
+                          rewardsApr:
+                            type: number
+                          totalApy:
+                            type: number
+                          allocationUsd:
+                            type: number
+                          allocationRatio:
+                            type: number
+                          allocationPct:
+                            type: number
+                        required:
+                        - tokenId
+                        - tokenSymbol
+                        - tokenAddress
+                        - strategyId
+                        - strategyTitle
+                        - strategyChainId
+                        - strategyNetwork
+                        - strategyVaultAddress
+                        - strategyAddress
+                        - strategyHref
+                        - strategyTotalUsd
+                        - strategyLiquidUsd
+                        - marketId
+                        - marketUrl
+                        - loanSymbol
+                        - collateralSymbol
+                        - lltv
+                        - risk
+                        - totalCollateralUsd
+                        - totalMarketSizeUsd
+                        - totalBorrowUsd
+                        - totalLiquidityUsd
+                        - supplyApy
+                        - rewardsApr
+                        - totalApy
+                        - allocationUsd
+                        - allocationRatio
+                        - allocationPct
+                        additionalProperties: false
+                  required:
+                  - token
+                  - rows
+                  additionalProperties: false
+        '400':
+          description: Unsupported token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenMorpho_collateral
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - nested
+          - rows
+          - grafana
+      description: Get Morpho-only collateral exposure for an oToken
+  /api/v2/{token}/collaterals:
+    get:
+      responses:
+        '200':
+          description: Token collaterals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    icon:
+                      type: string
+                    brandIcon:
+                      type: string
+                    color:
+                      type: string
+                    href:
+                      type: string
+                    balances:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          token:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              address:
+                                type: string
+                              name:
+                                type: string
+                              chainId:
+                                type: number
+                              decimals:
+                                type: number
+                              symbol:
+                                type: string
+                            required:
+                            - id
+                            - address
+                            - name
+                            - chainId
+                            - decimals
+                            - symbol
+                            additionalProperties: false
+                          address:
+                            type: string
+                          amount:
+                            type: number
+                          title:
+                            type: string
+                          color:
+                            type: string
+                          icon:
+                            type: string
+                          href:
+                            type: string
+                          marketUtilization:
+                            type: number
+                          marketLiquidity:
+                            type: number
+                          marketApy:
+                            type: number
+                          ratio:
+                            type: number
+                        required:
+                        - token
+                        - address
+                        - amount
+                        - title
+                        - icon
+                        additionalProperties: false
+                    amount:
+                      type: number
+                    liquidAmount:
+                      type: number
+                  required:
+                  - id
+                  - title
+                  - description
+                  - icon
+                  - brandIcon
+                  - color
+                  - balances
+                  - amount
+                  additionalProperties: false
+        '404':
+          description: Token not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenCollaterals
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: chainId
+        schema:
+          type: number
+      description: Get token collaterals
+  /api/v2/{token}/amo:
+    get:
+      responses:
+        '200':
+          description: AMO info
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  contract:
+                    type: string
+                  timestamp:
+                    type: number
+                  ownership:
+                    type: number
+                  balance0:
+                    type: number
+                  balance1:
+                    type: number
+                  roi:
+                    type: number
+                  totalSupply:
+                    type: number
+                  nonAmoApy:
+                    type: number
+                  currentWeekBribe:
+                    type: number
+                  bribeTokenBalance:
+                    type: number
+                  rebasingSupply:
+                    type: number
+                required:
+                - contract
+                - timestamp
+                - ownership
+                - balance0
+                - balance1
+                - roi
+                - totalSupply
+                - nonAmoApy
+                - currentWeekBribe
+                - bribeTokenBalance
+                - rebasingSupply
+                additionalProperties: false
+        '404':
+          description: No token found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2ByTokenAmo
+      tags:
+      - token
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      description: Get AMO info

@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account beacon-chain API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: beacon-chain
+paths:
+  /api/v2/beacon-chain/exit-time:
+    get:
+      responses:
+        '200':
+          description: Validator exit time
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  exitTimeInDays:
+                    type: number
+                  sweepTimeInDays:
+                    type: number
+                  beaconchain_entering:
+                    type: number
+                  beaconchain_exiting:
+                    type: number
+                  validatorscount:
+                    type: number
+                  beaconchain_entering_balance:
+                    type: number
+                  beaconchain_exiting_balance:
+                    type: number
+                required:
+                - exitTimeInDays
+                - sweepTimeInDays
+                - beaconchain_entering
+                - beaconchain_exiting
+                - validatorscount
+                - beaconchain_entering_balance
+                - beaconchain_exiting_balance
+                additionalProperties: false
+      operationId: getApiV2Beacon-chainExit-time
+      tags:
+      - beacon-chain
+      parameters: []
+      description: Get validator exit time

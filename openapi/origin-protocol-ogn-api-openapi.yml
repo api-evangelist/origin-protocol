@@ -1,0 +1,264 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account ogn API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: ogn
+paths:
+  /api/v2/ogn/buyback_stats:
+    get:
+      responses:
+        '200':
+          description: Buyback stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalOgnBought:
+                    type: number
+                  totalAmountSold:
+                    type: number
+                  totalOgnBoughtUSD:
+                    type: number
+                  firstBuybackTimestamp:
+                    type: number
+                  lastBuybackTimestamp:
+                    type: number
+                  buybacksCount:
+                    type: number
+                  buybacksDuration:
+                    type: number
+                  annualizedOgnBuybacks:
+                    type: number
+                  annualizedUsdBuybacks:
+                    type: number
+                required:
+                - totalOgnBought
+                - totalAmountSold
+                - totalOgnBoughtUSD
+                - firstBuybackTimestamp
+                - lastBuybackTimestamp
+                - buybacksCount
+                - buybacksDuration
+                - annualizedOgnBuybacks
+                - annualizedUsdBuybacks
+                additionalProperties: false
+      operationId: getApiV2OgnBuyback_stats
+      tags:
+      - ogn
+      parameters:
+      - in: query
+        name: startCumulative
+        schema:
+          type: number
+      description: Get buyback stats
+  /api/v2/ogn/buybacks:
+    get:
+      responses:
+        '200':
+          description: Buybacks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    timestamp:
+                      type: number
+                    operator:
+                      type: string
+                    tokenSold:
+                      type: string
+                    amountSold:
+                      type: number
+                    ognBought:
+                      type: number
+                    ognBoughtUSD:
+                      type: number
+                    txHash:
+                      type: string
+                  required:
+                  - id
+                  - timestamp
+                  - operator
+                  - tokenSold
+                  - amountSold
+                  - ognBought
+                  - ognBoughtUSD
+                  - txHash
+                  additionalProperties: false
+      operationId: getApiV2OgnBuybacks
+      tags:
+      - ogn
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      description: Get buybacks
+  /api/v2/ogn/daily_buybacks:
+    get:
+      responses:
+        '200':
+          description: Daily buybacks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    timestamp:
+                      type: number
+                    amountSold:
+                      type: number
+                    ognBought:
+                      type: number
+                    ognBoughtUSD:
+                      type: number
+                    cumulativeAmountSold:
+                      type: number
+                    cumulativeOgnBought:
+                      type: number
+                    cumulativeOgnBoughtUSD:
+                      type: number
+                  required:
+                  - id
+                  - timestamp
+                  - amountSold
+                  - ognBought
+                  - ognBoughtUSD
+                  - cumulativeAmountSold
+                  - cumulativeOgnBought
+                  - cumulativeOgnBoughtUSD
+                  additionalProperties: false
+      operationId: getApiV2OgnDaily_buybacks
+      tags:
+      - ogn
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: number
+      - in: query
+        name: offset
+        schema:
+          type: number
+      - in: query
+        name: startCumulative
+        schema:
+          type: number
+      description: Get daily buybacks
+  /api/v2/ogn/price:
+    get:
+      responses:
+        '200':
+          description: OGN price in USD
+          content:
+            application/json:
+              schema:
+                type: number
+        '503':
+          description: Price temporarily unavailable
+      operationId: getApiV2OgnPrice
+      tags:
+      - ogn
+      parameters: []
+      description: Get OGN price in USD from CoinGecko (cached to respect rate limits)
+  /api/v2/ogn/lockup_stats:
+    get:
+      responses:
+        '200':
+          description: Lockup stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  averageLockDuration:
+                    type: number
+                  averageOgnLockSize:
+                    type: number
+                  averageXognLockSize:
+                    type: number
+                  totalOgnLocked:
+                    type: number
+                  totalXognLocked:
+                    type: number
+                required:
+                - averageLockDuration
+                - averageOgnLockSize
+                - averageXognLockSize
+                - totalOgnLocked
+                - totalXognLocked
+                additionalProperties: false
+      operationId: getApiV2OgnLockup_stats
+      tags:
+      - ogn
+      parameters: []
+      description: Get lockup stats
+  /api/v2/ogn/staking:
+    get:
+      responses:
+        '200':
+          description: Staking data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ognRewardsPerYear:
+                    type: number
+                  ognStakePercentage:
+                    type: number
+                  maxOgnApy:
+                    type: number
+                required:
+                - ognRewardsPerYear
+                - ognStakePercentage
+                - maxOgnApy
+                additionalProperties: false
+      operationId: getApiV2OgnStaking
+      tags:
+      - ogn
+      parameters: []
+      description: Get staking data
+  /api/v2/ogn/supply:
+    get:
+      responses:
+        '200':
+          description: OGN supply
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalSupply:
+                    type: number
+                  circulatingSupply:
+                    type: number
+                required:
+                - totalSupply
+                - circulatingSupply
+                additionalProperties: false
+      operationId: getApiV2OgnSupply
+      tags:
+      - ogn
+      parameters: []
+      description: Get OGN supply

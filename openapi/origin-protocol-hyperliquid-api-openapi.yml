@@ -1,0 +1,250 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account hyperliquid API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: hyperliquid
+paths:
+  /api/v2/hyperliquid/funding_rates/{coin}:
+    get:
+      responses:
+        '200':
+          description: hyperliquid funding rates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    coin:
+                      type: string
+                    fundingRate:
+                      type: string
+                    premium:
+                      type: string
+                    time:
+                      type: number
+                    date:
+                      type: string
+                  required:
+                  - coin
+                  - fundingRate
+                  - premium
+                  - time
+                  - date
+                  additionalProperties: false
+        '404':
+          description: Coin not found
+          content:
+            application/json:
+              schema:
+                type: string
+      operationId: getApiV2HyperliquidFunding_ratesByCoin
+      tags:
+      - hyperliquid
+      parameters:
+      - in: path
+        name: coin
+        schema:
+          type: string
+          enum:
+          - BTC
+          - ETH
+          - SOL
+          - SUI
+          - XRP
+          - ADA
+          - kPEPE
+          - HYPE
+          - FARTCOIN
+          - DOGE
+          - S
+        required: true
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - csv
+          - json
+      - in: query
+        name: average
+        schema:
+          type: string
+          enum:
+          - 'true'
+          - 'false'
+      description: Get hyperliquid funding rates
+  /api/v2/hyperliquid/liquidity_by_coin/{coin}:
+    get:
+      responses:
+        '200':
+          description: hyperliquid liquidity by coin
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                    time:
+                      type: number
+                    mid_price:
+                      type: number
+                    median_liquidity:
+                      type: number
+                    median_slippage_0:
+                      type: number
+                    median_slippage_1000:
+                      type: number
+                    median_slippage_3000:
+                      type: number
+                    median_slippage_10000:
+                      type: number
+                    median_slippage_30000:
+                      type: number
+                    median_slippage_100000:
+                      type: number
+                  required:
+                  - date
+                  - time
+                  - mid_price
+                  - median_liquidity
+                  - median_slippage_0
+                  - median_slippage_1000
+                  - median_slippage_3000
+                  - median_slippage_10000
+                  - median_slippage_30000
+                  - median_slippage_100000
+                  additionalProperties: false
+        '404':
+          description: Coin not found
+          content:
+            application/json:
+              schema:
+                type: string
+      operationId: getApiV2HyperliquidLiquidity_by_coinByCoin
+      tags:
+      - hyperliquid
+      parameters:
+      - in: path
+        name: coin
+        schema:
+          type: string
+          enum:
+          - BTC
+          - ETH
+          - SOL
+          - SUI
+          - XRP
+          - ADA
+          - kPEPE
+          - HYPE
+          - FARTCOIN
+          - DOGE
+          - S
+        required: true
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - csv
+          - json
+      - in: query
+        name: average
+        schema:
+          type: string
+          enum:
+          - 'true'
+          - 'false'
+      - in: query
+        name: key
+        schema:
+          type: string
+          enum:
+          - median_liquidity
+          - median_slippage_0
+          - median_slippage_1000
+          - median_slippage_3000
+          - median_slippage_10000
+          - median_slippage_30000
+          - median_slippage_100000
+      description: Get hyperliquid liquidity by coin
+  /api/v2/hyperliquid/open_interests/{coin}:
+    get:
+      responses:
+        '200':
+          description: hyperliquid open interests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                    time:
+                      type: number
+                    open_interest:
+                      type: number
+                    coin:
+                      type: string
+                  required:
+                  - date
+                  - time
+                  - open_interest
+                  - coin
+                  additionalProperties: false
+        '404':
+          description: Coin not found
+          content:
+            application/json:
+              schema:
+                type: string
+      operationId: getApiV2HyperliquidOpen_interestsByCoin
+      tags:
+      - hyperliquid
+      parameters:
+      - in: path
+        name: coin
+        schema:
+          type: string
+          enum:
+          - BTC
+          - ETH
+          - SOL
+          - SUI
+          - XRP
+          - ADA
+          - kPEPE
+          - HYPE
+          - FARTCOIN
+          - DOGE
+          - S
+        required: true
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - csv
+          - json
+      - in: query
+        name: average
+        schema:
+          type: string
+          enum:
+          - 'true'
+          - 'false'
+      description: Get hyperliquid open interests

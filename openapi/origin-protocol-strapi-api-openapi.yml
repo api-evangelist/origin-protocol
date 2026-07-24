@@ -1,0 +1,40 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account strapi API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: strapi
+paths:
+  /api/v2/strapi/post_slugs:
+    get:
+      responses:
+        '200':
+          description: Blog post slugs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                    locale:
+                      type: string
+                    updatedAt:
+                      type: string
+                  required:
+                  - slug
+                  - locale
+                  additionalProperties: false
+      operationId: getApiV2StrapiPost_slugs
+      tags:
+      - strapi
+      parameters: []
+      description: Get all blog post slugs

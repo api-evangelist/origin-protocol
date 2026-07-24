@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account oeth API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: oeth
+paths:
+  /api/v2/oeth/collateral:
+    get:
+      responses:
+        '200':
+          description: OETH collateral
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    total:
+                      type: string
+                    price:
+                      type: string
+                    value:
+                      type: string
+                  required:
+                  - name
+                  - total
+                  - price
+                  - value
+                  additionalProperties: false
+      operationId: getApiV2OethCollateral
+      tags:
+      - oeth
+      parameters: []
+      description: Get OETH collateral

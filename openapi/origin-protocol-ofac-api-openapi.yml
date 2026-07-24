@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account ofac API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: ofac
+paths:
+  /api/v2/ofac/blacklist:
+    get:
+      responses:
+        '200':
+          description: OFAC blacklist
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '503':
+          description: Blacklist temporarily unavailable
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+                additionalProperties: false
+      operationId: getApiV2OfacBlacklist
+      tags:
+      - ofac
+      parameters: []
+      description: Get OFAC sanctioned addresses across supported networks

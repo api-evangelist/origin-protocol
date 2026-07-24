@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account supply API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: supply
+paths:
+  /circulating-oeth:
+    get:
+      responses:
+        '200':
+          description: OETH circulating supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getCirculating-oeth
+      tags:
+      - supply
+      parameters: []
+      description: Get OETH circulating supply
+  /circulating-ogn:
+    get:
+      responses:
+        '200':
+          description: OGN circulating supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getCirculating-ogn
+      tags:
+      - supply
+      parameters: []
+      description: Get OGN circulating supply
+  /circulating-ogv:
+    get:
+      responses:
+        '200':
+          description: OGV circulating supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getCirculating-ogv
+      tags:
+      - supply
+      parameters: []
+      description: Get OGV circulating supply
+  /total-oeth:
+    get:
+      responses:
+        '200':
+          description: OETH total supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getTotal-oeth
+      tags:
+      - supply
+      parameters: []
+      description: Get OETH total supply
+  /total-ousd:
+    get:
+      responses:
+        '200':
+          description: OUSD total supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getTotal-ousd
+      tags:
+      - supply
+      parameters: []
+      description: Get OUSD total supply
+  /total-superoethb:
+    get:
+      responses:
+        '200':
+          description: superOETHb total supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getTotal-superoethb
+      tags:
+      - supply
+      parameters: []
+      description: Get superOETHb total supply
+  /total-os:
+    get:
+      responses:
+        '200':
+          description: OS total supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getTotal-os
+      tags:
+      - supply
+      parameters: []
+      description: Get OS total supply
+  /total-ogv:
+    get:
+      responses:
+        '200':
+          description: OGV total supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getTotal-ogv
+      tags:
+      - supply
+      parameters: []
+      description: Get OGV total supply
+  /total-ogn:
+    get:
+      responses:
+        '200':
+          description: OGN total supply
+          content:
+            application/json:
+              schema:
+                type: number
+      operationId: getTotal-ogn
+      tags:
+      - supply
+      parameters: []
+      description: Get OGN total supply

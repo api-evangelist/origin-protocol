@@ -1,0 +1,93 @@
+openapi: 3.1.0
+info:
+  title: defi-analytics account reports API
+  description: API for defi-analytics
+  version: 1.0.0
+servers:
+- url: http://localhost:8787
+  description: Local server
+- url: https://api.originprotocol.com
+  description: Production server
+tags:
+- name: reports
+paths:
+  /reports/weekly/unsubscribe/{id}:
+    get:
+      responses:
+        '200':
+          description: Unsubscribe page
+          content:
+            text/plain:
+              schema:
+                type: string
+      operationId: getReportsWeeklyUnsubscribeById
+      tags:
+      - reports
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      description: Unsubscribe confirmation page
+  /reports/weekly/unsubscribe:
+    post:
+      responses:
+        '200':
+          description: Unsubscribed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                required:
+                - success
+                additionalProperties: false
+        '500':
+          description: Error unsubscribing
+      operationId: postReportsWeeklyUnsubscribe
+      tags:
+      - reports
+      parameters: []
+      description: Perform unsubscribe action
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              required:
+              - id
+              additionalProperties: false
+  /reports/weekly/{year}/{week}:
+    get:
+      responses:
+        '200':
+          description: Weekly report
+          content:
+            text/html:
+              schema:
+                anyOf:
+                - type: string
+                - type: 'null'
+        '404':
+          description: Weekly report not found
+      operationId: getReportsWeeklyByYearByWeek
+      tags:
+      - reports
+      parameters:
+      - in: path
+        name: year
+        schema:
+          type: number
+        required: true
+      - in: path
+        name: week
+        schema:
+          type: number
+        required: true
+      description: Get weekly report
