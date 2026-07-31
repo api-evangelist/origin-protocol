@@ -1,0 +1,24 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Origin DeFi Analytics API
+  version: 1.0.0
+  x-generated: '2026-07-20'
+  x-method: generated
+  x-source: openapi/origin-protocol-openapi.json
+extends: openapi/origin-protocol-openapi.json
+actions:
+- target: $.servers
+  description: Promote the production server ahead of the local development server.
+  update:
+  - url: https://api.originprotocol.com
+    description: Production server
+  - url: http://localhost:8787
+    description: Local server
+- target: $.info
+  description: Annotate provider and public/no-auth posture.
+  update:
+    x-provider: Origin Protocol
+    x-authentication: none (public read API)
+    x-docs: https://docs.originprotocol.com/registry/api.md
+    x-disclaimer: Provider states this API is not intended for widespread or mission-critical
+      use.

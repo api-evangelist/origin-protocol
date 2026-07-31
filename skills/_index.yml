@@ -1,0 +1,11 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/origin-protocol-openapi.json
+api: Origin DeFi Analytics API
+skills:
+  - name: origin-protocol-token-yield
+    file: origin-protocol-token-yield.md
+    description: Pull current/historical yield, ratios, collateral, and supply for an Origin yield-bearing token (OUSD/OETH/superOETHb/OS).
+  - name: origin-protocol-protocol-revenue
+    file: origin-protocol-protocol-revenue.md
+    description: Report Origin Protocol revenue, fees, product stats, and OGN buyback activity.

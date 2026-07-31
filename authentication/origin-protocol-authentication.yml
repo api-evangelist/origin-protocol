@@ -1,0 +1,9 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/origin-protocol-openapi.json
+api: Origin DeFi Analytics API
+schemes: []
+summary: No authentication. The Origin DeFi Analytics REST API is public and read-only;
+  the OpenAPI declares no securitySchemes and the docs describe an open REST wrapper
+  over the (non-public) origin-squid GraphQL indexer.
+docs: https://docs.originprotocol.com/registry/api.md

@@ -1,0 +1,58 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/origin-protocol-openapi.json
+api: Origin DeFi Analytics API
+base_url: https://api.originprotocol.com
+authentication:
+  style: none
+  note: Public read API; no API key or OAuth. Not intended for mission-critical use
+    per the provider.
+versioning:
+  style: uri-path
+  current: v2
+  pattern: /api/v2/...
+  note: Version pinned in the path; some legacy top-level routes (e.g. /circulating-ogn)
+    exist outside /api/v2.
+pagination:
+  style: offset
+  params:
+  - offset
+  - limit
+  - cursor
+  note: Most list/time-series endpoints accept `offset` and `limit`; a few accept
+    `cursor`. `days` bounds trailing windows (values >100 may be unreliable).
+chain_selection:
+  param: chainId
+  default: 1
+  note: chainId query parameter selects the EVM chain; defaults to 1 (Ethereum mainnet).
+token_selection:
+  param: token
+  values:
+  - ousd
+  - oeth
+  - superoethb
+  - os
+  note: Token symbol supplied as a path parameter across most product endpoints.
+error_envelope:
+  media_type: application/json
+  shape: '{ "error": "<message>" }'
+  rfc9457: false
+  ref: errors/origin-protocol-problem-types.yml
+idempotency:
+  supported: false
+  note: Read-only analytics API; write endpoints are limited to internal watchlist
+    management. No Idempotency-Key documented.
+rate_limiting:
+  documented: false
+  note: No published rate-limit headers or quotas; treat as best-effort and cache
+    responses.
+media_types:
+  response:
+  - application/json
+  - text/plain
+  - text/html
+  note: Most endpoints return application/json; a few scalar totals return text/plain.
+cross_links:
+  errors: errors/origin-protocol-problem-types.yml
+  lifecycle: lifecycle/origin-protocol-lifecycle.yml
+  authentication: authentication/origin-protocol-authentication.yml

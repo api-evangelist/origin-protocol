@@ -1,8 +1,14 @@
 aid: origin-protocol
 name: Origin Protocol
-description: 'Origin Protocol is a company surfaced as a portfolio company of pantera-capital and added
-  to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Origin Protocol builds permissionless DeFi infrastructure for yield-bearing
+  tokens on Ethereum and L2s. Its products include Origin Ether (OETH) and Super OETH
+  liquid-staking tokens, the Origin Dollar (OUSD) yield-bearing stablecoin, Origin
+  Sonic (OS), the Automated Redemption Manager (ARM) arbitrage vaults, and the OGN
+  governance/value-accrual token backed by protocol-revenue buybacks. Origin publishes
+  a public read-only Analytics REST API (api.originprotocol.com) that wraps its
+  origin-squid indexer, exposing yield, supply, collateral, revenue, and buyback
+  data. Backed by Pantera Capital; surfaced into the API Evangelist network and
+  enriched from Origin''s own developer surfaces.'
 url: https://raw.githubusercontent.com/api-evangelist/origin-protocol/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +16,446 @@ x-backed-by:
 - pantera-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://docs.originprotocol.com/~gitbook/image
 tags:
 - Company
 - Crypto
-apis: []
+- DeFi
+- Analytics
+- Ethereum
+- Stablecoin
+- Liquid Staking
+- Yield
+- Blockchain
+apis:
+- aid: origin-protocol:origin-protocol-account-api
+  name: Origin Protocol account API
+  description: The account API from Origin Protocol — 2 operation(s) for account.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - account
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-account-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-arm-api
+  name: Origin Protocol arm API
+  description: The arm API from Origin Protocol — 11 operation(s) for arm.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - arm
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-arm-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-beacon-chain-api
+  name: Origin Protocol beacon-chain API
+  description: The beacon-chain API from Origin Protocol — 1 operation(s) for beacon-chain.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - beacon-chain
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-beacon-chain-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-cache-api
+  name: Origin Protocol cache API
+  description: The cache API from Origin Protocol — 1 operation(s) for cache.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - cache
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-cache-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-coingecko-api
+  name: Origin Protocol coingecko API
+  description: The coingecko API from Origin Protocol — 7 operation(s) for coingecko.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - coingecko
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-coingecko-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-defillama-api
+  name: Origin Protocol defillama API
+  description: The defillama API from Origin Protocol — 2 operation(s) for defillama.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - defillama
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-defillama-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-dune-api
+  name: Origin Protocol dune API
+  description: The dune API from Origin Protocol — 1 operation(s) for dune.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - dune
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-dune-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-hyperliquid-api
+  name: Origin Protocol hyperliquid API
+  description: The hyperliquid API from Origin Protocol — 3 operation(s) for hyperliquid.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - hyperliquid
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-hyperliquid-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-merkl-api
+  name: Origin Protocol merkl API
+  description: The merkl API from Origin Protocol — 4 operation(s) for merkl.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - merkl
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-merkl-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-oeth-api
+  name: Origin Protocol oeth API
+  description: The oeth API from Origin Protocol — 1 operation(s) for oeth.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - oeth
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-oeth-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-ofac-api
+  name: Origin Protocol ofac API
+  description: The ofac API from Origin Protocol — 1 operation(s) for ofac.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - ofac
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-ofac-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-ogn-api
+  name: Origin Protocol ogn API
+  description: The ogn API from Origin Protocol — 7 operation(s) for ogn.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - ogn
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-ogn-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-protocol-api
+  name: Origin Protocol protocol API
+  description: The protocol API from Origin Protocol — 8 operation(s) for protocol.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - protocol
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-protocol-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-reports-api
+  name: Origin Protocol reports API
+  description: The reports API from Origin Protocol — 3 operation(s) for reports.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - reports
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-reports-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-strapi-api
+  name: Origin Protocol strapi API
+  description: The strapi API from Origin Protocol — 1 operation(s) for strapi.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - strapi
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-strapi-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-supply-api
+  name: Origin Protocol supply API
+  description: The supply API from Origin Protocol — 9 operation(s) for supply.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - supply
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-supply-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-token-api
+  name: Origin Protocol token API
+  description: The token API from Origin Protocol — 12 operation(s) for token.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - token
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-token-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +463,26 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.originprotocol.com/en
+  url: https://www.originprotocol.com
+- type: DeveloperPortal
+  url: https://docs.originprotocol.com
+- type: Documentation
+  url: https://docs.originprotocol.com
+- type: APIReference
+  url: https://api.originprotocol.com/scalar
+- type: GitHubOrganization
+  url: https://github.com/OriginProtocol
+- type: Blog
+  url: https://www.originprotocol.com/blog
+- type: Authentication
+  url: authentication/origin-protocol-authentication.yml
+- type: LLMsTxt
+  url: llms/origin-protocol-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Security
+  url: security/origin-protocol-vulnerability-disclosure.yml
+- type: VulnerabilityDisclosure
+  url: security/origin-protocol-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/origin-protocol-domain-security.yml

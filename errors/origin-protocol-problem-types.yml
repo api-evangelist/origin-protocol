@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/origin-protocol-openapi.json
+api: Origin DeFi Analytics API
+format: custom
+envelope:
+  media_type: application/json
+  shape: '{ "error": "<message>" }'
+  note: Errors return a JSON object with a single string `error` field. This is NOT
+    RFC 9457 application/problem+json.
+problem_types:
+- status: 400
+  title: Bad Request
+  example_reason: Unsupported token
+  occurrences: 1
+  remediation: Check path/query parameters (token symbol, chainId, days) against the
+    operation contract.
+- status: 404
+  title: Not Found
+  example_reason: Token not found
+  occurrences: 25
+  remediation: The requested resource (token, ARM, account, or record) does not exist
+    for the given identifier; verify the symbol/address and chainId.
+- status: 500
+  title: Internal Server Error
+  example_reason: Error fetching Dune results
+  occurrences: 2
+  remediation: A server-side error occurred; retry with backoff and report persistent
+    failures via Discord.
+- status: 503
+  title: Service Unavailable
+  example_reason: Blacklist temporarily unavailable
+  occurrences: 2
+  remediation: The upstream indexer or data source is temporarily unavailable; retry
+    with exponential backoff.

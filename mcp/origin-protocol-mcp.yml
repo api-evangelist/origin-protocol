@@ -1,0 +1,301 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/origin-protocol-openapi.json
+status: candidate
+api: Origin DeFi Analytics API
+server:
+  hosted: null
+  note: No official hosted/remote MCP server found. Candidate tool list derived from
+    read-only OpenAPI GET operations.
+transport: stdio (candidate)
+tool_count: 72
+tools:
+- name: getApiV2AccountByAddressPortfolioHistory
+  method: GET
+  path: /api/v2/account/{address}/portfolio/history
+  description: Get single-wallet portfolio value history across all supported chains
+- name: getApiV2AccountByAddressActivity
+  method: GET
+  path: /api/v2/account/{address}/activity
+  description: Get single-wallet activity feed across all supported chains
+- name: getApiV2ArmDaily_statsByToken
+  method: GET
+  path: /api/v2/arm/daily_stats/{token}
+  description: Get ARM daily stats
+- name: getApiV2ArmDaily_protocol_revenueByToken
+  method: GET
+  path: /api/v2/arm/daily_protocol_revenue/{token}
+  description: Get ARM daily protocol revenue
+- name: getApiV2ArmTrading-volumeByToken
+  method: GET
+  path: /api/v2/arm/trading-volume/{token}
+  description: Get ARM trading volume
+- name: getApiV2ArmSwapsByToken
+  method: GET
+  path: /api/v2/arm/swaps/{token}
+  description: Get ARM swaps
+- name: getApiV2ArmWithdrawal_requestsByToken
+  method: GET
+  path: /api/v2/arm/withdrawal_requests/{token}
+  description: Get ARM withdrawal requests
+- name: getApiV2ArmWithdrawal_statsByToken
+  method: GET
+  path: /api/v2/arm/withdrawal_stats/{token}
+  description: Get ARM withdrawal stats
+- name: getApiV2ArmLending-market-daily-apyByToken
+  method: GET
+  path: /api/v2/arm/lending-market-daily-apy/{token}
+  description: Get ARM lending market apy
+- name: getApiV2ArmAll-arms-trading-volume-usd
+  method: GET
+  path: /api/v2/arm/all-arms-trading-volume-usd
+  description: Get total USD trading volume for all arms
+- name: getApiV2ArmCoingeckoByToken
+  method: GET
+  path: /api/v2/arm/coingecko/{token}
+  description: Get ARM price call data
+- name: getApiV2Beacon-chainExit-time
+  method: GET
+  path: /api/v2/beacon-chain/exit-time
+  description: Get validator exit time
+- name: getApiV2CoingeckoNetworks
+  method: GET
+  path: /api/v2/coingecko/networks
+  description: Get coingecko networks
+- name: getApiV2CoingeckoPoolsByNetworkTokenByToken
+  method: GET
+  path: /api/v2/coingecko/pools/{network}/token/{token}
+  description: Get pools for a token and a chain
+- name: getApiV2CoingeckoOhlcvsByNetworkTokenByToken
+  method: GET
+  path: /api/v2/coingecko/ohlcvs/{network}/token/{token}
+  description: Get ohlcvs for a token
+- name: getApiV2CoingeckoOhlcvsByTokenId
+  method: GET
+  path: /api/v2/coingecko/ohlcvs/{tokenId}
+  description: Get ohlcvs for a tokenId
+- name: getApiV2CoingeckoWatchlist
+  method: GET
+  path: /api/v2/coingecko/watchlist
+  description: Get watchlist
+- name: getApiV2CoingeckoPriceByToken
+  method: GET
+  path: /api/v2/coingecko/price/{token}
+  description: Get token price call data
+- name: getApiV2DefillamaProtocols
+  method: GET
+  path: /api/v2/defillama/protocols
+  description: Get DefiLlama protocols
+- name: getApiV2DefillamaProtocolsApy
+  method: GET
+  path: /api/v2/defillama/protocols/apy
+  description: Get DefiLlama protocol APYs computed from revenue and TVL
+- name: getApiV2Dune
+  method: GET
+  path: /api/v2/dune
+  description: Get Dune Analytics query results
+- name: getApiV2Historical_trades
+  method: GET
+  path: /api/v2/historical_trades
+  description: Get ARM historical trades
+- name: getApiV2HyperliquidFunding_ratesByCoin
+  method: GET
+  path: /api/v2/hyperliquid/funding_rates/{coin}
+  description: Get hyperliquid funding rates
+- name: getApiV2HyperliquidLiquidity_by_coinByCoin
+  method: GET
+  path: /api/v2/hyperliquid/liquidity_by_coin/{coin}
+  description: Get hyperliquid liquidity by coin
+- name: getApiV2HyperliquidOpen_interestsByCoin
+  method: GET
+  path: /api/v2/hyperliquid/open_interests/{coin}
+  description: Get hyperliquid open interests
+- name: getApiV2MerklCampaignByTokenId
+  method: GET
+  path: /api/v2/merkl/campaign/{tokenId}
+  description: Get Merkl rewards
+- name: getApiV2MerklOpportunityByTokenId
+  method: GET
+  path: /api/v2/merkl/opportunity/{tokenId}
+  description: Get Merkl opportunity
+- name: getApiV2MerklByUserRewardsByTokenId
+  method: GET
+  path: /api/v2/merkl/{user}/rewards/{tokenId}
+  description: Get available, claimed, and pending Merkl rewards for a user and a
+    product id
+- name: getApiV2MerklByUserRewardsByTokenIdClaim-transaction
+  method: GET
+  path: /api/v2/merkl/{user}/rewards/{tokenId}/claim-transaction
+  description: Get Merkl reward claim transaction data for a user to sign in a dapp
+- name: getApiV2OethCollateral
+  method: GET
+  path: /api/v2/oeth/collateral
+  description: Get OETH collateral
+- name: getApiV2OfacBlacklist
+  method: GET
+  path: /api/v2/ofac/blacklist
+  description: Get OFAC sanctioned addresses across supported networks
+- name: getApiV2OgnBuyback_stats
+  method: GET
+  path: /api/v2/ogn/buyback_stats
+  description: Get buyback stats
+- name: getApiV2OgnBuybacks
+  method: GET
+  path: /api/v2/ogn/buybacks
+  description: Get buybacks
+- name: getApiV2OgnDaily_buybacks
+  method: GET
+  path: /api/v2/ogn/daily_buybacks
+  description: Get daily buybacks
+- name: getApiV2OgnPrice
+  method: GET
+  path: /api/v2/ogn/price
+  description: Get OGN price in USD from CoinGecko (cached to respect rate limits)
+- name: getApiV2OgnLockup_stats
+  method: GET
+  path: /api/v2/ogn/lockup_stats
+  description: Get lockup stats
+- name: getApiV2OgnStaking
+  method: GET
+  path: /api/v2/ogn/staking
+  description: Get staking data
+- name: getApiV2OgnSupply
+  method: GET
+  path: /api/v2/ogn/supply
+  description: Get OGN supply
+- name: getApiV2ProtocolProtocol-fees
+  method: GET
+  path: /api/v2/protocol/protocol-fees
+  description: Get protocol fees
+- name: getApiV2ProtocolCumulative_fees
+  method: GET
+  path: /api/v2/protocol/cumulative_fees
+  description: Get cumulative protocol fees
+- name: getApiV2ProtocolDaily_fees
+  method: GET
+  path: /api/v2/protocol/daily_fees
+  description: Get daily protocol fees
+- name: getApiV2ProtocolDaily_revenue
+  method: GET
+  path: /api/v2/protocol/daily_revenue
+  description: Get daily protocol revenue
+- name: getApiV2ProtocolCumulative_revenue
+  method: GET
+  path: /api/v2/protocol/cumulative_revenue
+  description: Get cumulative protocol revenue
+- name: getApiV2ProtocolDaily_total_supply
+  method: GET
+  path: /api/v2/protocol/daily_total_supply
+  description: Get daily total supply
+- name: getApiV2ProtocolContributors
+  method: GET
+  path: /api/v2/protocol/contributors
+  description: Get contributors
+- name: getApiV2ProtocolProducts_stats
+  method: GET
+  path: /api/v2/protocol/products_stats
+  description: Get products stats
+- name: getApiV2StrapiPost_slugs
+  method: GET
+  path: /api/v2/strapi/post_slugs
+  description: Get all blog post slugs
+- name: getApiV2Tickers
+  method: GET
+  path: /api/v2/tickers
+  description: Get ARM tickers
+- name: getApiV2ByTokenWithdrawal_requests
+  method: GET
+  path: /api/v2/{token}/withdrawal_requests
+  description: Get token withdrawal requests
+- name: getApiV2ByTokenWithdrawal_stats
+  method: GET
+  path: /api/v2/{token}/withdrawal_stats
+  description: Get token withdrawal stats
+- name: getApiV2ByTokenAprHistory
+  method: GET
+  path: /api/v2/{token}/apr/history
+  description: Get APR history
+- name: getApiV2ByTokenAprTrailing_historyByDays
+  method: GET
+  path: /api/v2/{token}/apr/trailing_history/{days}
+  description: Get APR trailing history
+- name: getApiV2ByTokenStatsByStat
+  method: GET
+  path: /api/v2/{token}/stats/{stat}
+  description: Get token stats
+- name: getApiV2ByTokenAprTrailing
+  method: GET
+  path: /api/v2/{token}/apr/trailing
+  description: Get APR trailing
+- name: getApiV2ByTokenRatios
+  method: GET
+  path: /api/v2/{token}/ratios
+  description: Get token ratios
+- name: getApiV2ByTokenDaily_stats
+  method: GET
+  path: /api/v2/{token}/daily_stats
+  description: Get token daily stats
+- name: getApiV2ByTokenDaily_protocol_revenue
+  method: GET
+  path: /api/v2/{token}/daily_protocol_revenue
+  description: Get token daily protocol revenue
+- name: getApiV2ByTokenMorpho_collateral
+  method: GET
+  path: /api/v2/{token}/morpho_collateral
+  description: Get Morpho-only collateral exposure for an oToken
+- name: getApiV2ByTokenCollaterals
+  method: GET
+  path: /api/v2/{token}/collaterals
+  description: Get token collaterals
+- name: getApiV2ByTokenAmo
+  method: GET
+  path: /api/v2/{token}/amo
+  description: Get AMO info
+- name: getCirculating-oeth
+  method: GET
+  path: /circulating-oeth
+  description: Get OETH circulating supply
+- name: getCirculating-ogn
+  method: GET
+  path: /circulating-ogn
+  description: Get OGN circulating supply
+- name: getCirculating-ogv
+  method: GET
+  path: /circulating-ogv
+  description: Get OGV circulating supply
+- name: getTotal-oeth
+  method: GET
+  path: /total-oeth
+  description: Get OETH total supply
+- name: getTotal-ousd
+  method: GET
+  path: /total-ousd
+  description: Get OUSD total supply
+- name: getTotal-superoethb
+  method: GET
+  path: /total-superoethb
+  description: Get superOETHb total supply
+- name: getTotal-os
+  method: GET
+  path: /total-os
+  description: Get OS total supply
+- name: getTotal-ogv
+  method: GET
+  path: /total-ogv
+  description: Get OGV total supply
+- name: getTotal-ogn
+  method: GET
+  path: /total-ogn
+  description: Get OGN total supply
+- name: getReportsWeeklyUnsubscribeById
+  method: GET
+  path: /reports/weekly/unsubscribe/{id}
+  description: Unsubscribe confirmation page
+- name: getReportsWeeklyByYearByWeek
+  method: GET
+  path: /reports/weekly/{year}/{week}
+  description: Get weekly report
+- name: getCacheLast-updated
+  method: GET
+  path: /cache/last-updated
+  description: Get cache key last updated metadata

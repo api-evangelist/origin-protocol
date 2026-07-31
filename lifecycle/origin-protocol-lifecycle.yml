@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.originprotocol.com/registry/api.md
+api: Origin DeFi Analytics API
+versioning:
+  scheme: uri-path
+  current: v2
+  policy: Endpoints created incrementally as-needed; provider states the API is "not
+    intended for widespread use" and may change without notice.
+stability: best-effort
+support_channel: https://originprotocol.com/discord
+deprecation:
+  policy_documented: false
+  sunset_header: false
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation headers documented.
+status_page:
+  present: false
+  note: No public status page found (status.originprotocol.com does not resolve).
+sla:
+  documented: false
+deprecated_operations: []

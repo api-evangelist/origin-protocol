@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/origin-protocol-openapi.json
+api: Origin DeFi Analytics API
+standards:
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 securityScheme in the OpenAPI; API is public/no-auth.
+- id: oidc
+  conforms: false
+  evidence: No openIdConnect securityScheme; no /.well-known/openid-configuration
+    (SPA catch-all only).
+- id: rfc9457
+  conforms: false
+  evidence: 'Error responses use a custom {"error": string} JSON envelope, not application/problem+json.'
+- id: pagination
+  conforms: true
+  evidence: offset/limit (and cursor on some endpoints) query parameters across list/time-series
+    operations.
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key header documented; API is predominantly read-only.
+- id: json:api
+  conforms: false
+  evidence: Responses are bespoke JSON objects, not JSON:API document structure.
+- id: openapi
+  conforms: true
+  evidence: Publishes an OpenAPI 3.1.0 description at https://api.originprotocol.com/openapi
+    (Scalar reference).
