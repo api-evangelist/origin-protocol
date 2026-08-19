@@ -1,0 +1,279 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account arm API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "arm",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2ArmDaily_statsByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/daily_stats/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM daily stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmDaily_protocol_revenueByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/daily_protocol_revenue/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM daily protocol revenue"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmTrading-volumeByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/trading-volume/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM trading volume"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmSwapsByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/swaps/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM swaps"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmWithdrawal_requestsByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/withdrawal_requests/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM withdrawal requests"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmWithdrawal_statsByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/withdrawal_stats/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get ARM withdrawal stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmLending-market-daily-apyByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/lending-market-daily-apy/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM lending market apy"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmAll-arms-trading-volume-usd",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/all-arms-trading-volume-usd"
+          },
+          "docs": "Get total USD trading volume for all arms"
+        },
+        {
+          "info": {
+            "name": "getApiV2ArmCoingeckoByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/arm/coingecko/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get ARM price call data"
+        },
+        {
+          "info": {
+            "name": "getApiV2Historical_trades",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/historical_trades",
+            "params": [
+              {
+                "name": "ticker_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_time",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM historical trades"
+        },
+        {
+          "info": {
+            "name": "getApiV2Tickers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/tickers",
+            "params": [
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get ARM tickers"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

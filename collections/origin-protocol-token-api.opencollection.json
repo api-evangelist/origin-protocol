@@ -1,0 +1,334 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account token API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2ByTokenWithdrawal_requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/withdrawal_requests",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token withdrawal requests"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenWithdrawal_stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/withdrawal_stats",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token withdrawal stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenAprHistory",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/apr/history",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get APR history"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenAprTrailing_historyByDays",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/apr/trailing_history/:days",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get APR trailing history"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenStatsByStat",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/stats/:stat",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "stat",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenAprTrailing",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/apr/trailing",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get APR trailing"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenRatios",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/ratios",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token ratios"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenDaily_stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/daily_stats",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token daily stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenDaily_protocol_revenue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/daily_protocol_revenue",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token daily protocol revenue"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenMorpho_collateral",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/morpho_collateral",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Morpho-only collateral exposure for an oToken"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenCollaterals",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/collaterals",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get token collaterals"
+        },
+        {
+          "info": {
+            "name": "getApiV2ByTokenAmo",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/:token/amo",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get AMO info"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

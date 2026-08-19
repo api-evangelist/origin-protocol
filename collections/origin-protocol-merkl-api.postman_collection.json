@@ -1,0 +1,453 @@
+{
+  "item": [
+    {
+      "id": "e95f8a22-b93f-498d-8459-e60be2913255",
+      "name": "merkl",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "02519014-d7d6-4adb-891b-adb9b04636bb",
+          "name": "get Api V2Merkl Campaign By Token Id",
+          "request": {
+            "name": "get Api V2Merkl Campaign By Token Id",
+            "description": {
+              "content": "Get Merkl rewards",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "merkl",
+                "campaign",
+                ":tokenId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f65c62e3-72ff-4d75-baf3-85efcb68356a",
+              "name": "Merkl rewards",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "merkl",
+                    "campaign",
+                    ":tokenId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"computeChainId\": 8846.225966541595,\n  \"distributionChainId\": 8487.332719755894,\n  \"campaignId\": \"string\",\n  \"type\": \"string\",\n  \"amount\": \"string\",\n  \"startTimestamp\": \"string\",\n  \"endTimestamp\": \"string\",\n  \"creatorAddress\": \"string\",\n  \"params\": \"\",\n  \"chain\": {\n    \"id\": 8842.60233023921,\n    \"name\": \"string\",\n    \"icon\": \"string\",\n    \"liveCampaigns\": 177.16963030465993,\n    \"endOfDisputePeriod\": 1664.0203845707235,\n    \"lastClaimsOnchainFetchTimestamp\": \"string\",\n    \"explorers\": [\n      {\n        \"type\": \"string\",\n        \"url\": \"string\",\n        \"chainId\": 3262.739324036744\n      },\n      {\n        \"type\": \"string\",\n        \"url\": \"string\",\n        \"chainId\": 5089.088835384584\n      }\n    ]\n  },\n  \"rewardToken\": {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"chainId\": 5382.385343314327,\n    \"address\": \"string\",\n    \"decimals\": 9220.454045077535,\n    \"symbol\": \"string\",\n    \"icon\": \"string\",\n    \"verified\": false,\n    \"isNative\": true,\n    \"isTest\": true,\n    \"type\": \"TOKEN\",\n    \"price\": 3610.671373080555,\n    \"updatedAt\": 4561.980036980995,\n    \"priceSource\": \"string\",\n    \"displaySymbol\": \"string\",\n    \"underlyingTokenId\": \"string\",\n    \"priceAlertDismissedAt\": 7454.2348413655045,\n    \"priceAlertCount\": 3788.4695828532954\n  },\n  \"campaignStatus\": {\n    \"campaignId\": \"string\",\n    \"computedUntil\": \"string\",\n    \"processingStarted\": \"string\",\n    \"status\": \"string\",\n    \"preComputeProcessingStarted\": \"string\",\n    \"preComputeStatus\": \"string\",\n    \"delay\": 9322.41684621576,\n    \"error\": \"string\",\n    \"details\": \"\"\n  },\n  \"createdAt\": \"string\",\n  \"isPrivate\": false,\n  \"subType\": 7818.819432786257,\n  \"apr\": 3967.59711161641,\n  \"dailyRewards\": 9064.966147624034,\n  \"creator\": {\n    \"address\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"creatorId\": \"string\"\n  },\n  \"description\": \"string\",\n  \"rewardTokenId\": \"string\",\n  \"opportunityId\": \"string\",\n  \"distributionChain\": {\n    \"id\": 9296.728667559808,\n    \"name\": \"string\",\n    \"icon\": \"string\",\n    \"liveCampaigns\": 8727.501139667722,\n    \"endOfDisputePeriod\": 8666.395622625363,\n    \"lastClaimsOnchainFetchTimestamp\": \"string\",\n    \"explorers\": [\n      {\n        \"type\": \"string\",\n        \"url\": \"string\",\n        \"chainId\": 627.8060356736503\n      },\n      {\n        \"type\": \"string\",\n        \"url\": \"string\",\n        \"chainId\": 9663.534002106258\n      }\n    ]\n  },\n  \"distributionType\": \"string\",\n  \"rootCampaignId\": \"string\",\n  \"parentCampaignId\": \"string\",\n  \"childCampaignIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"dailyRewardsBreakdown\": [\n    {\n      \"campaignId\": \"string\",\n      \"value\": 5784.141611443212,\n      \"timestamp\": \"string\",\n      \"token\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 1064.4974142882502,\n        \"address\": \"string\",\n        \"decimals\": 570.806548985775,\n        \"symbol\": \"string\",\n        \"icon\": \"string\",\n        \"verified\": false,\n        \"isNative\": false,\n        \"isTest\": false,\n        \"type\": \"PRETGE\",\n        \"price\": 4610.120307301059,\n        \"updatedAt\": 5813.440175116196,\n        \"priceSource\": \"string\",\n        \"displaySymbol\": \"string\",\n        \"underlyingTokenId\": \"string\",\n        \"priceAlertDismissedAt\": 8601.964130873297,\n        \"priceAlertCount\": 5076.785362967548\n      },\n      \"amount\": \"string\",\n      \"maxValue\": 7722.534458394605,\n      \"distributionType\": \"string\",\n      \"onChainCampaignId\": \"string\"\n    },\n    {\n      \"campaignId\": \"string\",\n      \"value\": 4722.0325263874465,\n      \"timestamp\": \"string\",\n      \"token\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 3714.4560068535716,\n        \"address\": \"string\",\n        \"decimals\": 8616.16738434592,\n        \"symbol\": \"string\",\n        \"icon\": \"string\",\n        \"verified\": false,\n        \"isNative\": false,\n        \"isTest\": false,\n        \"type\": \"TOKEN\",\n        \"price\": 1271.977800086407,\n        \"updatedAt\": 1034.2208392135733,\n        \"priceSource\": \"string\",\n        \"displaySymbol\": \"string\",\n        \"underlyingTokenId\": \"string\",\n        \"priceAlertDismissedAt\": 8372.82160413756,\n        \"priceAlertCount\": 1019.2901127853038\n      },\n      \"amount\": \"string\",\n      \"maxValue\": 6346.018296335781,\n      \"distributionType\": \"string\",\n      \"onChainCampaignId\": \"string\"\n    }\n  ],\n  \"pauseCompute\": \"string\",\n  \"pausePrecompute\": \"string\",\n  \"hasOverrides\": false,\n  \"campaignEncodingHash\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e107ace5-77e0-4787-9f97-7af754aa7b9a",
+          "name": "get Api V2Merkl Opportunity By Token Id",
+          "request": {
+            "name": "get Api V2Merkl Opportunity By Token Id",
+            "description": {
+              "content": "Get Merkl opportunity",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "merkl",
+                "opportunity",
+                ":tokenId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4e6eaba0-97f1-4eaf-8113-944ddfd7698c",
+              "name": "Merkl opportunity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "merkl",
+                    "opportunity",
+                    ":tokenId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"type\": \"string\",\n  \"identifier\": \"string\",\n  \"chainId\": 13.709969730384408,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"howToSteps\": [\n    \"string\",\n    \"string\"\n  ],\n  \"status\": \"LIVE\",\n  \"action\": \"LONG\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tvl\": 2105.635041450803,\n  \"apr\": 7306.0127415271345,\n  \"dailyRewards\": 8668.840547420465,\n  \"liveCampaigns\": 1637.325786544175,\n  \"lastCampaignCreatedAt\": 3219.8111718098544,\n  \"tokens\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 1121.6322495430043,\n      \"address\": \"string\",\n      \"decimals\": 3080.285331073188,\n      \"symbol\": \"string\",\n      \"icon\": \"string\",\n      \"verified\": false,\n      \"isNative\": true,\n      \"isTest\": false,\n      \"type\": \"TOKEN\",\n      \"price\": 7946.896469610807,\n      \"updatedAt\": 2009.6930420907388,\n      \"priceSource\": \"string\",\n      \"displaySymbol\": \"string\",\n      \"underlyingTokenId\": \"string\",\n      \"priceAlertDismissedAt\": 2174.0846788762647,\n      \"priceAlertCount\": 2089.3268355064133\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 4986.153503889807,\n      \"address\": \"string\",\n      \"decimals\": 5890.997361887179,\n      \"symbol\": \"string\",\n      \"icon\": \"string\",\n      \"verified\": true,\n      \"isNative\": true,\n      \"isTest\": true,\n      \"type\": \"POINT\",\n      \"price\": 8490.455434872092,\n      \"updatedAt\": 7278.673852505496,\n      \"priceSource\": \"string\",\n      \"displaySymbol\": \"string\",\n      \"underlyingTokenId\": \"string\",\n      \"priceAlertDismissedAt\": 7673.403017838812,\n      \"priceAlertCount\": 1410.6338892682456\n    }\n  ],\n  \"chain\": {\n    \"id\": 7834.553017156764,\n    \"name\": \"string\",\n    \"icon\": \"string\",\n    \"liveCampaigns\": 9565.359858941769,\n    \"endOfDisputePeriod\": 8980.845933338154,\n    \"lastClaimsOnchainFetchTimestamp\": \"string\",\n    \"explorers\": [\n      {\n        \"type\": \"string\",\n        \"url\": \"string\",\n        \"chainId\": 3825.10812483564\n      },\n      {\n        \"type\": \"string\",\n        \"url\": \"string\",\n        \"chainId\": 9649.915525692017\n      }\n    ]\n  },\n  \"activePrograms\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"slug\": \"string\",\n      \"description\": \"string\",\n      \"icon\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"slug\": \"string\",\n      \"description\": \"string\",\n      \"icon\": \"string\"\n    }\n  ],\n  \"mainProtocol\": \"string\",\n  \"depositUrl\": \"string\",\n  \"depositUrls\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"url\": \"string\",\n      \"priority\": 636.2856989098864,\n      \"subtitle\": \"string\",\n      \"icon\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"url\": \"string\",\n      \"priority\": 5223.034565707503,\n      \"subtitle\": \"string\",\n      \"icon\": \"string\"\n    }\n  ],\n  \"explorerAddress\": \"string\",\n  \"hidden\": true,\n  \"maxDailyRewards\": 6971.027681693108,\n  \"earliestCampaignStart\": \"string\",\n  \"latestCampaignStart\": \"string\",\n  \"earliestCampaignEnd\": \"string\",\n  \"latestCampaignEnd\": \"string\",\n  \"nativeApr\": 4506.471663999742,\n  \"maxApr\": 6203.853458209172,\n  \"liveCampaignsForCreator\": 4355.494914409209,\n  \"soonCampaignsForCreator\": 2088.5106046764836,\n  \"pastCampaignsForCreator\": 6214.398134641838,\n  \"distributionType\": \"string\",\n  \"protocol\": {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"icon\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"description\": \"string\",\n    \"url\": \"string\",\n    \"banner\": \"string\",\n    \"opportunityBannerLight\": \"string\",\n    \"opportunityBannerDark\": \"string\",\n    \"dailyRewards\": 1672.8904392383138,\n    \"numberOfLiveCampaigns\": 6994.602046847158,\n    \"opportunityLiveTags\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"aprRecord\": {\n    \"cumulated\": 5973.007057372874,\n    \"timestamp\": \"string\",\n    \"breakdowns\": [\n      {\n        \"identifier\": \"string\",\n        \"type\": \"CAMPAIGN\",\n        \"value\": 5164.95152517242,\n        \"timestamp\": \"string\",\n        \"distributionType\": \"string\"\n      },\n      {\n        \"identifier\": \"string\",\n        \"type\": \"TOKEN\",\n        \"value\": 6352.56104443544,\n        \"timestamp\": \"string\",\n        \"distributionType\": \"string\"\n      }\n    ]\n  },\n  \"nativeAprRecord\": {\n    \"title\": \"string\",\n    \"value\": 8997.760762422373,\n    \"timestamp\": \"string\",\n    \"description\": \"string\",\n    \"amount\": \"string\",\n    \"rewardToken\": {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 8694.293478181615,\n      \"address\": \"string\",\n      \"decimals\": 25.94043135887736,\n      \"symbol\": \"string\",\n      \"icon\": \"string\",\n      \"verified\": true,\n      \"isNative\": false,\n      \"isTest\": true,\n      \"type\": \"PRETGE\",\n      \"price\": 5879.907430000783,\n      \"updatedAt\": 9438.498930303942,\n      \"priceSource\": \"string\",\n      \"displaySymbol\": \"string\",\n      \"underlyingTokenId\": \"string\",\n      \"priceAlertDismissedAt\": 1143.933714025881,\n      \"priceAlertCount\": 5382.108031813601\n    }\n  },\n  \"tvlRecord\": {\n    \"total\": 41.75844781582394,\n    \"timestamp\": \"string\",\n    \"breakdowns\": [\n      {\n        \"identifier\": \"string\",\n        \"type\": \"TOKEN\",\n        \"value\": 1269.2889483682568\n      },\n      {\n        \"identifier\": \"string\",\n        \"type\": \"PROTOCOL\",\n        \"value\": 4515.089760402389\n      }\n    ]\n  },\n  \"rewardsRecord\": {\n    \"total\": 3725.287940392976,\n    \"timestamp\": \"string\",\n    \"breakdowns\": [\n      {\n        \"campaignId\": \"string\",\n        \"value\": 7742.679442497019,\n        \"timestamp\": \"string\",\n        \"token\": {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"chainId\": 7790.864165129805,\n          \"address\": \"string\",\n          \"decimals\": 6517.168089444356,\n          \"symbol\": \"string\",\n          \"icon\": \"string\",\n          \"verified\": true,\n          \"isNative\": false,\n          \"isTest\": true,\n          \"type\": \"PRETGE\",\n          \"price\": 9990.289304486418,\n          \"updatedAt\": 9858.644878476336,\n          \"priceSource\": \"string\",\n          \"displaySymbol\": \"string\",\n          \"underlyingTokenId\": \"string\",\n          \"priceAlertDismissedAt\": 8858.877596805925,\n          \"priceAlertCount\": 6079.430348594678\n        },\n        \"amount\": \"string\",\n        \"maxValue\": 4904.416295697041,\n        \"distributionType\": \"string\",\n        \"onChainCampaignId\": \"string\"\n      },\n      {\n        \"campaignId\": \"string\",\n        \"value\": 1925.9596538155865,\n        \"timestamp\": \"string\",\n        \"token\": {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"chainId\": 6346.8727870431785,\n          \"address\": \"string\",\n          \"decimals\": 1158.9010249435883,\n          \"symbol\": \"string\",\n          \"icon\": \"string\",\n          \"verified\": false,\n          \"isNative\": true,\n          \"isTest\": true,\n          \"type\": \"TOKEN\",\n          \"price\": 398.21876753478034,\n          \"updatedAt\": 5342.040411218752,\n          \"priceSource\": \"string\",\n          \"displaySymbol\": \"string\",\n          \"underlyingTokenId\": \"string\",\n          \"priceAlertDismissedAt\": 4739.516593704306,\n          \"priceAlertCount\": 5193.02242583696\n        },\n        \"amount\": \"string\",\n        \"maxValue\": 7558.384810028012,\n        \"distributionType\": \"string\",\n        \"onChainCampaignId\": \"string\"\n      }\n    ]\n  },\n  \"campaigns\": [\n    {\n      \"id\": \"string\",\n      \"computeChainId\": 118.87377227673745,\n      \"distributionChainId\": 8739.939353512344,\n      \"campaignId\": \"string\",\n      \"type\": \"string\",\n      \"amount\": \"string\",\n      \"startTimestamp\": \"string\",\n      \"endTimestamp\": \"string\",\n      \"creatorAddress\": \"string\",\n      \"params\": \"\",\n      \"chain\": {\n        \"id\": 7013.513269768181,\n        \"name\": \"string\",\n        \"icon\": \"string\",\n        \"liveCampaigns\": 9968.071576439403,\n        \"endOfDisputePeriod\": 2163.6870957740284,\n        \"lastClaimsOnchainFetchTimestamp\": \"string\",\n        \"explorers\": [\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 1342.882243528124\n          },\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 2520.102679278692\n          }\n        ]\n      },\n      \"rewardToken\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 365.81559231763316,\n        \"address\": \"string\",\n        \"decimals\": 6082.096260460024,\n        \"symbol\": \"string\",\n        \"icon\": \"string\",\n        \"verified\": true,\n        \"isNative\": true,\n        \"isTest\": false,\n        \"type\": \"PRETGE\",\n        \"price\": 5258.260393777856,\n        \"updatedAt\": 5721.541907322657,\n        \"priceSource\": \"string\",\n        \"displaySymbol\": \"string\",\n        \"underlyingTokenId\": \"string\",\n        \"priceAlertDismissedAt\": 7558.558070808303,\n        \"priceAlertCount\": 6539.22773743158\n      },\n      \"campaignStatus\": {\n        \"campaignId\": \"string\",\n        \"computedUntil\": \"string\",\n        \"processingStarted\": \"string\",\n        \"status\": \"string\",\n        \"preComputeProcessingStarted\": \"string\",\n        \"preComputeStatus\": \"string\",\n        \"delay\": 4257.886810603094,\n        \"error\": \"string\",\n        \"details\": \"\"\n      },\n      \"createdAt\": \"string\",\n      \"isPrivate\": false,\n      \"subType\": 9380.941178214176,\n      \"apr\": 3721.48304825245,\n      \"dailyRewards\": 2276.3237548864035,\n      \"creator\": {\n        \"address\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"creatorId\": \"string\"\n      },\n      \"description\": \"string\",\n      \"rewardTokenId\": \"string\",\n      \"opportunityId\": \"string\",\n      \"distributionChain\": {\n        \"id\": 2186.555662757229,\n        \"name\": \"string\",\n        \"icon\": \"string\",\n        \"liveCampaigns\": 8677.242127600512,\n        \"endOfDisputePeriod\": 9515.523123172965,\n        \"lastClaimsOnchainFetchTimestamp\": \"string\",\n        \"explorers\": [\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 3493.0681998811806\n          },\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 5112.087624415809\n          }\n        ]\n      },\n      \"distributionType\": \"string\",\n      \"rootCampaignId\": \"string\",\n      \"parentCampaignId\": \"string\",\n      \"childCampaignIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"dailyRewardsBreakdown\": [\n        {\n          \"campaignId\": \"string\",\n          \"value\": 883.9472719142339,\n          \"timestamp\": \"string\",\n          \"token\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"chainId\": 8048.787223549375,\n            \"address\": \"string\",\n            \"decimals\": 1415.1989058790148,\n            \"symbol\": \"string\",\n            \"icon\": \"string\",\n            \"verified\": false,\n            \"isNative\": true,\n            \"isTest\": true,\n            \"type\": \"POINT\",\n            \"price\": 2624.651759807983,\n            \"updatedAt\": 2082.9448275650766,\n            \"priceSource\": \"string\",\n            \"displaySymbol\": \"string\",\n            \"underlyingTokenId\": \"string\",\n            \"priceAlertDismissedAt\": 7999.014708518477,\n            \"priceAlertCount\": 6626.4615613148335\n          },\n          \"amount\": \"string\",\n          \"maxValue\": 3849.6074758621903,\n          \"distributionType\": \"string\",\n          \"onChainCampaignId\": \"string\"\n        },\n        {\n          \"campaignId\": \"string\",\n          \"value\": 1611.7393693943138,\n          \"timestamp\": \"string\",\n          \"token\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"chainId\": 2662.59234086764,\n            \"address\": \"string\",\n            \"decimals\": 79.048950935251,\n            \"symbol\": \"string\",\n            \"icon\": \"string\",\n            \"verified\": false,\n            \"isNative\": false,\n            \"isTest\": true,\n            \"type\": \"POINT\",\n            \"price\": 7711.136488455972,\n            \"updatedAt\": 9498.35757852699,\n            \"priceSource\": \"string\",\n            \"displaySymbol\": \"string\",\n            \"underlyingTokenId\": \"string\",\n            \"priceAlertDismissedAt\": 625.4578765888008,\n            \"priceAlertCount\": 853.3100764691359\n          },\n          \"amount\": \"string\",\n          \"maxValue\": 8592.281192373806,\n          \"distributionType\": \"string\",\n          \"onChainCampaignId\": \"string\"\n        }\n      ],\n      \"pauseCompute\": \"string\",\n      \"pausePrecompute\": \"string\",\n      \"hasOverrides\": false,\n      \"campaignEncodingHash\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"computeChainId\": 1722.0695355540495,\n      \"distributionChainId\": 2751.379962448498,\n      \"campaignId\": \"string\",\n      \"type\": \"string\",\n      \"amount\": \"string\",\n      \"startTimestamp\": \"string\",\n      \"endTimestamp\": \"string\",\n      \"creatorAddress\": \"string\",\n      \"params\": \"\",\n      \"chain\": {\n        \"id\": 4541.377264133985,\n        \"name\": \"string\",\n        \"icon\": \"string\",\n        \"liveCampaigns\": 4564.431525646967,\n        \"endOfDisputePeriod\": 8630.33549482537,\n        \"lastClaimsOnchainFetchTimestamp\": \"string\",\n        \"explorers\": [\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 7911.390882561299\n          },\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 4664.835801508633\n          }\n        ]\n      },\n      \"rewardToken\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 3440.56293611708,\n        \"address\": \"string\",\n        \"decimals\": 4055.9959531828126,\n        \"symbol\": \"string\",\n        \"icon\": \"string\",\n        \"verified\": true,\n        \"isNative\": false,\n        \"isTest\": false,\n        \"type\": \"PRETGE\",\n        \"price\": 2136.8122389734745,\n        \"updatedAt\": 7229.404363678089,\n        \"priceSource\": \"string\",\n        \"displaySymbol\": \"string\",\n        \"underlyingTokenId\": \"string\",\n        \"priceAlertDismissedAt\": 891.7416803837431,\n        \"priceAlertCount\": 7964.780793904206\n      },\n      \"campaignStatus\": {\n        \"campaignId\": \"string\",\n        \"computedUntil\": \"string\",\n        \"processingStarted\": \"string\",\n        \"status\": \"string\",\n        \"preComputeProcessingStarted\": \"string\",\n        \"preComputeStatus\": \"string\",\n        \"delay\": 7202.3452722158945,\n        \"error\": \"string\",\n        \"details\": \"\"\n      },\n      \"createdAt\": \"string\",\n      \"isPrivate\": false,\n      \"subType\": 4357.002471657379,\n      \"apr\": 6513.133285425452,\n      \"dailyRewards\": 6750.726195668504,\n      \"creator\": {\n        \"address\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"creatorId\": \"string\"\n      },\n      \"description\": \"string\",\n      \"rewardTokenId\": \"string\",\n      \"opportunityId\": \"string\",\n      \"distributionChain\": {\n        \"id\": 2809.632449103614,\n        \"name\": \"string\",\n        \"icon\": \"string\",\n        \"liveCampaigns\": 1512.0286907407299,\n        \"endOfDisputePeriod\": 6978.454089611538,\n        \"lastClaimsOnchainFetchTimestamp\": \"string\",\n        \"explorers\": [\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 6520.438869928324\n          },\n          {\n            \"type\": \"string\",\n            \"url\": \"string\",\n            \"chainId\": 5385.535779382868\n          }\n        ]\n      },\n      \"distributionType\": \"string\",\n      \"rootCampaignId\": \"string\",\n      \"parentCampaignId\": \"string\",\n      \"childCampaignIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"dailyRewardsBreakdown\": [\n        {\n          \"campaignId\": \"string\",\n          \"value\": 5115.618662784578,\n          \"timestamp\": \"string\",\n          \"token\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"chainId\": 5006.720777523431,\n            \"address\": \"string\",\n            \"decimals\": 4622.115484908871,\n            \"symbol\": \"string\",\n            \"icon\": \"string\",\n            \"verified\": false,\n            \"isNative\": false,\n            \"isTest\": false,\n            \"type\": \"PRETGE\",\n            \"price\": 5126.426825855894,\n            \"updatedAt\": 6206.340341469058,\n            \"priceSource\": \"string\",\n            \"displaySymbol\": \"string\",\n            \"underlyingTokenId\": \"string\",\n            \"priceAlertDismissedAt\": 5885.038447287513,\n            \"priceAlertCount\": 3048.289383085826\n          },\n          \"amount\": \"string\",\n          \"maxValue\": 4458.913220921149,\n          \"distributionType\": \"string\",\n          \"onChainCampaignId\": \"string\"\n        },\n        {\n          \"campaignId\": \"string\",\n          \"value\": 115.65324240702446,\n          \"timestamp\": \"string\",\n          \"token\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"chainId\": 8751.181506871835,\n            \"address\": \"string\",\n            \"decimals\": 5331.309224606612,\n            \"symbol\": \"string\",\n            \"icon\": \"string\",\n            \"verified\": true,\n            \"isNative\": false,\n            \"isTest\": true,\n            \"type\": \"POINT\",\n            \"price\": 6793.673596909218,\n            \"updatedAt\": 492.7762314976003,\n            \"priceSource\": \"string\",\n            \"displaySymbol\": \"string\",\n            \"underlyingTokenId\": \"string\",\n            \"priceAlertDismissedAt\": 6179.259381637813,\n            \"priceAlertCount\": 4861.49549698506\n          },\n          \"amount\": \"string\",\n          \"maxValue\": 5132.99137218553,\n          \"distributionType\": \"string\",\n          \"onChainCampaignId\": \"string\"\n        }\n      ],\n      \"pauseCompute\": \"string\",\n      \"pausePrecompute\": \"string\",\n      \"hasOverrides\": true,\n      \"campaignEncodingHash\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9cda13e3-6016-447f-9f98-641e9234d7e7",
+          "name": "get Api V2Merkl By User Rewards By Token Id",
+          "request": {
+            "name": "get Api V2Merkl By User Rewards By Token Id",
+            "description": {
+              "content": "Get available, claimed, and pending Merkl rewards for a user and a product id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "merkl",
+                ":user",
+                "rewards",
+                ":tokenId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "forceRefresh",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "03864965-3ad0-43fe-be24-8b19e8413189",
+              "name": "Merkl rewards grouped by chain",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "merkl",
+                    ":user",
+                    "rewards",
+                    ":tokenId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "forceRefresh",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"chain\": {\n      \"id\": 1002.9887109052005,\n      \"name\": \"string\"\n    },\n    \"amountUSD\": 4291.5133923432995,\n    \"claimedUSD\": 9411.748012203569,\n    \"pendingUSD\": 5003.5555340761985,\n    \"claimableUSD\": 8008.476399867874,\n    \"rewards\": [\n      {\n        \"token\": {\n          \"chainId\": 3057.451042450572,\n          \"address\": \"string\",\n          \"decimals\": 401.63043655557453,\n          \"symbol\": \"string\",\n          \"type\": \"TOKEN\"\n        },\n        \"amount\": 5761.342407516766,\n        \"claimed\": 7507.311165433712,\n        \"pending\": 8714.033638301671,\n        \"claimable\": 257.8436852824639,\n        \"proofs\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"token\": {\n          \"chainId\": 3320.0409670738686,\n          \"address\": \"string\",\n          \"decimals\": 2593.310910510117,\n          \"symbol\": \"string\",\n          \"type\": \"TOKEN\"\n        },\n        \"amount\": 1086.8856958865513,\n        \"claimed\": 1886.5939428831614,\n        \"pending\": 8950.796621129068,\n        \"claimable\": 2260.537484826496,\n        \"proofs\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ]\n  },\n  {\n    \"chain\": {\n      \"id\": 312.17073748793564,\n      \"name\": \"string\"\n    },\n    \"amountUSD\": 2122.3316615433373,\n    \"claimedUSD\": 6973.902945522459,\n    \"pendingUSD\": 5917.376913529162,\n    \"claimableUSD\": 1614.6817032493154,\n    \"rewards\": [\n      {\n        \"token\": {\n          \"chainId\": 9268.617231097283,\n          \"address\": \"string\",\n          \"decimals\": 1326.5597989071086,\n          \"symbol\": \"string\",\n          \"type\": \"PRETGE\"\n        },\n        \"amount\": 1418.8918745923263,\n        \"claimed\": 669.2488699151278,\n        \"pending\": 3006.0513585745475,\n        \"claimable\": 4073.915862766253,\n        \"proofs\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"token\": {\n          \"chainId\": 316.1180388041063,\n          \"address\": \"string\",\n          \"decimals\": 1972.7420453868883,\n          \"symbol\": \"string\",\n          \"type\": \"POINT\"\n        },\n        \"amount\": 7372.786463533387,\n        \"claimed\": 1387.22218138848,\n        \"pending\": 2803.6841019110348,\n        \"claimable\": 5417.409461508315,\n        \"proofs\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c709e49b-30a1-460c-bd23-a88c829053f4",
+          "name": "get Api V2Merkl By User Rewards By Token Id Claim-transaction",
+          "request": {
+            "name": "get Api V2Merkl By User Rewards By Token Id Claim-transaction",
+            "description": {
+              "content": "Get Merkl reward claim transaction data for a user to sign in a dapp",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "merkl",
+                ":user",
+                "rewards",
+                ":tokenId",
+                "claim-transaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fdb5d21d-8af5-496b-b250-fa185c78faef",
+              "name": "Unsigned Merkl claim transactions grouped by chain",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "merkl",
+                    ":user",
+                    "rewards",
+                    ":tokenId",
+                    "claim-transaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"transactions\": [\n    {\n      \"chainId\": 1395.1267562681592,\n      \"from\": \"string\",\n      \"to\": \"string\",\n      \"value\": \"string\",\n      \"data\": \"string\"\n    },\n    {\n      \"chainId\": 9929.45369260184,\n      \"from\": \"string\",\n      \"to\": \"string\",\n      \"value\": \"string\",\n      \"data\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "99a4cb38-18c4-4922-befe-1df223d4c066",
+    "name": "defi-analytics account merkl API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

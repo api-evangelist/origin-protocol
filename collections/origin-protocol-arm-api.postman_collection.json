@@ -1,0 +1,1635 @@
+{
+  "item": [
+    {
+      "id": "01ee2fe3-a379-4afa-99a5-ea9e7736b16d",
+      "name": "arm",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bfaa4db6-e13a-4431-93d0-449a522c21bd",
+          "name": "get Api V2Arm Daily stats By Token",
+          "request": {
+            "name": "get Api V2Arm Daily stats By Token",
+            "description": {
+              "content": "Get ARM daily stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "daily_stats",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c1619288-4c16-438d-bf6f-87d3b62b2106",
+              "name": "ARM daily stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "daily_stats",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"timestamp\": 5557.206682447646,\n    \"date\": \"string\",\n    \"address\": \"string\",\n    \"totalAssets\": 3121.259781434661,\n    \"rateUSD\": 5657.222432742025,\n    \"rateETH\": 1146.2701869341975,\n    \"rateNative\": 3539.6870066505357,\n    \"rateAsset\": 5441.877698893944,\n    \"totalAssetsCap\": 2851.4271324499696,\n    \"totalSupply\": 4247.606444363626,\n    \"assets\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetSymbols\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetBalances\": [\n      4352.035635782812,\n      2753.4564845955247\n    ],\n    \"assetTotals\": [\n      1481.578002163465,\n      2188.7425818972183\n    ],\n    \"assetRates\": [\n      1786.2816647626223,\n      5012.773735434162\n    ],\n    \"outstandingAssets\": [\n      9145.620458090942,\n      9777.484806850518\n    ],\n    \"ratesUSD\": [\n      5.7697417892421665,\n      2279.5265684097876\n    ],\n    \"ratesETH\": [\n      763.9405652689502,\n      4002.963480913009\n    ],\n    \"ratesNative\": [\n      2247.103737212114,\n      2201.743857895855\n    ],\n    \"ratesAsset\": [\n      4615.192931323297,\n      9935.780693350818\n    ],\n    \"assetsPerShare\": 7611.091239197452,\n    \"totalDeposits\": 8836.17514632046,\n    \"totalWithdrawals\": 4386.062061177914,\n    \"totalWithdrawalsClaimed\": 1320.9090166155602,\n    \"marketAssets\": 9183.127301675784,\n    \"apr\": 6286.944890889139,\n    \"apy\": 3944.1058323185384,\n    \"yield\": 8514.765285591891,\n    \"fees\": 6472.3240889445,\n    \"apy7\": 7011.970432703436,\n    \"apy14\": 5999.685873759871,\n    \"apy30\": 645.3451237364926,\n    \"bestApy\": 6456.074550204726,\n    \"bestApyTrailingDays\": 6984.371760060105,\n    \"baseApy\": 2884.3478697669566,\n    \"baseApr\": 4147.095596624624,\n    \"baseYield\": 6547.1280263325625,\n    \"incentiveYield\": 3743.2716034697346,\n    \"incentiveApr\": 2599.0127087581996,\n    \"incentiveApy\": 6951.656708529079\n  },\n  {\n    \"id\": \"string\",\n    \"timestamp\": 3035.070219037275,\n    \"date\": \"string\",\n    \"address\": \"string\",\n    \"totalAssets\": 3519.8482344378003,\n    \"rateUSD\": 3387.7397426333478,\n    \"rateETH\": 129.40060609757498,\n    \"rateNative\": 4895.439972026075,\n    \"rateAsset\": 2427.2687180784446,\n    \"totalAssetsCap\": 4231.897832357121,\n    \"totalSupply\": 5652.986866495769,\n    \"assets\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetSymbols\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetBalances\": [\n      9310.767364026702,\n      2303.249177133491\n    ],\n    \"assetTotals\": [\n      3359.5916834684713,\n      755.8808557718844\n    ],\n    \"assetRates\": [\n      5097.632653685743,\n      7682.261687789358\n    ],\n    \"outstandingAssets\": [\n      6475.747607043329,\n      9128.199179470497\n    ],\n    \"ratesUSD\": [\n      2706.4705670998555,\n      1584.1111837399635\n    ],\n    \"ratesETH\": [\n      940.4751031060343,\n      5262.609745452155\n    ],\n    \"ratesNative\": [\n      8739.9163665107,\n      6956.93488020015\n    ],\n    \"ratesAsset\": [\n      9249.716262792874,\n      7850.271461353585\n    ],\n    \"assetsPerShare\": 3362.0409025049103,\n    \"totalDeposits\": 4002.92523876164,\n    \"totalWithdrawals\": 5898.824526121748,\n    \"totalWithdrawalsClaimed\": 2251.9239940351777,\n    \"marketAssets\": 7245.806745633387,\n    \"apr\": 9776.70640383489,\n    \"apy\": 58.49672126911787,\n    \"yield\": 7913.995549658965,\n    \"fees\": 321.03832910690187,\n    \"apy7\": 5154.6154493010545,\n    \"apy14\": 982.9339749164701,\n    \"apy30\": 4715.528253044245,\n    \"bestApy\": 7779.88149251433,\n    \"bestApyTrailingDays\": 5091.633757321484,\n    \"baseApy\": 5127.840018633478,\n    \"baseApr\": 2279.1331828383563,\n    \"baseYield\": 9758.65178476432,\n    \"incentiveYield\": 3060.181625271526,\n    \"incentiveApr\": 3733.9150950643607,\n    \"incentiveApy\": 825.6239000594389\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c163b5b1-ec51-404c-8a36-1388057c86f3",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "daily_stats",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ce427ec0-8d14-493d-935b-ba12bab18bb3",
+          "name": "get Api V2Arm Daily protocol revenue By Token",
+          "request": {
+            "name": "get Api V2Arm Daily protocol revenue By Token",
+            "description": {
+              "content": "Get ARM daily protocol revenue",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "daily_protocol_revenue",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "40c3b01f-226e-4ab5-a8ef-899add9d94fa",
+              "name": "ARM daily protocol revenue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "daily_protocol_revenue",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": 1934.3452185537935,\n    \"date\": \"string\",\n    \"amount\": 3330.474139211629,\n    \"rateETH\": 7764.48946032432,\n    \"rateUSD\": 335.9862996783647,\n    \"rateNative\": 4147.176733858047,\n    \"rateAsset1\": 9593.451440112221,\n    \"avg7\": 4090.265410171351,\n    \"avg14\": 6890.390268308493,\n    \"avg30\": 7556.844898474028\n  },\n  {\n    \"timestamp\": 7016.215440985928,\n    \"date\": \"string\",\n    \"amount\": 8911.151926483177,\n    \"rateETH\": 8046.552325888993,\n    \"rateUSD\": 3310.7661662358155,\n    \"rateNative\": 718.4976971551904,\n    \"rateAsset1\": 7861.4645729484355,\n    \"avg7\": 4307.752354747928,\n    \"avg14\": 9069.478896795566,\n    \"avg30\": 3824.189106989858\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1138dd7b-3622-42b9-bf10-c07ecef1b4a5",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "daily_protocol_revenue",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8b963620-30d3-4356-8ac3-84411e2c1898",
+          "name": "get Api V2Arm Trading-volume By Token",
+          "request": {
+            "name": "get Api V2Arm Trading-volume By Token",
+            "description": {
+              "content": "Get ARM trading volume",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "trading-volume",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3f384d51-f007-41a9-8805-a8d9d5478606",
+              "name": "ARM trading volume",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "trading-volume",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": 5672.261082265161,\n    \"date\": \"string\",\n    \"dailyTradingVolume\": 3594.8576762947914,\n    \"tradingVolume\": 1539.7935041848486,\n    \"tradingVolumeUSD\": 7800.975266272422,\n    \"currency\": \"string\",\n    \"rateUSD\": 8854.42395941049,\n    \"rateETH\": 2061.3736525549552,\n    \"rateNative\": 4852.821738698047,\n    \"rateLiquidityAsset\": 7231.012444403309\n  },\n  {\n    \"timestamp\": 9382.623298254246,\n    \"date\": \"string\",\n    \"dailyTradingVolume\": 6222.822212249372,\n    \"tradingVolume\": 935.8331974604106,\n    \"tradingVolumeUSD\": 7065.157836420961,\n    \"currency\": \"string\",\n    \"rateUSD\": 2368.1501910487837,\n    \"rateETH\": 9385.711676004355,\n    \"rateNative\": 2073.2425695414227,\n    \"rateLiquidityAsset\": 1936.9890036581505\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5e232610-9629-4fc2-a0e8-a53e013b3478",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "trading-volume",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "61937be3-3a4e-4eb0-82d6-2a0f5c95b89c",
+          "name": "get Api V2Arm Swaps By Token",
+          "request": {
+            "name": "get Api V2Arm Swaps By Token",
+            "description": {
+              "content": "Get ARM swaps",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "swaps",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92097067-2304-4516-ab8e-221100c664ea",
+              "name": "ARM swaps",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "swaps",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"amountBase\": 7769.715467425686,\n    \"amountLiquidity\": 390.6073901935714,\n    \"armAction\": \"buy\",\n    \"armId\": \"string\",\n    \"baseAsset\": \"string\",\n    \"baseSymbol\": \"string\",\n    \"id\": \"string\",\n    \"liquidityAsset\": \"string\",\n    \"liquiditySymbol\": \"string\",\n    \"price\": 21.61705349459586,\n    \"rateToLiquidity\": 6402.291358692245,\n    \"spread\": 4998.1046225637065,\n    \"timestamp\": \"string\",\n    \"txHash\": \"string\"\n  },\n  {\n    \"amountBase\": 7611.617086997489,\n    \"amountLiquidity\": 9706.029175776897,\n    \"armAction\": \"sell\",\n    \"armId\": \"string\",\n    \"baseAsset\": \"string\",\n    \"baseSymbol\": \"string\",\n    \"id\": \"string\",\n    \"liquidityAsset\": \"string\",\n    \"liquiditySymbol\": \"string\",\n    \"price\": 5328.8869544707095,\n    \"rateToLiquidity\": 4537.2202375413835,\n    \"spread\": 1965.8990711016588,\n    \"timestamp\": \"string\",\n    \"txHash\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cbf21fd8-471d-4105-a229-9b69dab76e8f",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "swaps",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "372cd1f1-5e2c-4d54-a695-bfc0e50befdf",
+          "name": "get Api V2Arm Withdrawal requests By Token",
+          "request": {
+            "name": "get Api V2Arm Withdrawal requests By Token",
+            "description": {
+              "content": "Get ARM withdrawal requests",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "withdrawal_requests",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6ffb9a31-e423-4d41-91c0-8c0551710e74",
+              "name": "ARM withdrawal requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "withdrawal_requests",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"account\": \"string\",\n    \"amount\": \"string\",\n    \"queued\": \"string\",\n    \"requestId\": \"string\",\n    \"claimed\": false,\n    \"timestamp\": \"string\",\n    \"txHash\": \"string\",\n    \"claimable\": true,\n    \"claimableAt\": \"string\",\n    \"claimedAt\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"account\": \"string\",\n    \"amount\": \"string\",\n    \"queued\": \"string\",\n    \"requestId\": \"string\",\n    \"claimed\": true,\n    \"timestamp\": \"string\",\n    \"txHash\": \"string\",\n    \"claimable\": true,\n    \"claimableAt\": \"string\",\n    \"claimedAt\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "df243b39-2c93-440e-8352-68e25b5aac79",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "withdrawal_requests",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8390fdb8-8d8a-47e6-827c-441ffc3d9f88",
+          "name": "get Api V2Arm Withdrawal stats By Token",
+          "request": {
+            "name": "get Api V2Arm Withdrawal stats By Token",
+            "description": {
+              "content": "Get ARM withdrawal stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "withdrawal_stats",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92e93604-408e-4707-b74e-dc43543b4acd",
+              "name": "ARM withdrawal stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "withdrawal_stats",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"minimumDelayMs\": 6183.65765329864,\n  \"averageWithdrawalTimeMs\": 3555.1292245039044,\n  \"medianWithdrawalTimeMs\": 5599.835245537438,\n  \"p95WithdrawalTimeMs\": 2820.075594101191,\n  \"currentlyQueued\": 602.074872420325,\n  \"currentlyPending\": 6647.872711948818,\n  \"currentlyClaimable\": 1286.232430647728,\n  \"vaultAvailability\": 9875.006040204778,\n  \"withdrawableBalance\": 8046.55196712192\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f6acfe42-00ce-455f-9426-5f0535a1db74",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "withdrawal_stats",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eaa01d57-80ed-4d2d-b5c3-bb021b34d784",
+          "name": "get Api V2Arm Lending-market-daily-apy By Token",
+          "request": {
+            "name": "get Api V2Arm Lending-market-daily-apy By Token",
+            "description": {
+              "content": "Get ARM lending market apy",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "lending-market-daily-apy",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8f63776d-eb11-4a9b-81fe-60a63aea4d02",
+              "name": "ARM lending market apy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "lending-market-daily-apy",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": 3103.2400034768993,\n    \"apy\": 3801.38054606896\n  },\n  {\n    \"timestamp\": 2396.1645618030425,\n    \"apy\": 4809.245348829616\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "babe19ae-cadf-4875-b198-a7c2670adf86",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "lending-market-daily-apy",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1113bd7-e8ae-434a-b053-62ac597dc09c",
+          "name": "get Api V2Arm All-arms-trading-volume-usd",
+          "request": {
+            "name": "get Api V2Arm All-arms-trading-volume-usd",
+            "description": {
+              "content": "Get total USD trading volume for all arms",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "all-arms-trading-volume-usd"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f609eacd-07f8-4256-b324-a7030c4f0ca1",
+              "name": "Total USD trading volume for all arms",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "all-arms-trading-volume-usd"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "3260.1343016236606",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e28d7b2-3419-4533-81b0-207c4e84d73c",
+          "name": "get Api V2Arm Coingecko By Token",
+          "request": {
+            "name": "get Api V2Arm Coingecko By Token",
+            "description": {
+              "content": "Get ARM price call data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "arm",
+                "coingecko",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "70400c96-b2df-4370-b814-c18e75f39f8f",
+              "name": "ARM price call data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "coingecko",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"action\": \"string\",\n  \"to\": \"string\",\n  \"data\": \"string\",\n  \"tag\": \"string\",\n  \"chain\": 1085.3829347599108\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a19a9fec-61ed-4897-bef5-9dc2b9de32ba",
+              "name": "ARM not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "arm",
+                    "coingecko",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "03007cd7-865c-467d-9797-796836090e3a",
+          "name": "get Api V2Historical trades",
+          "request": {
+            "name": "get Api V2Historical trades",
+            "description": {
+              "content": "Get ARM historical trades",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "historical_trades"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ticker_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_time",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_time",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "10a5b661-6575-42f0-90cc-8ce7d8dafa2a",
+              "name": "ARM trades",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "historical_trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ticker_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "start_time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_time",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"base_volume\": 9560.401726880807,\n    \"price\": 992.566430946511,\n    \"target_volume\": 574.8692615826534,\n    \"trade_id\": 7094.190676553757,\n    \"trade_timestamp\": 3639.616089508498,\n    \"type\": \"string\"\n  },\n  {\n    \"base_volume\": 4435.7554864295535,\n    \"price\": 2175.1262260128724,\n    \"target_volume\": 7842.3643961720545,\n    \"trade_id\": 7065.768674924482,\n    \"trade_timestamp\": 1926.1638671172266,\n    \"type\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "39e69e9d-840b-413c-ae08-087358e29694",
+          "name": "get Api V2Tickers",
+          "request": {
+            "name": "get Api V2Tickers",
+            "description": {
+              "content": "Get ARM tickers",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "tickers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "1",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e8a5ad4e-a491-4ea5-bf22-5c156ceded20",
+              "name": "ARM tickers",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "tickers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"ticker_id\": \"string\",\n    \"liquidity_in_usd\": 2754.882830582619,\n    \"ask\": 9338.629791401157,\n    \"base_currency\": \"string\",\n    \"base_volume\": 132.65277368202155,\n    \"bid\": 4748.121042898776,\n    \"high\": 315.10242933914134,\n    \"last_price\": 207.84487459856393,\n    \"low\": 9258.90025886562,\n    \"pool_id\": \"string\",\n    \"target_currency\": \"string\",\n    \"target_volume\": 5085.846521167136\n  },\n  {\n    \"ticker_id\": \"string\",\n    \"liquidity_in_usd\": 81.91682714905556,\n    \"ask\": 8891.751522675238,\n    \"base_currency\": \"string\",\n    \"base_volume\": 3244.900505925423,\n    \"bid\": 8703.080315130084,\n    \"high\": 4998.715308149526,\n    \"last_price\": 1689.4455859193713,\n    \"low\": 2620.4579186882293,\n    \"pool_id\": \"string\",\n    \"target_currency\": \"string\",\n    \"target_volume\": 8674.500649231619\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "daeefa54-e96d-4f3d-9797-815f6a0a9859",
+              "name": "No ARM tickers found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "tickers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fa543ea6-f212-4fd4-a627-7aa0eaedeaa8",
+    "name": "defi-analytics account arm API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

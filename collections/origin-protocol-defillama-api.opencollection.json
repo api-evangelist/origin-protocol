@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account defillama API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "defillama",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2DefillamaProtocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/defillama/protocols"
+          },
+          "docs": "Get DefiLlama protocols"
+        },
+        {
+          "info": {
+            "name": "getApiV2DefillamaProtocolsApy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/defillama/protocols/apy",
+            "params": [
+              {
+                "name": "protocols",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get DefiLlama protocol APYs computed from revenue and TVL"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

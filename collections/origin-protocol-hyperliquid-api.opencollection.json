@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account hyperliquid API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "hyperliquid",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2HyperliquidFunding_ratesByCoin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/hyperliquid/funding_rates/:coin",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "average",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get hyperliquid funding rates"
+        },
+        {
+          "info": {
+            "name": "getApiV2HyperliquidLiquidity_by_coinByCoin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/hyperliquid/liquidity_by_coin/:coin",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "average",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get hyperliquid liquidity by coin"
+        },
+        {
+          "info": {
+            "name": "getApiV2HyperliquidOpen_interestsByCoin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/hyperliquid/open_interests/:coin",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "average",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get hyperliquid open interests"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,148 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account protocol API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "protocol",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2ProtocolProtocol-fees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/protocol-fees"
+          },
+          "docs": "Get protocol fees"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolCumulative_fees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/cumulative_fees",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get cumulative protocol fees"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolDaily_fees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/daily_fees",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get daily protocol fees"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolDaily_revenue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/daily_revenue",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get daily protocol revenue"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolCumulative_revenue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/cumulative_revenue",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get cumulative protocol revenue"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolDaily_total_supply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/daily_total_supply",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get daily total supply"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolContributors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/contributors",
+            "params": [
+              {
+                "name": "force",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get contributors"
+        },
+        {
+          "info": {
+            "name": "getApiV2ProtocolProducts_stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/protocol/products_stats"
+          },
+          "docs": "Get products stats"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

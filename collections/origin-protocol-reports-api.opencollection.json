@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account reports API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getReportsWeeklyUnsubscribeById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/reports/weekly/unsubscribe/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unsubscribe confirmation page"
+        },
+        {
+          "info": {
+            "name": "postReportsWeeklyUnsubscribe",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8787/reports/weekly/unsubscribe",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Perform unsubscribe action"
+        },
+        {
+          "info": {
+            "name": "getReportsWeeklyByYearByWeek",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/reports/weekly/:year/:week",
+            "params": [
+              {
+                "name": "year",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "week",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get weekly report"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

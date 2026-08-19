@@ -1,0 +1,253 @@
+{
+  "item": [
+    {
+      "id": "c9ec8e34-edc5-4ab6-9418-00d421ecba9d",
+      "name": "account",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "842d5bda-4785-4857-9d57-ef2d711db502",
+          "name": "get Api V2Account By Address Portfolio History",
+          "request": {
+            "name": "get Api V2Account By Address Portfolio History",
+            "description": {
+              "content": "Get single-wallet portfolio value history across all supported chains",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "account",
+                ":address",
+                "portfolio",
+                "history"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c34ceb82-50c8-402b-9df4-50027b55f4ca",
+              "name": "Account portfolio history",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "account",
+                    ":address",
+                    "portfolio",
+                    "history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"address\": \"string\",\n  \"chainIds\": [\n    5809.146430335693,\n    212.62532488740214\n  ],\n  \"limit\": 2639.296854535156,\n  \"points\": [\n    {\n      \"t\": \"string\",\n      \"totalUsd\": 4963.996466452395\n    },\n    {\n      \"t\": \"string\",\n      \"totalUsd\": 7439.451455457658\n    }\n  ],\n  \"summary\": {\n    \"peak\": 213.38643398742585,\n    \"lowest\": 4724.192943338707,\n    \"totalReturnPct\": 18.04393449265862\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9d534976-a989-43bb-b0a0-5c81c14b2d14",
+          "name": "get Api V2Account By Address Activity",
+          "request": {
+            "name": "get Api V2Account By Address Activity",
+            "description": {
+              "content": "Get single-wallet activity feed across all supported chains",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "account",
+                ":address",
+                "activity"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "37aee0cd-c3af-4d7b-ae8d-cc55e78587eb",
+              "name": "Account activity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "account",
+                    ":address",
+                    "activity"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"address\": \"string\",\n  \"chainIds\": [\n    992.3221832452389,\n    4957.1467351195815\n  ],\n  \"items\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"otokenActivity\",\n      \"type\": \"string\",\n      \"chainId\": 5366.774684371621,\n      \"timestamp\": \"string\",\n      \"txHash\": \"string\",\n      \"tokenAddress\": \"string\",\n      \"from\": \"string\",\n      \"to\": \"string\",\n      \"amount\": \"string\",\n      \"data\": {}\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"otokenActivity\",\n      \"type\": \"string\",\n      \"chainId\": 1228.8985105489735,\n      \"timestamp\": \"string\",\n      \"txHash\": \"string\",\n      \"tokenAddress\": \"string\",\n      \"from\": \"string\",\n      \"to\": \"string\",\n      \"amount\": \"string\",\n      \"data\": {}\n    }\n  ],\n  \"page\": {\n    \"nextCursor\": \"string\",\n    \"hasMore\": true\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d11b8714-2917-4c16-bad5-1d0d42b099c7",
+    "name": "defi-analytics account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

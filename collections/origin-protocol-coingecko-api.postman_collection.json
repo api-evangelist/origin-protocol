@@ -1,0 +1,913 @@
+{
+  "item": [
+    {
+      "id": "e4718676-de32-4203-857a-5b1e178a0008",
+      "name": "coingecko",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5b742799-635c-4c0b-ae5e-e120c125a6b8",
+          "name": "get Api V2Coingecko Networks",
+          "request": {
+            "name": "get Api V2Coingecko Networks",
+            "description": {
+              "content": "Get coingecko networks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "networks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5089a96c-a872-4819-877d-f3cad1ac8d76",
+              "name": "Coingecko networks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "networks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"type\": \"string\",\n    \"attributes\": {\n      \"name\": \"string\",\n      \"coingecko_asset_platform_id\": \"string\"\n    }\n  },\n  {\n    \"id\": \"string\",\n    \"type\": \"string\",\n    \"attributes\": {\n      \"name\": \"string\",\n      \"coingecko_asset_platform_id\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5cce667f-f8ad-4ead-899b-cff159f0cd1e",
+          "name": "get Api V2Coingecko Pools By Network Token By Token",
+          "request": {
+            "name": "get Api V2Coingecko Pools By Network Token By Token",
+            "description": {
+              "content": "Get pools for a token and a chain",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "pools",
+                ":network",
+                "token",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "network",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4e107c3d-c41a-46f6-b092-75399ed6a8f4",
+              "name": "Pool details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "pools",
+                    ":network",
+                    "token",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "network",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"type\": \"string\",\n    \"attributes\": {\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"base_token_price_usd\": \"string\",\n      \"quote_token_price_usd\": \"string\",\n      \"base_token_price_native_currency\": \"string\",\n      \"quote_token_price_native_currency\": \"string\",\n      \"base_token_price_quote_token\": \"string\",\n      \"quote_token_price_base_token\": \"string\",\n      \"pool_created_at\": \"string\",\n      \"reserve_in_usd\": \"string\",\n      \"fdv_usd\": \"string\",\n      \"market_cap_usd\": \"string\",\n      \"price_change_percentage\": {},\n      \"transactions\": {},\n      \"volume_usd\": {}\n    },\n    \"relationships\": {\n      \"base_token\": {\n        \"data\": {\n          \"id\": \"string\",\n          \"type\": \"string\"\n        }\n      },\n      \"quote_token\": {\n        \"data\": {\n          \"id\": \"string\",\n          \"type\": \"string\"\n        }\n      },\n      \"dexbase_token\": {\n        \"data\": {\n          \"id\": \"string\",\n          \"type\": \"string\"\n        }\n      }\n    }\n  },\n  {\n    \"id\": \"string\",\n    \"type\": \"string\",\n    \"attributes\": {\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"base_token_price_usd\": \"string\",\n      \"quote_token_price_usd\": \"string\",\n      \"base_token_price_native_currency\": \"string\",\n      \"quote_token_price_native_currency\": \"string\",\n      \"base_token_price_quote_token\": \"string\",\n      \"quote_token_price_base_token\": \"string\",\n      \"pool_created_at\": \"string\",\n      \"reserve_in_usd\": \"string\",\n      \"fdv_usd\": \"string\",\n      \"market_cap_usd\": \"string\",\n      \"price_change_percentage\": {},\n      \"transactions\": {},\n      \"volume_usd\": {}\n    },\n    \"relationships\": {\n      \"base_token\": {\n        \"data\": {\n          \"id\": \"string\",\n          \"type\": \"string\"\n        }\n      },\n      \"quote_token\": {\n        \"data\": {\n          \"id\": \"string\",\n          \"type\": \"string\"\n        }\n      },\n      \"dexbase_token\": {\n        \"data\": {\n          \"id\": \"string\",\n          \"type\": \"string\"\n        }\n      }\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b1173e4-2356-42aa-814a-47f485b2f138",
+          "name": "get Api V2Coingecko Ohlcvs By Network Token By Token",
+          "request": {
+            "name": "get Api V2Coingecko Ohlcvs By Network Token By Token",
+            "description": {
+              "content": "Get ohlcvs for a token",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "ohlcvs",
+                ":network",
+                "token",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "network",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1dc69f8d-f86a-430c-aa78-af9028f3c204",
+              "name": "Ohlcvs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "ohlcvs",
+                    ":network",
+                    "token",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "network",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": -7593187607983733,\n    \"pool\": \"string\",\n    \"network\": \"string\",\n    \"base_token\": \"string\",\n    \"quote_token\": \"string\",\n    \"timestamp\": -1840760314409332,\n    \"open\": -65832181879683.266,\n    \"high\": -41680761630989.8,\n    \"low\": -77763017610076.84,\n    \"close\": 61734531803979.69,\n    \"volume\": 127349369463883.75\n  },\n  {\n    \"id\": -563551165499868,\n    \"pool\": \"string\",\n    \"network\": \"string\",\n    \"base_token\": \"string\",\n    \"quote_token\": \"string\",\n    \"timestamp\": -8750440740912295,\n    \"open\": -24473650876600.094,\n    \"high\": -139617877874805.06,\n    \"low\": 33678188972131.28,\n    \"close\": -7580252586979.719,\n    \"volume\": -124846730452463.44\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1ce0545-6db4-436a-8ecf-8819de94d4b7",
+          "name": "get Api V2Coingecko Ohlcvs By Token Id",
+          "request": {
+            "name": "get Api V2Coingecko Ohlcvs By Token Id",
+            "description": {
+              "content": "Get ohlcvs for a tokenId",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "ohlcvs",
+                ":tokenId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0e0f76d0-67b9-40a8-950a-dba049e634b5",
+              "name": "Ohlcvs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "ohlcvs",
+                    ":tokenId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": -7593187607983733,\n    \"pool\": \"string\",\n    \"network\": \"string\",\n    \"base_token\": \"string\",\n    \"quote_token\": \"string\",\n    \"timestamp\": -1840760314409332,\n    \"open\": -65832181879683.266,\n    \"high\": -41680761630989.8,\n    \"low\": -77763017610076.84,\n    \"close\": 61734531803979.69,\n    \"volume\": 127349369463883.75\n  },\n  {\n    \"id\": -563551165499868,\n    \"pool\": \"string\",\n    \"network\": \"string\",\n    \"base_token\": \"string\",\n    \"quote_token\": \"string\",\n    \"timestamp\": -8750440740912295,\n    \"open\": -24473650876600.094,\n    \"high\": -139617877874805.06,\n    \"low\": 33678188972131.28,\n    \"close\": -7580252586979.719,\n    \"volume\": -124846730452463.44\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8a4fcf9d-9290-42e7-939e-2b325fc12755",
+          "name": "get Api V2Coingecko Watchlist",
+          "request": {
+            "name": "get Api V2Coingecko Watchlist",
+            "description": {
+              "content": "Get watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "watchlist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "all",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4c9a1ce5-5a44-4ef2-8b95-c566b9478b7b",
+              "name": "Watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "watchlist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "all",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"address\": \"string\",\n    \"network\": \"string\",\n    \"symbol\": \"string\",\n    \"watchlisted\": false\n  },\n  {\n    \"id\": \"string\",\n    \"address\": \"string\",\n    \"network\": \"string\",\n    \"symbol\": \"string\",\n    \"watchlisted\": true\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6a9f4577-cc46-4cbc-ae8e-9be8a609fefb",
+          "name": "post Api V2Coingecko Watchlist",
+          "request": {
+            "name": "post Api V2Coingecko Watchlist",
+            "description": {
+              "content": "Add token to watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "watchlist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"address\": \"<string>\",\n  \"network\": \"<string>\",\n  \"symbol\": \"<string>\",\n  \"watchlisted\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c3bf8d18-b2f6-4fea-95d0-8c42e63b2985",
+              "name": "Token added to watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "watchlist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"address\": \"<string>\",\n  \"network\": \"<string>\",\n  \"symbol\": \"<string>\",\n  \"watchlisted\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"address\": \"string\",\n  \"network\": \"string\",\n  \"symbol\": \"string\",\n  \"watchlisted\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba3c6db6-79ea-4772-9cb2-afafa32191e0",
+          "name": "patch Api V2Coingecko Watchlist By Token Id",
+          "request": {
+            "name": "patch Api V2Coingecko Watchlist By Token Id",
+            "description": {
+              "content": "Add or remove token from watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "watchlist",
+                ":tokenId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"isWatchlisted\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "75fabeaa-821f-4dc8-ae7a-69d1b6081c52",
+              "name": "Token added to watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "watchlist",
+                    ":tokenId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWatchlisted\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"address\": \"string\",\n  \"network\": \"string\",\n  \"symbol\": \"string\",\n  \"watchlisted\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e981aefe-be10-446c-a518-475ba89ee33a",
+          "name": "delete Api V2Coingecko Watchlist By Token Id",
+          "request": {
+            "name": "delete Api V2Coingecko Watchlist By Token Id",
+            "description": {
+              "content": "Remove token from watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "watchlist",
+                ":tokenId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tokenId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "51b4366d-704a-40fe-becc-98c17b0383f2",
+              "name": "Token removed from watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "watchlist",
+                    ":tokenId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tokenId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"address\": \"string\",\n  \"network\": \"string\",\n  \"symbol\": \"string\",\n  \"watchlisted\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "908e9158-2089-4a0e-a9b4-aae9271af1ee",
+          "name": "get Api V2Coingecko Price By Token",
+          "request": {
+            "name": "get Api V2Coingecko Price By Token",
+            "description": {
+              "content": "Get token price call data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "coingecko",
+                "price",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50322832-849e-4494-afc1-d456877b83a0",
+              "name": "Token price call data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "coingecko",
+                    "price",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"action\": \"string\",\n  \"to\": \"string\",\n  \"data\": \"string\",\n  \"tag\": \"string\",\n  \"chain\": 2476.701147238175\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "49b25252-62b8-47dd-a7c9-7e2123f7d417",
+    "name": "defi-analytics account coingecko API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

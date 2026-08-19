@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account beacon-chain API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "beacon-chain",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2Beacon-chainExit-time",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/beacon-chain/exit-time"
+          },
+          "docs": "Get validator exit time"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

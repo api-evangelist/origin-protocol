@@ -1,0 +1,2067 @@
+{
+  "item": [
+    {
+      "id": "86a078da-ad69-4692-983c-e83f287d78e2",
+      "name": "token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bcfa3783-f271-4d2d-bea0-fac574cf6998",
+          "name": "get Api V2By Token Withdrawal requests",
+          "request": {
+            "name": "get Api V2By Token Withdrawal requests",
+            "description": {
+              "content": "Get token withdrawal requests",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "withdrawal_requests"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b84321e-d947-4dba-8445-5546fbedb406",
+              "name": "Token withdrawal requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "withdrawal_requests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"withdrawer\": \"string\",\n    \"amount\": \"string\",\n    \"queued\": \"string\",\n    \"requestId\": \"string\",\n    \"claimed\": false,\n    \"claimable\": false,\n    \"timestamp\": \"string\",\n    \"txHash\": \"string\",\n    \"claimableAt\": \"string\",\n    \"claimedAt\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"withdrawer\": \"string\",\n    \"amount\": \"string\",\n    \"queued\": \"string\",\n    \"requestId\": \"string\",\n    \"claimed\": false,\n    \"claimable\": false,\n    \"timestamp\": \"string\",\n    \"txHash\": \"string\",\n    \"claimableAt\": \"string\",\n    \"claimedAt\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "998add95-329a-4aa9-a7d0-c5e618264546",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "withdrawal_requests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b18a882-8d4c-4050-b462-b4ce99671ca7",
+          "name": "get Api V2By Token Withdrawal stats",
+          "request": {
+            "name": "get Api V2By Token Withdrawal stats",
+            "description": {
+              "content": "Get token withdrawal stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "withdrawal_stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dc2375ab-0d00-438f-b218-da9e7cc4d3b9",
+              "name": "Token withdrawal stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "withdrawal_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"minimumDelayMs\": 7835.07640946017,\n  \"averageWithdrawalTimeMs\": 9345.154537723849,\n  \"medianWithdrawalTimeMs\": 2099.788114115969,\n  \"p95WithdrawalTimeMs\": 6923.46395674448,\n  \"currentlyQueued\": 9817.154335204867,\n  \"currentlyPending\": 7385.251198775514,\n  \"currentlyClaimable\": 8346.275619922719,\n  \"vaultAvailability\": 9101.781656847685,\n  \"withdrawableBalance\": 9461.062256516398\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "62590254-40ab-49e4-8d47-6fa41b74b1b3",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "withdrawal_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04d2e420-9449-4711-8b19-e218d132828f",
+          "name": "get Api V2By Token Apr History",
+          "request": {
+            "name": "get Api V2By Token Apr History",
+            "description": {
+              "content": "Get APR history",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "apr",
+                "history"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1b4683e8-5371-4b05-85da-5655b56316f7",
+              "name": "APR history",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "apr",
+                    "history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"apr\": 596.2248896254763,\n    \"apy\": 3418.8691947486473,\n    \"daily\": [\n      {\n        \"apy\": \"string\"\n      },\n      {\n        \"apy\": \"string\"\n      }\n    ]\n  },\n  {\n    \"apr\": 7106.437243066861,\n    \"apy\": 1721.9673264399848,\n    \"daily\": [\n      {\n        \"apy\": \"string\"\n      },\n      {\n        \"apy\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "faec0740-6118-4c4e-bc08-8ac459926335",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "apr",
+                    "history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0eea94c3-dde3-4a28-880f-28523f2a3605",
+          "name": "get Api V2By Token Apr Trailing history By Days",
+          "request": {
+            "name": "get Api V2By Token Apr Trailing history By Days",
+            "description": {
+              "content": "Get APR trailing history",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "apr",
+                "trailing_history",
+                ":days"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "days",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c17c2764-1867-44a0-bbde-ffbef48b907c",
+              "name": "APR trailing history",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "apr",
+                    "trailing_history",
+                    ":days"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "days",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"trailing_history\": [\n    {\n      \"day\": \"string\",\n      \"trailing_apy\": 5427.865393730308\n    },\n    {\n      \"day\": \"string\",\n      \"trailing_apy\": 7285.563077385125\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ac4b4d47-0240-4e23-8a7d-11710785dca9",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "apr",
+                    "trailing_history",
+                    ":days"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "days",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0cae13a-d477-4bda-91e1-5ff27466b31a",
+          "name": "get Api V2By Token Stats By Stat",
+          "request": {
+            "name": "get Api V2By Token Stats By Stat",
+            "description": {
+              "content": "Get token stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "stats",
+                ":stat"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stat",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a637ffb2-7df6-40d2-b6f1-b35505ac41ac",
+              "name": "Token stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "stats",
+                    ":stat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stat",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2a4a82c6-5437-43cf-a26e-8d8da064ebce",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "stats",
+                    ":stat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stat",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "52a91385-f646-42b9-9413-10e572b41991",
+          "name": "get Api V2By Token Apr Trailing",
+          "request": {
+            "name": "get Api V2By Token Apr Trailing",
+            "description": {
+              "content": "Get APR trailing",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "apr",
+                "trailing"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8fd1b96b-e0b1-42d1-8616-ee46fbdcf6e4",
+              "name": "APR trailing",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "apr",
+                    "trailing"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"apr\": \"string\",\n  \"apy\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0184d640-1b76-40cb-809f-5ffcc502564f",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "apr",
+                    "trailing"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "66ce833b-93f0-42ac-92cd-43f2730f3e1f",
+          "name": "get Api V2By Token Ratios",
+          "request": {
+            "name": "get Api V2By Token Ratios",
+            "description": {
+              "content": "Get token ratios",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "ratios"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c4770f7-d9ff-499b-bfd8-981d7ee577b1",
+              "name": "Token ratios",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "ratios"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"current_credits_per_token\": \"string\",\n  \"next_credits_per_token\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "99420364-90fa-42ca-a12e-a087bfd4e7ed",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "ratios"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "24dadd43-d054-4cda-896b-d65509352464",
+          "name": "get Api V2By Token Daily stats",
+          "request": {
+            "name": "get Api V2By Token Daily stats",
+            "description": {
+              "content": "Get token daily stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "daily_stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b65dbd7c-c6eb-4236-a851-b9d2752666f0",
+              "name": "Token daily stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "daily_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"timestamp\": 7372.015507089072,\n    \"date\": \"string\",\n    \"fees\": 2098.338806560677,\n    \"totalSupply\": 4032.880994341298,\n    \"rateUSD\": 6142.250229486129,\n    \"rateETH\": 1241.5002102641092,\n    \"rateNative\": 394.87627697251446,\n    \"apy\": 1400.9592509181068,\n    \"apy7\": 21.39729459209372,\n    \"apy14\": 7037.78583156255,\n    \"apy30\": 5996.567272695934,\n    \"bestApy\": 8661.604264488082,\n    \"bestApyTrailingDays\": 2420.780224356438,\n    \"yield\": 7939.068159412366,\n    \"cumulativeFees\": 7653.021871794419,\n    \"cumulativeYield\": 2882.88625309464,\n    \"amoSupply\": 3795.2422505637783,\n    \"tvl\": 5197.62332821164,\n    \"rateWrapped\": 5363.715594346193\n  },\n  {\n    \"id\": \"string\",\n    \"timestamp\": 4321.223413319145,\n    \"date\": \"string\",\n    \"fees\": 6436.884142569133,\n    \"totalSupply\": 3060.5936832962043,\n    \"rateUSD\": 6788.870719854466,\n    \"rateETH\": 2577.2864655232775,\n    \"rateNative\": 8931.205530659257,\n    \"apy\": 9608.84613051358,\n    \"apy7\": 719.8221363437395,\n    \"apy14\": 2459.0653234551805,\n    \"apy30\": 7938.810252480858,\n    \"bestApy\": 356.0011717489342,\n    \"bestApyTrailingDays\": 3635.931502827663,\n    \"yield\": 8349.764932576207,\n    \"cumulativeFees\": 4499.866842325374,\n    \"cumulativeYield\": 8410.720378014015,\n    \"amoSupply\": 6022.3135915334515,\n    \"tvl\": 1943.260143938026,\n    \"rateWrapped\": 2760.138732318265\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a8ede53f-ad3d-4cf8-a56e-c9b170b4a542",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "daily_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7bd06f3f-8049-4d9c-94d7-9f57ca380651",
+          "name": "get Api V2By Token Daily protocol revenue",
+          "request": {
+            "name": "get Api V2By Token Daily protocol revenue",
+            "description": {
+              "content": "Get token daily protocol revenue",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "daily_protocol_revenue"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "93052422-f395-45ab-98ec-8a23e971a2d9",
+              "name": "Token daily protocol revenue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "daily_protocol_revenue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": 2352.425376518084,\n    \"date\": \"string\",\n    \"amount\": 2065.4529869947446,\n    \"rateNative\": 8304.805902284297,\n    \"rateETH\": 3901.340792679311,\n    \"rateUSD\": 440.43197760385897,\n    \"avg7\": 1212.2282237695824,\n    \"avg14\": 5096.913885257598,\n    \"avg30\": 5574.732376289573\n  },\n  {\n    \"timestamp\": 4795.652364448811,\n    \"date\": \"string\",\n    \"amount\": 8263.285290207772,\n    \"rateNative\": 5829.881138090112,\n    \"rateETH\": 8188.933786220629,\n    \"rateUSD\": 9503.762910403775,\n    \"avg7\": 6809.6570185047485,\n    \"avg14\": 6062.2761632298725,\n    \"avg30\": 8603.823929146169\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5bc1826e-3221-4719-8b22-6d9bc6ea1315",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "daily_protocol_revenue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "801e9ab3-561d-4580-b09a-f1b8f116a564",
+          "name": "get Api V2By Token Morpho collateral",
+          "request": {
+            "name": "get Api V2By Token Morpho collateral",
+            "description": {
+              "content": "Get Morpho-only collateral exposure for an oToken",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "morpho_collateral"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf651762-a8a7-4a81-ae3a-903678590876",
+              "name": "Morpho collateral data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "morpho_collateral"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"token\": {\n    \"id\": \"string\",\n    \"address\": \"string\",\n    \"name\": \"string\",\n    \"chainId\": 8091.162010898943,\n    \"decimals\": 2137.3227392797767,\n    \"symbol\": \"string\"\n  },\n  \"strategies\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"chainId\": 1832.977737978505,\n      \"network\": \"string\",\n      \"vaultAddress\": \"string\",\n      \"strategyAddress\": \"string\",\n      \"href\": \"string\",\n      \"amount\": 9732.53643179431,\n      \"liquidAmount\": 4304.091723607191,\n      \"markets\": [\n        {\n          \"marketId\": \"string\",\n          \"network\": \"string\",\n          \"marketUrl\": \"string\",\n          \"loanSymbol\": \"string\",\n          \"collateralSymbol\": \"string\",\n          \"lltv\": \"string\",\n          \"risk\": \"string\",\n          \"totalCollateralUsd\": 4645.6405980960335,\n          \"totalMarketSizeUsd\": 1149.201098076801,\n          \"totalBorrowUsd\": 2967.4243583090642,\n          \"totalLiquidityUsd\": 6650.248914565905,\n          \"supplyApy\": 7361.162771614049,\n          \"rewardsApr\": 9818.12219925825,\n          \"totalApy\": 2143.6949807351148,\n          \"ratio\": 3162.4479165456933,\n          \"strategyAmount\": 6262.702537551174\n        },\n        {\n          \"marketId\": \"string\",\n          \"network\": \"string\",\n          \"marketUrl\": \"string\",\n          \"loanSymbol\": \"string\",\n          \"collateralSymbol\": \"string\",\n          \"lltv\": \"string\",\n          \"risk\": \"string\",\n          \"totalCollateralUsd\": 1224.06350674235,\n          \"totalMarketSizeUsd\": 3965.696806878939,\n          \"totalBorrowUsd\": 8724.674126430029,\n          \"totalLiquidityUsd\": 9252.509789610258,\n          \"supplyApy\": 7873.045654116823,\n          \"rewardsApr\": 25.768072609624326,\n          \"totalApy\": 7404.372733363432,\n          \"ratio\": 9674.146320115742,\n          \"strategyAmount\": 5166.558931198936\n        }\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"chainId\": 5774.912691508681,\n      \"network\": \"string\",\n      \"vaultAddress\": \"string\",\n      \"strategyAddress\": \"string\",\n      \"href\": \"string\",\n      \"amount\": 7042.309124221243,\n      \"liquidAmount\": 7852.3076266016615,\n      \"markets\": [\n        {\n          \"marketId\": \"string\",\n          \"network\": \"string\",\n          \"marketUrl\": \"string\",\n          \"loanSymbol\": \"string\",\n          \"collateralSymbol\": \"string\",\n          \"lltv\": \"string\",\n          \"risk\": \"string\",\n          \"totalCollateralUsd\": 9512.493652109002,\n          \"totalMarketSizeUsd\": 2666.4706350408464,\n          \"totalBorrowUsd\": 8994.3532175729,\n          \"totalLiquidityUsd\": 1467.364409823526,\n          \"supplyApy\": 2644.403793893676,\n          \"rewardsApr\": 6484.592576137698,\n          \"totalApy\": 4527.616006267449,\n          \"ratio\": 4534.713823845218,\n          \"strategyAmount\": 9918.020145279703\n        },\n        {\n          \"marketId\": \"string\",\n          \"network\": \"string\",\n          \"marketUrl\": \"string\",\n          \"loanSymbol\": \"string\",\n          \"collateralSymbol\": \"string\",\n          \"lltv\": \"string\",\n          \"risk\": \"string\",\n          \"totalCollateralUsd\": 6157.835788145033,\n          \"totalMarketSizeUsd\": 8343.557445325308,\n          \"totalBorrowUsd\": 2260.214240672276,\n          \"totalLiquidityUsd\": 3587.5614924859624,\n          \"supplyApy\": 5662.180262366731,\n          \"rewardsApr\": 7780.034783030422,\n          \"totalApy\": 8122.419354315976,\n          \"ratio\": 5390.373420029072,\n          \"strategyAmount\": 6995.810485814023\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c45d90ec-6cda-4ec0-9928-42353c78fefd",
+              "name": "Unsupported token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "morpho_collateral"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "85556d13-5e10-4ef8-a4dc-6adf86ceaeb9",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "morpho_collateral"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "85e43caf-b9e0-4295-8143-82c256788657",
+          "name": "get Api V2By Token Collaterals",
+          "request": {
+            "name": "get Api V2By Token Collaterals",
+            "description": {
+              "content": "Get token collaterals",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "collaterals"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "026be5e9-8fb3-412b-8ef4-20e40810dddf",
+              "name": "Token collaterals",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "collaterals"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"icon\": \"string\",\n    \"brandIcon\": \"string\",\n    \"color\": \"string\",\n    \"balances\": [\n      {\n        \"token\": {\n          \"id\": \"string\",\n          \"address\": \"string\",\n          \"name\": \"string\",\n          \"chainId\": 3554.447711201495,\n          \"decimals\": 9374.08188196743,\n          \"symbol\": \"string\"\n        },\n        \"address\": \"string\",\n        \"amount\": 4213.017456276333,\n        \"title\": \"string\",\n        \"icon\": \"string\",\n        \"color\": \"string\",\n        \"href\": \"string\",\n        \"marketUtilization\": 3682.1071989503407,\n        \"marketLiquidity\": 4426.305422541529,\n        \"marketApy\": 8653.009032873571,\n        \"ratio\": 5716.484273701671\n      },\n      {\n        \"token\": {\n          \"id\": \"string\",\n          \"address\": \"string\",\n          \"name\": \"string\",\n          \"chainId\": 7650.7598047389265,\n          \"decimals\": 1647.2597409473021,\n          \"symbol\": \"string\"\n        },\n        \"address\": \"string\",\n        \"amount\": 7878.5515386297075,\n        \"title\": \"string\",\n        \"icon\": \"string\",\n        \"color\": \"string\",\n        \"href\": \"string\",\n        \"marketUtilization\": 6489.978264829672,\n        \"marketLiquidity\": 1343.1389211585,\n        \"marketApy\": 6163.455941752457,\n        \"ratio\": 5120.2505304619835\n      }\n    ],\n    \"amount\": 8311.400758389806,\n    \"href\": \"string\",\n    \"liquidAmount\": 2755.13424170037\n  },\n  {\n    \"id\": \"string\",\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"icon\": \"string\",\n    \"brandIcon\": \"string\",\n    \"color\": \"string\",\n    \"balances\": [\n      {\n        \"token\": {\n          \"id\": \"string\",\n          \"address\": \"string\",\n          \"name\": \"string\",\n          \"chainId\": 963.0981448415166,\n          \"decimals\": 2716.3261483982214,\n          \"symbol\": \"string\"\n        },\n        \"address\": \"string\",\n        \"amount\": 1161.3113251921136,\n        \"title\": \"string\",\n        \"icon\": \"string\",\n        \"color\": \"string\",\n        \"href\": \"string\",\n        \"marketUtilization\": 5039.667611100803,\n        \"marketLiquidity\": 6611.009095726983,\n        \"marketApy\": 7615.675444351297,\n        \"ratio\": 3214.343721527957\n      },\n      {\n        \"token\": {\n          \"id\": \"string\",\n          \"address\": \"string\",\n          \"name\": \"string\",\n          \"chainId\": 8940.204100942778,\n          \"decimals\": 8329.549239589483,\n          \"symbol\": \"string\"\n        },\n        \"address\": \"string\",\n        \"amount\": 6240.473429324228,\n        \"title\": \"string\",\n        \"icon\": \"string\",\n        \"color\": \"string\",\n        \"href\": \"string\",\n        \"marketUtilization\": 9299.374678650927,\n        \"marketLiquidity\": 9541.087349488584,\n        \"marketApy\": 5503.360114561212,\n        \"ratio\": 269.9425433309177\n      }\n    ],\n    \"amount\": 6887.108334952847,\n    \"href\": \"string\",\n    \"liquidAmount\": 6541.900735665311\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2703fe03-ad3d-4e82-8f9a-69a61efcb092",
+              "name": "Token not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "collaterals"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f61a7f3e-47ec-4e15-9fdd-dbd3f5a9123f",
+          "name": "get Api V2By Token Amo",
+          "request": {
+            "name": "get Api V2By Token Amo",
+            "description": {
+              "content": "Get AMO info",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":token",
+                "amo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "token",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c49380d8-dfe4-4cc5-823b-9c8ef80efac7",
+              "name": "AMO info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "amo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"contract\": \"string\",\n  \"timestamp\": 4363.569052842756,\n  \"ownership\": 8782.154697612736,\n  \"balance0\": 108.084618378681,\n  \"balance1\": 2696.586302269033,\n  \"roi\": 8096.898014567756,\n  \"totalSupply\": 957.0416774388135,\n  \"nonAmoApy\": 8283.094487491131,\n  \"currentWeekBribe\": 4449.986745191395,\n  \"bribeTokenBalance\": 7733.898607110326,\n  \"rebasingSupply\": 2259.286595635426\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a307bd3b-d1f0-48f1-9a2f-3baf9b8491ff",
+              "name": "No token found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":token",
+                    "amo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "token",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5ec66ebb-0bde-4e3f-8538-36b65d5a6458",
+    "name": "defi-analytics account token API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

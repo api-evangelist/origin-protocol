@@ -1,0 +1,656 @@
+{
+  "item": [
+    {
+      "id": "f7bf640d-fcea-4af7-a69f-c45d9db3b685",
+      "name": "ogn",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7426d56d-0467-4087-9283-009533af7666",
+          "name": "get Api V2Ogn Buyback stats",
+          "request": {
+            "name": "get Api V2Ogn Buyback stats",
+            "description": {
+              "content": "Get buyback stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "buyback_stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startCumulative",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "07714937-4493-46fb-a85a-37584d795e7f",
+              "name": "Buyback stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "buyback_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startCumulative",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalOgnBought\": 9657.60189801811,\n  \"totalAmountSold\": 9670.068885129283,\n  \"totalOgnBoughtUSD\": 2233.2995752008756,\n  \"firstBuybackTimestamp\": 6653.782599781077,\n  \"lastBuybackTimestamp\": 6108.438097840455,\n  \"buybacksCount\": 5686.7408695861495,\n  \"buybacksDuration\": 536.493259678531,\n  \"annualizedOgnBuybacks\": 5663.527881761368,\n  \"annualizedUsdBuybacks\": 3803.728327667423\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c6787fff-8d79-417f-a067-e3a3990c88b9",
+          "name": "get Api V2Ogn Buybacks",
+          "request": {
+            "name": "get Api V2Ogn Buybacks",
+            "description": {
+              "content": "Get buybacks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "buybacks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50a32e9b-5adf-43c2-bd7b-de2e339a701d",
+              "name": "Buybacks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "buybacks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"timestamp\": 9436.227851321863,\n    \"operator\": \"string\",\n    \"tokenSold\": \"string\",\n    \"amountSold\": 75.46722732504452,\n    \"ognBought\": 1838.6881738935845,\n    \"ognBoughtUSD\": 264.31224971990133,\n    \"txHash\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"timestamp\": 4286.932462343626,\n    \"operator\": \"string\",\n    \"tokenSold\": \"string\",\n    \"amountSold\": 6128.853788217319,\n    \"ognBought\": 2572.546559313054,\n    \"ognBoughtUSD\": 9752.007501406206,\n    \"txHash\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "26aef02f-26fc-41e7-8f3a-e7851542b541",
+          "name": "get Api V2Ogn Daily buybacks",
+          "request": {
+            "name": "get Api V2Ogn Daily buybacks",
+            "description": {
+              "content": "Get daily buybacks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "daily_buybacks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startCumulative",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "255ab100-ab14-4502-945b-5b55c4d31a35",
+              "name": "Daily buybacks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "daily_buybacks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "startCumulative",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"timestamp\": 1136.679367735287,\n    \"amountSold\": 30.473697074169248,\n    \"ognBought\": 3211.7911020998313,\n    \"ognBoughtUSD\": 5693.155512920013,\n    \"cumulativeAmountSold\": 7271.409049000339,\n    \"cumulativeOgnBought\": 5818.011198099052,\n    \"cumulativeOgnBoughtUSD\": 1581.754819335428\n  },\n  {\n    \"id\": \"string\",\n    \"timestamp\": 3759.5505352727987,\n    \"amountSold\": 2087.1071705452814,\n    \"ognBought\": 9357.830474793529,\n    \"ognBoughtUSD\": 3767.6996216557623,\n    \"cumulativeAmountSold\": 2899.508923180424,\n    \"cumulativeOgnBought\": 5467.075727106659,\n    \"cumulativeOgnBoughtUSD\": 797.7372951990203\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3c63de90-c224-47d4-b9e0-1be9e703c500",
+          "name": "get Api V2Ogn Price",
+          "request": {
+            "name": "get Api V2Ogn Price",
+            "description": {
+              "content": "Get OGN price in USD from CoinGecko (cached to respect rate limits)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "price"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fc28028a-d134-437c-ac91-23cf4bf6c0d0",
+              "name": "OGN price in USD",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "price"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "3433.414874355698",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fdfeeb1e-16ea-4b21-991e-10f0681e3f46",
+              "name": "Price temporarily unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "price"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a388fd19-7774-49aa-958c-b69b53063af9",
+          "name": "get Api V2Ogn Lockup stats",
+          "request": {
+            "name": "get Api V2Ogn Lockup stats",
+            "description": {
+              "content": "Get lockup stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "lockup_stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8fb6cc7-566d-409e-bec8-fbfb1fa72fce",
+              "name": "Lockup stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "lockup_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"averageLockDuration\": 181.72261987383308,\n  \"averageOgnLockSize\": 8352.02542692307,\n  \"averageXognLockSize\": 9945.660997328296,\n  \"totalOgnLocked\": 7354.428967749021,\n  \"totalXognLocked\": 404.12559853991837\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1a82062-6732-475a-b317-528624fa16c1",
+          "name": "get Api V2Ogn Staking",
+          "request": {
+            "name": "get Api V2Ogn Staking",
+            "description": {
+              "content": "Get staking data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "staking"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "73836bcc-5e47-4be6-8c49-afc813aca700",
+              "name": "Staking data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "staking"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ognRewardsPerYear\": 6612.968322079791,\n  \"ognStakePercentage\": 8551.766946769741,\n  \"maxOgnApy\": 2271.109089900565\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5735016e-1b94-4de0-a327-701eef342087",
+          "name": "get Api V2Ogn Supply",
+          "request": {
+            "name": "get Api V2Ogn Supply",
+            "description": {
+              "content": "Get OGN supply",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "ogn",
+                "supply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5dd5b671-407f-41c8-864d-cea1399b51a5",
+              "name": "OGN supply",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "ogn",
+                    "supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalSupply\": 7892.860328273266,\n  \"circulatingSupply\": 8309.875622559854\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4d47174e-4c83-4966-88a5-0b1625f06b95",
+    "name": "defi-analytics account ogn API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

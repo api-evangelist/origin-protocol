@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account ofac API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ofac",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2OfacBlacklist",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ofac/blacklist"
+          },
+          "docs": "Get OFAC sanctioned addresses across supported networks"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

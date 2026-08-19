@@ -1,0 +1,197 @@
+{
+  "item": [
+    {
+      "id": "b896968b-f6ce-4b88-9545-4a12ccab2aec",
+      "name": "defillama",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f2a0ee5c-3b68-4eee-a672-ee1bcd4ec795",
+          "name": "get Api V2Defillama Protocols",
+          "request": {
+            "name": "get Api V2Defillama Protocols",
+            "description": {
+              "content": "Get DefiLlama protocols",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "defillama",
+                "protocols"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d050b3d5-a2f5-42d1-b624-675be56a0ebf",
+              "name": "DefiLlama protocols",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "defillama",
+                    "protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"symbol\": \"string\",\n    \"url\": \"string\",\n    \"description\": \"string\",\n    \"logo\": \"string\",\n    \"gecko_id\": \"string\",\n    \"cmcId\": \"string\",\n    \"category\": \"string\",\n    \"chains\": [\n      \"string\",\n      \"string\"\n    ],\n    \"module\": \"string\",\n    \"slug\": \"string\",\n    \"tvl\": 8439.211014995666,\n    \"chainTvls\": {\n      \"key_0\": 6593.954516309112,\n      \"key_1\": 3946.3257011788864\n    },\n    \"change_1h\": 6587.080365404187,\n    \"change_1d\": 5425.6458899408735,\n    \"change_7d\": 3118.725212823449,\n    \"tokenBreakdowns\": {\n      \"key_0\": {},\n      \"key_1\": {}\n    },\n    \"mcap\": 7556.322280945428,\n    \"chain\": \"string\",\n    \"audits\": \"string\",\n    \"audit_note\": \"string\",\n    \"twitter\": \"string\",\n    \"audit_links\": [\n      \"string\",\n      \"string\"\n    ],\n    \"listedAt\": 8465.947553356798,\n    \"governanceID\": [\n      \"string\",\n      \"string\"\n    ],\n    \"github\": [\n      \"string\",\n      \"string\"\n    ],\n    \"treasury\": \"string\",\n    \"methodology\": \"string\",\n    \"staking\": 1000.8712694171073\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"symbol\": \"string\",\n    \"url\": \"string\",\n    \"description\": \"string\",\n    \"logo\": \"string\",\n    \"gecko_id\": \"string\",\n    \"cmcId\": \"string\",\n    \"category\": \"string\",\n    \"chains\": [\n      \"string\",\n      \"string\"\n    ],\n    \"module\": \"string\",\n    \"slug\": \"string\",\n    \"tvl\": 8914.268446912269,\n    \"chainTvls\": {\n      \"key_0\": 7412.783379122141\n    },\n    \"change_1h\": 5964.988501624715,\n    \"change_1d\": 6206.654182515084,\n    \"change_7d\": 2749.4584641096585,\n    \"tokenBreakdowns\": {\n      \"key_0\": {},\n      \"key_1\": {}\n    },\n    \"mcap\": 1405.6092068838789,\n    \"chain\": \"string\",\n    \"audits\": \"string\",\n    \"audit_note\": \"string\",\n    \"twitter\": \"string\",\n    \"audit_links\": [\n      \"string\",\n      \"string\"\n    ],\n    \"listedAt\": 3063.655785759115,\n    \"governanceID\": [\n      \"string\",\n      \"string\"\n    ],\n    \"github\": [\n      \"string\",\n      \"string\"\n    ],\n    \"treasury\": \"string\",\n    \"methodology\": \"string\",\n    \"staking\": 639.5532284309057\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7268ea3d-b301-4783-99d6-96c0859cd31c",
+          "name": "get Api V2Defillama Protocols Apy",
+          "request": {
+            "name": "get Api V2Defillama Protocols Apy",
+            "description": {
+              "content": "Get DefiLlama protocol APYs computed from revenue and TVL",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "defillama",
+                "protocols",
+                "apy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "protocols",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b6007d31-1168-4a92-b1fa-692461504b68",
+              "name": "DefiLlama protocol APYs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "defillama",
+                    "protocols",
+                    "apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "protocols",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"defillamaId\": \"string\",\n    \"name\": \"string\",\n    \"displayName\": \"string\",\n    \"slug\": \"string\",\n    \"category\": \"string\",\n    \"chains\": [\n      \"string\",\n      \"string\"\n    ],\n    \"logo\": \"string\",\n    \"tvlUsd\": 3839.154220447807,\n    \"revenue24hUsd\": 6072.651385957593,\n    \"revenue7dUsd\": 3986.3498488739356,\n    \"revenue30dUsd\": 3402.0209827579138,\n    \"annualizedRevenueUsd\": 3259.6037632446196,\n    \"apy\": 1054.718883079886\n  },\n  {\n    \"id\": \"string\",\n    \"defillamaId\": \"string\",\n    \"name\": \"string\",\n    \"displayName\": \"string\",\n    \"slug\": \"string\",\n    \"category\": \"string\",\n    \"chains\": [\n      \"string\",\n      \"string\"\n    ],\n    \"logo\": \"string\",\n    \"tvlUsd\": 2905.4475083575826,\n    \"revenue24hUsd\": 5042.948523745249,\n    \"revenue7dUsd\": 7418.99998639708,\n    \"revenue30dUsd\": 2745.1959605221664,\n    \"annualizedRevenueUsd\": 5096.405567473368,\n    \"apy\": 379.0450035888071\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "68580942-0a2a-4e66-9e51-81e5bf4e5464",
+    "name": "defi-analytics account defillama API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

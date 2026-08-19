@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account merkl API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "merkl",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2MerklCampaignByTokenId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/merkl/campaign/:tokenId",
+            "params": [
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Merkl rewards"
+        },
+        {
+          "info": {
+            "name": "getApiV2MerklOpportunityByTokenId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/merkl/opportunity/:tokenId",
+            "params": [
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Merkl opportunity"
+        },
+        {
+          "info": {
+            "name": "getApiV2MerklByUserRewardsByTokenId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/merkl/:user/rewards/:tokenId",
+            "params": [
+              {
+                "name": "user",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "forceRefresh",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get available, claimed, and pending Merkl rewards for a user and a product id"
+        },
+        {
+          "info": {
+            "name": "getApiV2MerklByUserRewardsByTokenIdClaim-transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/merkl/:user/rewards/:tokenId/claim-transaction",
+            "params": [
+              {
+                "name": "user",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Merkl reward claim transaction data for a user to sign in a dapp"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

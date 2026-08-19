@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account ogn API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ogn",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2OgnBuyback_stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/buyback_stats",
+            "params": [
+              {
+                "name": "startCumulative",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get buyback stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2OgnBuybacks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/buybacks",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get buybacks"
+        },
+        {
+          "info": {
+            "name": "getApiV2OgnDaily_buybacks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/daily_buybacks",
+            "params": [
+              {
+                "name": "days",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "startCumulative",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get daily buybacks"
+        },
+        {
+          "info": {
+            "name": "getApiV2OgnPrice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/price"
+          },
+          "docs": "Get OGN price in USD from CoinGecko (cached to respect rate limits)"
+        },
+        {
+          "info": {
+            "name": "getApiV2OgnLockup_stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/lockup_stats"
+          },
+          "docs": "Get lockup stats"
+        },
+        {
+          "info": {
+            "name": "getApiV2OgnStaking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/staking"
+          },
+          "docs": "Get staking data"
+        },
+        {
+          "info": {
+            "name": "getApiV2OgnSupply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/ogn/supply"
+          },
+          "docs": "Get OGN supply"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

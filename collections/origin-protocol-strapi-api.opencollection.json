@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account strapi API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "strapi",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2StrapiPost_slugs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/strapi/post_slugs"
+          },
+          "docs": "Get all blog post slugs"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

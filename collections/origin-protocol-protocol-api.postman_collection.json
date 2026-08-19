@@ -1,0 +1,707 @@
+{
+  "item": [
+    {
+      "id": "69ce9eed-cf0c-48f7-b4fa-23ea20390d25",
+      "name": "protocol",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1025d26b-5ec4-4ed5-a538-0b631b1e9633",
+          "name": "get Api V2Protocol Protocol-fees",
+          "request": {
+            "name": "get Api V2Protocol Protocol-fees",
+            "description": {
+              "content": "Get protocol fees",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "protocol-fees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59d53592-692f-4d97-9b65-be4cec093337",
+              "name": "Protocol fees",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "protocol-fees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"revenue\": {\n    \"now\": 5635.9246748332325,\n    \"oneDayAgo\": 8152.216360759136,\n    \"twoDaysAgo\": 896.917506424173,\n    \"oneWeekAgo\": 2799.7576979384507,\n    \"twoWeeksAgo\": 3738.157173599164,\n    \"thirtyDaysAgo\": 8144.2307266100215,\n    \"sixtyDaysAgo\": 9481.489656073898,\n    \"ninetyDaysAgo\": 9498.246446407029\n  },\n  \"days\": [\n    {\n      \"date\": 870.2625345903159,\n      \"revenue\": 6730.972464585278\n    },\n    {\n      \"date\": 8816.839074164667,\n      \"revenue\": 7501.795378165393\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8af99d13-9112-4f47-934a-d2acb5543311",
+          "name": "get Api V2Protocol Cumulative fees",
+          "request": {
+            "name": "get Api V2Protocol Cumulative fees",
+            "description": {
+              "content": "Get cumulative protocol fees",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "cumulative_fees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8180ad93-e043-47a5-957f-a41eaec43a12",
+              "name": "Cumulative protocol fees",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "cumulative_fees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"oethETH\": 1966.0046136048193,\n  \"oethUSD\": 8785.726279175558,\n  \"ousdETH\": 8783.573241747537,\n  \"ousdUSD\": 6322.5584550805115,\n  \"superOethbETH\": 9204.7662945515,\n  \"superOethbUSD\": 2646.2482499490816,\n  \"osETH\": 5218.07075828006,\n  \"osUSD\": 4088.2274322780963,\n  \"armWethStethETH\": 2608.1951386241662,\n  \"armWethStethUSD\": 3366.1854201758947,\n  \"armWsOsETH\": 3980.0948979170194,\n  \"armWsOsUSD\": 7144.114291647508,\n  \"armWethEethETH\": 3004.052109790826,\n  \"armWethEethUSD\": 1192.4531455832089,\n  \"armSusdeUsdeETH\": 9513.617916681325,\n  \"armSusdeUsdeUSD\": 9387.123621527842,\n  \"totalETH\": 266.3861937967227,\n  \"totalUSD\": 9293.94867924076\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "453629a3-71f9-4570-bbe3-6078fe9afa30",
+          "name": "get Api V2Protocol Daily fees",
+          "request": {
+            "name": "get Api V2Protocol Daily fees",
+            "description": {
+              "content": "Get daily protocol fees",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "daily_fees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f936a13-a681-437f-90e1-65d55e507578",
+              "name": "Daily protocol fees",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "daily_fees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"timestamp\": 9254.230154411316,\n  \"date\": \"string\",\n  \"oeth\": {\n    \"amount\": 2380.139961067965,\n    \"amountETH\": 7875.614551864271,\n    \"amountUSD\": 7974.374849328419,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 2731.3200093824244,\n      \"decimals\": 6125.692198294812,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"ousd\": {\n    \"amount\": 8128.35102694271,\n    \"amountETH\": 6244.26200818212,\n    \"amountUSD\": 6479.970865044789,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 4504.048787121105,\n      \"decimals\": 3926.3058002649177,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"superOethb\": {\n    \"amount\": 7978.128675064255,\n    \"amountETH\": 2732.9993352975134,\n    \"amountUSD\": 4000.391089309584,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 5474.413666205343,\n      \"decimals\": 1995.081627016303,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"os\": {\n    \"amount\": 8055.226465143257,\n    \"amountETH\": 5425.365799329522,\n    \"amountUSD\": 9545.807731743273,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 2989.850556865592,\n      \"decimals\": 306.1210985470386,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armWethSteth\": {\n    \"amount\": 7832.834208068702,\n    \"amountETH\": 3615.2963947075723,\n    \"amountUSD\": 9070.892658019153,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 2233.2160361313427,\n      \"decimals\": 382.8270056882066,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armWsOs\": {\n    \"amount\": 7753.525698036438,\n    \"amountETH\": 782.2466155906571,\n    \"amountUSD\": 7487.399208874259,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 6853.437503664502,\n      \"decimals\": 7900.281215419976,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armWethEeth\": {\n    \"amount\": 7732.953922479437,\n    \"amountETH\": 3242.9751025975984,\n    \"amountUSD\": 8258.759324786746,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 8369.107726219789,\n      \"decimals\": 8829.609406806385,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armSusdeUsde\": {\n    \"amount\": 3447.6535807905852,\n    \"amountETH\": 5925.618015985652,\n    \"amountUSD\": 6931.412824443905,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 6646.241500603126,\n      \"decimals\": 2676.14594697023,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"total\": {\n    \"amount\": 6593.153094615644,\n    \"amountETH\": 2103.2491522208106,\n    \"amountUSD\": 9531.129183410081\n  },\n  \"avg7\": {\n    \"amount\": 8732.4731510777,\n    \"amountETH\": 4868.94184074842,\n    \"amountUSD\": 7297.793943427885\n  },\n  \"avg14\": {\n    \"amount\": 2344.3820201545773,\n    \"amountETH\": 9231.098904279605,\n    \"amountUSD\": 5459.839335035488\n  },\n  \"avg30\": {\n    \"amount\": 2857.436776415487,\n    \"amountETH\": 3888.9545281240535,\n    \"amountUSD\": 3233.342220236807\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "45b05b95-4e02-4180-accf-542bd917a283",
+          "name": "get Api V2Protocol Daily revenue",
+          "request": {
+            "name": "get Api V2Protocol Daily revenue",
+            "description": {
+              "content": "Get daily protocol revenue",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "daily_revenue"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fc9df619-0229-4202-a6cc-2c00f2189cf0",
+              "name": "Daily protocol revenue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "daily_revenue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": 8779.725149824984,\n    \"date\": \"string\",\n    \"oeth\": {\n      \"amount\": 2366.7010720201574,\n      \"amountETH\": 7244.504045016776,\n      \"amountUSD\": 1692.455107394275,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 297.31642409166705,\n        \"decimals\": 1436.4292083630414,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"ousd\": {\n      \"amount\": 7257.717064708897,\n      \"amountETH\": 5865.640279690815,\n      \"amountUSD\": 6554.382951221546,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 7006.051497490872,\n        \"decimals\": 8585.752396160082,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"superOethb\": {\n      \"amount\": 343.62574455074514,\n      \"amountETH\": 4064.143308150414,\n      \"amountUSD\": 3858.415072334983,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 3627.448408578624,\n        \"decimals\": 7528.538220948725,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"os\": {\n      \"amount\": 6422.138380629913,\n      \"amountETH\": 31.59192557773194,\n      \"amountUSD\": 8640.959143509497,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 3624.505123078553,\n        \"decimals\": 6869.099826623789,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armWethSteth\": {\n      \"amount\": 5738.882239804027,\n      \"amountETH\": 5800.347189185483,\n      \"amountUSD\": 7139.664390372549,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 3628.1272655688877,\n        \"decimals\": 7046.284835275178,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armWsOs\": {\n      \"amount\": 5426.87704058826,\n      \"amountETH\": 9886.315233009005,\n      \"amountUSD\": 4848.603273486871,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 9312.866812976798,\n        \"decimals\": 1098.6857976713027,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armWethEeth\": {\n      \"amount\": 4524.514670857079,\n      \"amountETH\": 2432.8164041807345,\n      \"amountUSD\": 6107.256357757615,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 5405.9366863567475,\n        \"decimals\": 6246.51632896393,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armSusdeUsde\": {\n      \"amount\": 8040.033730449114,\n      \"amountETH\": 8501.31048067451,\n      \"amountUSD\": 3968.00472875964,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 8536.949459608213,\n        \"decimals\": 5018.405004749933,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"total\": {\n      \"amount\": 5443.794088316178,\n      \"amountETH\": 7835.047843977851,\n      \"amountUSD\": 5526.632023855309\n    },\n    \"avg7\": {\n      \"amount\": 1719.1701154378413,\n      \"amountETH\": 8303.157823918486,\n      \"amountUSD\": 154.4991734587786\n    },\n    \"avg14\": {\n      \"amount\": 4460.1890785304,\n      \"amountETH\": 5539.786519979682,\n      \"amountUSD\": 4137.736789322966\n    },\n    \"avg30\": {\n      \"amount\": 803.8191818335616,\n      \"amountETH\": 5356.571269898037,\n      \"amountUSD\": 7553.517562671511\n    }\n  },\n  {\n    \"timestamp\": 6968.668094319231,\n    \"date\": \"string\",\n    \"oeth\": {\n      \"amount\": 8871.21844981261,\n      \"amountETH\": 5125.342901337258,\n      \"amountUSD\": 5777.782462030699,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 749.2116957165429,\n        \"decimals\": 6438.58399900432,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"ousd\": {\n      \"amount\": 2766.887913819088,\n      \"amountETH\": 2200.383531981851,\n      \"amountUSD\": 8325.35422052128,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 8006.661881712087,\n        \"decimals\": 6215.44822193748,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"superOethb\": {\n      \"amount\": 5064.872114223586,\n      \"amountETH\": 6022.959454740036,\n      \"amountUSD\": 2248.482052184306,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 9882.655376864619,\n        \"decimals\": 7859.902216832003,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"os\": {\n      \"amount\": 4254.7700036038805,\n      \"amountETH\": 9796.38288001352,\n      \"amountUSD\": 9794.53706976829,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 2176.1431921201693,\n        \"decimals\": 2673.666862138828,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armWethSteth\": {\n      \"amount\": 3042.4642929686265,\n      \"amountETH\": 6261.374647240524,\n      \"amountUSD\": 1565.9241067069097,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 1720.3342718270987,\n        \"decimals\": 8020.758666379907,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armWsOs\": {\n      \"amount\": 5703.465051152256,\n      \"amountETH\": 7890.865800844556,\n      \"amountUSD\": 5779.324265651377,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 5389.650966799111,\n        \"decimals\": 6047.192744740959,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armWethEeth\": {\n      \"amount\": 6924.540595299623,\n      \"amountETH\": 1727.638115941137,\n      \"amountUSD\": 6812.0890244993925,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 9564.750769017579,\n        \"decimals\": 7413.9198308652,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"armSusdeUsde\": {\n      \"amount\": 1531.9708110716213,\n      \"amountETH\": 1336.2645790616634,\n      \"amountUSD\": 7233.390180694773,\n      \"token\": {\n        \"id\": \"string\",\n        \"address\": \"string\",\n        \"name\": \"string\",\n        \"chainId\": 8304.83466256991,\n        \"decimals\": 2737.952139726959,\n        \"symbol\": \"string\"\n      },\n      \"color\": \"string\"\n    },\n    \"total\": {\n      \"amount\": 5325.789186960294,\n      \"amountETH\": 7080.394710039212,\n      \"amountUSD\": 2224.2370507564524\n    },\n    \"avg7\": {\n      \"amount\": 9401.464382553391,\n      \"amountETH\": 8650.493810170135,\n      \"amountUSD\": 2448.1515541588437\n    },\n    \"avg14\": {\n      \"amount\": 7663.279899077741,\n      \"amountETH\": 1166.8190318770976,\n      \"amountUSD\": 1855.7343026537453\n    },\n    \"avg30\": {\n      \"amount\": 2992.887173980615,\n      \"amountETH\": 2938.252012911663,\n      \"amountUSD\": 3536.0672673054437\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3efbd031-de52-427b-9819-ebe7b5c9e4e1",
+          "name": "get Api V2Protocol Cumulative revenue",
+          "request": {
+            "name": "get Api V2Protocol Cumulative revenue",
+            "description": {
+              "content": "Get cumulative protocol revenue",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "cumulative_revenue"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d08ea720-0afc-440a-b710-18490c4ca41f",
+              "name": "Cumulative protocol revenue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "cumulative_revenue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"oethETH\": 1966.0046136048193,\n  \"oethUSD\": 8785.726279175558,\n  \"ousdETH\": 8783.573241747537,\n  \"ousdUSD\": 6322.5584550805115,\n  \"superOethbETH\": 9204.7662945515,\n  \"superOethbUSD\": 2646.2482499490816,\n  \"osETH\": 5218.07075828006,\n  \"osUSD\": 4088.2274322780963,\n  \"armWethStethETH\": 2608.1951386241662,\n  \"armWethStethUSD\": 3366.1854201758947,\n  \"armWsOsETH\": 3980.0948979170194,\n  \"armWsOsUSD\": 7144.114291647508,\n  \"armWethEethETH\": 3004.052109790826,\n  \"armWethEethUSD\": 1192.4531455832089,\n  \"armSusdeUsdeETH\": 9513.617916681325,\n  \"armSusdeUsdeUSD\": 9387.123621527842,\n  \"totalETH\": 266.3861937967227,\n  \"totalUSD\": 9293.94867924076\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4eb3691d-a503-4e99-9d44-cdfdb0a8ad6e",
+          "name": "get Api V2Protocol Daily total supply",
+          "request": {
+            "name": "get Api V2Protocol Daily total supply",
+            "description": {
+              "content": "Get daily total supply",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "daily_total_supply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac48fd99-5f4a-4d45-abe8-af7f99aa6b0c",
+              "name": "Daily total supply",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "daily_total_supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "days",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"timestamp\": 9254.230154411316,\n  \"date\": \"string\",\n  \"oeth\": {\n    \"amount\": 2380.139961067965,\n    \"amountETH\": 7875.614551864271,\n    \"amountUSD\": 7974.374849328419,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 2731.3200093824244,\n      \"decimals\": 6125.692198294812,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"ousd\": {\n    \"amount\": 8128.35102694271,\n    \"amountETH\": 6244.26200818212,\n    \"amountUSD\": 6479.970865044789,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 4504.048787121105,\n      \"decimals\": 3926.3058002649177,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"superOethb\": {\n    \"amount\": 7978.128675064255,\n    \"amountETH\": 2732.9993352975134,\n    \"amountUSD\": 4000.391089309584,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 5474.413666205343,\n      \"decimals\": 1995.081627016303,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"os\": {\n    \"amount\": 8055.226465143257,\n    \"amountETH\": 5425.365799329522,\n    \"amountUSD\": 9545.807731743273,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 2989.850556865592,\n      \"decimals\": 306.1210985470386,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armWethSteth\": {\n    \"amount\": 7832.834208068702,\n    \"amountETH\": 3615.2963947075723,\n    \"amountUSD\": 9070.892658019153,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 2233.2160361313427,\n      \"decimals\": 382.8270056882066,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armWsOs\": {\n    \"amount\": 7753.525698036438,\n    \"amountETH\": 782.2466155906571,\n    \"amountUSD\": 7487.399208874259,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 6853.437503664502,\n      \"decimals\": 7900.281215419976,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armWethEeth\": {\n    \"amount\": 7732.953922479437,\n    \"amountETH\": 3242.9751025975984,\n    \"amountUSD\": 8258.759324786746,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 8369.107726219789,\n      \"decimals\": 8829.609406806385,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"armSusdeUsde\": {\n    \"amount\": 3447.6535807905852,\n    \"amountETH\": 5925.618015985652,\n    \"amountUSD\": 6931.412824443905,\n    \"token\": {\n      \"id\": \"string\",\n      \"address\": \"string\",\n      \"name\": \"string\",\n      \"chainId\": 6646.241500603126,\n      \"decimals\": 2676.14594697023,\n      \"symbol\": \"string\"\n    },\n    \"color\": \"string\"\n  },\n  \"total\": {\n    \"amount\": 6593.153094615644,\n    \"amountETH\": 2103.2491522208106,\n    \"amountUSD\": 9531.129183410081\n  },\n  \"avg7\": {\n    \"amount\": 8732.4731510777,\n    \"amountETH\": 4868.94184074842,\n    \"amountUSD\": 7297.793943427885\n  },\n  \"avg14\": {\n    \"amount\": 2344.3820201545773,\n    \"amountETH\": 9231.098904279605,\n    \"amountUSD\": 5459.839335035488\n  },\n  \"avg30\": {\n    \"amount\": 2857.436776415487,\n    \"amountETH\": 3888.9545281240535,\n    \"amountUSD\": 3233.342220236807\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cc17ea6b-5537-457e-b076-031d7af65d67",
+          "name": "get Api V2Protocol Contributors",
+          "request": {
+            "name": "get Api V2Protocol Contributors",
+            "description": {
+              "content": "Get contributors",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "contributors"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "force",
+                  "value": "false",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5eb32955-4549-42ae-b0a9-5c8962d52f1a",
+              "name": "Contributors data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "contributors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "force",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  \"string\",\n  \"string\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c4f6068-46ea-47e1-b75e-38b8e41431bd",
+          "name": "get Api V2Protocol Products stats",
+          "request": {
+            "name": "get Api V2Protocol Products stats",
+            "description": {
+              "content": "Get products stats",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "protocol",
+                "products_stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fb4e76ce-82b2-4a60-a979-4f411f23292b",
+              "name": "Product stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "protocol",
+                    "products_stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"oeth\": {\n    \"id\": \"string\",\n    \"timestamp\": 5824.692328057934,\n    \"date\": \"string\",\n    \"fees\": 2376.780255292661,\n    \"totalSupply\": 1341.6325819395747,\n    \"rateUSD\": 2527.169014769317,\n    \"rateETH\": 8896.348078644363,\n    \"rateNative\": 3022.894987611161,\n    \"apy\": 8628.696002378214,\n    \"apy7\": 1357.754268664908,\n    \"apy14\": 7116.51800616948,\n    \"apy30\": 548.1178411101839,\n    \"bestApy\": 6144.488396551754,\n    \"bestApyTrailingDays\": 5390.513426438815,\n    \"yield\": 9944.687678094937,\n    \"cumulativeFees\": 2167.458331781622,\n    \"cumulativeYield\": 5185.201605989247,\n    \"amoSupply\": 6929.821050432263,\n    \"tvl\": 7726.883476521988,\n    \"rateWrapped\": 3770.2570380503576\n  },\n  \"ousd\": {\n    \"id\": \"string\",\n    \"timestamp\": 1386.6426656715814,\n    \"date\": \"string\",\n    \"fees\": 7546.348472468541,\n    \"totalSupply\": 8939.887797679907,\n    \"rateUSD\": 7697.9809229779685,\n    \"rateETH\": 6167.0637886899385,\n    \"rateNative\": 3716.5494251249474,\n    \"apy\": 1835.3537065544178,\n    \"apy7\": 4585.819215328715,\n    \"apy14\": 5884.162314002409,\n    \"apy30\": 4219.590050119757,\n    \"bestApy\": 8334.466143097163,\n    \"bestApyTrailingDays\": 8491.549848634759,\n    \"yield\": 4571.760688744212,\n    \"cumulativeFees\": 2343.4705160737412,\n    \"cumulativeYield\": 7035.166286884177,\n    \"amoSupply\": 7467.863759456218,\n    \"tvl\": 2853.950716586191,\n    \"rateWrapped\": 1066.2530866758302\n  },\n  \"superOethb\": {\n    \"id\": \"string\",\n    \"timestamp\": 1890.8910831769056,\n    \"date\": \"string\",\n    \"fees\": 4156.055422550189,\n    \"totalSupply\": 7253.362708153824,\n    \"rateUSD\": 746.082328381601,\n    \"rateETH\": 5190.40503800321,\n    \"rateNative\": 8037.556647985429,\n    \"apy\": 8857.214229432915,\n    \"apy7\": 7403.831966637845,\n    \"apy14\": 5320.415160206572,\n    \"apy30\": 6769.702986487017,\n    \"bestApy\": 3325.934018280738,\n    \"bestApyTrailingDays\": 171.93715055464298,\n    \"yield\": 4966.9322458063225,\n    \"cumulativeFees\": 488.68376681010074,\n    \"cumulativeYield\": 9316.740744122315,\n    \"amoSupply\": 8221.62188541744,\n    \"tvl\": 8661.52466119231,\n    \"rateWrapped\": 1273.9135322915595\n  },\n  \"os\": {\n    \"id\": \"string\",\n    \"timestamp\": 4170.151457224069,\n    \"date\": \"string\",\n    \"fees\": 9975.935687480245,\n    \"totalSupply\": 4646.639177129887,\n    \"rateUSD\": 8424.624273313137,\n    \"rateETH\": 6304.95469265352,\n    \"rateNative\": 9573.64836465588,\n    \"apy\": 2750.8483521743933,\n    \"apy7\": 8517.773852266726,\n    \"apy14\": 1043.3121768589403,\n    \"apy30\": 1580.8433374696385,\n    \"bestApy\": 6449.238928751039,\n    \"bestApyTrailingDays\": 3151.5448866847105,\n    \"yield\": 1447.769720948826,\n    \"cumulativeFees\": 7043.904991923628,\n    \"cumulativeYield\": 5006.271707934199,\n    \"amoSupply\": 8267.136378200581,\n    \"tvl\": 2023.0253003520193,\n    \"rateWrapped\": 7453.099334916163\n  },\n  \"armWethSteth\": {\n    \"id\": \"string\",\n    \"timestamp\": 798.7312090874854,\n    \"date\": \"string\",\n    \"address\": \"string\",\n    \"totalAssets\": 4925.80732076651,\n    \"rateUSD\": 6199.9293775876895,\n    \"rateETH\": 7187.937161632994,\n    \"rateNative\": 2802.926783287536,\n    \"rateAsset\": 8177.000597518101,\n    \"totalAssetsCap\": 5466.182599478254,\n    \"totalSupply\": 5254.098936358484,\n    \"assets\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetSymbols\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetBalances\": [\n      3574.8749878152885,\n      3037.874185075732\n    ],\n    \"assetTotals\": [\n      565.6052988188043,\n      3429.9703303564697\n    ],\n    \"assetRates\": [\n      6616.66099756437,\n      8056.630998216983\n    ],\n    \"outstandingAssets\": [\n      2587.659726977255,\n      4880.42440440355\n    ],\n    \"ratesUSD\": [\n      8800.7043078917,\n      9400.244587837251\n    ],\n    \"ratesETH\": [\n      2128.7637466234623,\n      8014.331849259064\n    ],\n    \"ratesNative\": [\n      601.4894206095967,\n      5341.144341499371\n    ],\n    \"ratesAsset\": [\n      873.475509356989,\n      6377.211565138468\n    ],\n    \"assetsPerShare\": 3540.509895514088,\n    \"totalDeposits\": 4153.234443087576,\n    \"totalWithdrawals\": 7163.968058234806,\n    \"totalWithdrawalsClaimed\": 2023.2418163403854,\n    \"marketAssets\": 322.97315897707455,\n    \"apr\": 4655.941981506011,\n    \"apy\": 7210.763941174131,\n    \"yield\": 7648.4221485177595,\n    \"fees\": 2240.836767885509,\n    \"apy7\": 8782.078442459702,\n    \"apy14\": 2187.2321485464618,\n    \"apy30\": 9363.418520284748,\n    \"bestApy\": 9666.299878937942,\n    \"bestApyTrailingDays\": 7925.809331433998,\n    \"baseApy\": 447.65476969821805,\n    \"baseApr\": 9215.127736683111,\n    \"baseYield\": 6366.461181501668,\n    \"incentiveYield\": 6197.911815909919,\n    \"incentiveApr\": 4010.9318782335567,\n    \"incentiveApy\": 5805.507512486234\n  },\n  \"armWsOs\": {\n    \"id\": \"string\",\n    \"timestamp\": 4708.725261393835,\n    \"date\": \"string\",\n    \"address\": \"string\",\n    \"totalAssets\": 3443.995244884932,\n    \"rateUSD\": 9883.69829202408,\n    \"rateETH\": 5361.933722328685,\n    \"rateNative\": 8405.080322912925,\n    \"rateAsset\": 7038.287912192514,\n    \"totalAssetsCap\": 1143.7510244163684,\n    \"totalSupply\": 8564.210956583489,\n    \"assets\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetSymbols\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetBalances\": [\n      7948.707257079144,\n      4767.577291603243\n    ],\n    \"assetTotals\": [\n      5086.4795068784315,\n      5231.92936683538\n    ],\n    \"assetRates\": [\n      6968.6431124346045,\n      1504.7748165545627\n    ],\n    \"outstandingAssets\": [\n      177.1007924805934,\n      2671.012950672088\n    ],\n    \"ratesUSD\": [\n      541.2650555665643,\n      8473.522343226867\n    ],\n    \"ratesETH\": [\n      6820.657487667306,\n      5135.66485549768\n    ],\n    \"ratesNative\": [\n      7834.273535047735,\n      7612.56353149129\n    ],\n    \"ratesAsset\": [\n      4396.581625084626,\n      1246.64717618293\n    ],\n    \"assetsPerShare\": 3749.517068244342,\n    \"totalDeposits\": 8743.153110923604,\n    \"totalWithdrawals\": 5257.486894646042,\n    \"totalWithdrawalsClaimed\": 9157.489536133005,\n    \"marketAssets\": 7891.696626242217,\n    \"apr\": 6290.1717395360065,\n    \"apy\": 5074.057651526182,\n    \"yield\": 8496.274456415464,\n    \"fees\": 4020.526023314489,\n    \"apy7\": 3813.0806331888443,\n    \"apy14\": 8881.590434712554,\n    \"apy30\": 7160.6969206773865,\n    \"bestApy\": 6744.301887482233,\n    \"bestApyTrailingDays\": 1395.3364172604277,\n    \"baseApy\": 812.9624785449773,\n    \"baseApr\": 6365.767386082285,\n    \"baseYield\": 8451.767197644549,\n    \"incentiveYield\": 3153.581572224261,\n    \"incentiveApr\": 4963.223721559123,\n    \"incentiveApy\": 2281.8045448281364\n  },\n  \"armWethEeth\": {\n    \"id\": \"string\",\n    \"timestamp\": 8379.640933476358,\n    \"date\": \"string\",\n    \"address\": \"string\",\n    \"totalAssets\": 4149.500547811611,\n    \"rateUSD\": 4740.493111196269,\n    \"rateETH\": 1081.5952724740873,\n    \"rateNative\": 6867.720886905683,\n    \"rateAsset\": 1404.1934604547978,\n    \"totalAssetsCap\": 2259.6771089628255,\n    \"totalSupply\": 2420.257882406387,\n    \"assets\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetSymbols\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetBalances\": [\n      3462.4497713358382,\n      295.8739583933179\n    ],\n    \"assetTotals\": [\n      174.65988051438396,\n      9752.011186921709\n    ],\n    \"assetRates\": [\n      5530.004794173154,\n      5683.857027240173\n    ],\n    \"outstandingAssets\": [\n      6086.187352934097,\n      9276.994979858442\n    ],\n    \"ratesUSD\": [\n      191.27378434195208,\n      9098.14487278399\n    ],\n    \"ratesETH\": [\n      7035.134485620685,\n      6687.977903941082\n    ],\n    \"ratesNative\": [\n      1143.9737699378938,\n      4576.49434364313\n    ],\n    \"ratesAsset\": [\n      8861.49089926315,\n      5071.963093097208\n    ],\n    \"assetsPerShare\": 8031.317552478375,\n    \"totalDeposits\": 6864.991924898817,\n    \"totalWithdrawals\": 1225.3846022615778,\n    \"totalWithdrawalsClaimed\": 3644.8996034033366,\n    \"marketAssets\": 1909.5528912335858,\n    \"apr\": 5098.794099563763,\n    \"apy\": 686.3659331453186,\n    \"yield\": 3221.1518291606912,\n    \"fees\": 9223.520878939713,\n    \"apy7\": 1654.6511045430302,\n    \"apy14\": 1530.9892966774619,\n    \"apy30\": 4562.155735510393,\n    \"bestApy\": 5171.182386802505,\n    \"bestApyTrailingDays\": 9257.667392753849,\n    \"baseApy\": 5869.872999232566,\n    \"baseApr\": 7129.101965449398,\n    \"baseYield\": 7944.408427045159,\n    \"incentiveYield\": 8516.080668423687,\n    \"incentiveApr\": 9582.201665463834,\n    \"incentiveApy\": 6343.9480798820405\n  },\n  \"armSusdeUsde\": {\n    \"id\": \"string\",\n    \"timestamp\": 3271.287308090329,\n    \"date\": \"string\",\n    \"address\": \"string\",\n    \"totalAssets\": 8662.813882470766,\n    \"rateUSD\": 1402.5294130249288,\n    \"rateETH\": 4156.073748095442,\n    \"rateNative\": 2098.8546859196267,\n    \"rateAsset\": 6787.7611710539295,\n    \"totalAssetsCap\": 9782.233152787589,\n    \"totalSupply\": 7986.130977460183,\n    \"assets\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetSymbols\": [\n      \"string\",\n      \"string\"\n    ],\n    \"assetBalances\": [\n      2394.7174637172984,\n      5767.054618375728\n    ],\n    \"assetTotals\": [\n      7880.171578246962,\n      2920.1621026449175\n    ],\n    \"assetRates\": [\n      209.2866645788505,\n      436.4816642474234\n    ],\n    \"outstandingAssets\": [\n      5080.3057955139475,\n      5981.450688160014\n    ],\n    \"ratesUSD\": [\n      4656.623129343435,\n      7616.795830098205\n    ],\n    \"ratesETH\": [\n      9238.993825091382,\n      3093.9875163738575\n    ],\n    \"ratesNative\": [\n      8072.1841143456295,\n      9094.969261652403\n    ],\n    \"ratesAsset\": [\n      1797.5068543575267,\n      6774.128861007794\n    ],\n    \"assetsPerShare\": 889.5890707654064,\n    \"totalDeposits\": 435.6333907949705,\n    \"totalWithdrawals\": 1521.5245877757543,\n    \"totalWithdrawalsClaimed\": 8732.839763742637,\n    \"marketAssets\": 6708.147491185921,\n    \"apr\": 4764.836417054159,\n    \"apy\": 9883.925434087552,\n    \"yield\": 6664.591418227671,\n    \"fees\": 9874.43808646042,\n    \"apy7\": 9298.698146463004,\n    \"apy14\": 9723.988516107696,\n    \"apy30\": 576.9080401121885,\n    \"bestApy\": 4812.944613205195,\n    \"bestApyTrailingDays\": 9814.266511870937,\n    \"baseApy\": 8886.320726057873,\n    \"baseApr\": 4613.84833235639,\n    \"baseYield\": 6181.603529311268,\n    \"incentiveYield\": 7721.96453614854,\n    \"incentiveApr\": 9386.381623498883,\n    \"incentiveApy\": 6135.502205132837\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fc56a1ab-9b6b-442c-976d-9c849e75b86a",
+    "name": "defi-analytics account protocol API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

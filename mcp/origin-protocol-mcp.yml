@@ -5,8 +5,8 @@ status: candidate
 api: Origin DeFi Analytics API
 server:
   hosted: null
-  note: No official hosted/remote MCP server found. Candidate tool list derived from
-    read-only OpenAPI GET operations.
+  note: No official hosted/remote MCP server found. Candidate tool list derived from read-only OpenAPI
+    GET operations.
 transport: stdio (candidate)
 tool_count: 72
 tools:
@@ -121,8 +121,7 @@ tools:
 - name: getApiV2MerklByUserRewardsByTokenId
   method: GET
   path: /api/v2/merkl/{user}/rewards/{tokenId}
-  description: Get available, claimed, and pending Merkl rewards for a user and a
-    product id
+  description: Get available, claimed, and pending Merkl rewards for a user and a product id
 - name: getApiV2MerklByUserRewardsByTokenIdClaim-transaction
   method: GET
   path: /api/v2/merkl/{user}/rewards/{tokenId}/claim-transaction
@@ -299,3 +298,9 @@ tools:
   method: GET
   path: /cache/last-updated
   description: Get cache key last updated metadata
+deployment:
+  mode: none
+  verified: derived
+  tools: 72
+  checked: '2026-08-12'
+  source: catalog MCP census

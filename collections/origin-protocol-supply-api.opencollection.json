@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account supply API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "supply",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getCirculating-oeth",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/circulating-oeth"
+          },
+          "docs": "Get OETH circulating supply"
+        },
+        {
+          "info": {
+            "name": "getCirculating-ogn",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/circulating-ogn"
+          },
+          "docs": "Get OGN circulating supply"
+        },
+        {
+          "info": {
+            "name": "getCirculating-ogv",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/circulating-ogv"
+          },
+          "docs": "Get OGV circulating supply"
+        },
+        {
+          "info": {
+            "name": "getTotal-oeth",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/total-oeth"
+          },
+          "docs": "Get OETH total supply"
+        },
+        {
+          "info": {
+            "name": "getTotal-ousd",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/total-ousd"
+          },
+          "docs": "Get OUSD total supply"
+        },
+        {
+          "info": {
+            "name": "getTotal-superoethb",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/total-superoethb"
+          },
+          "docs": "Get superOETHb total supply"
+        },
+        {
+          "info": {
+            "name": "getTotal-os",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/total-os"
+          },
+          "docs": "Get OS total supply"
+        },
+        {
+          "info": {
+            "name": "getTotal-ogv",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/total-ogv"
+          },
+          "docs": "Get OGV total supply"
+        },
+        {
+          "info": {
+            "name": "getTotal-ogn",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/total-ogn"
+          },
+          "docs": "Get OGN total supply"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

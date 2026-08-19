@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account cache API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "cache",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getCacheLast-updated",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/cache/last-updated",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get cache key last updated metadata"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

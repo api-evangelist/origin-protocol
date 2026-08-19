@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "f3430c93-2e24-4d2b-98a5-51ccf62413f4",
+      "name": "cache",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "84c286ea-8d97-42d3-bd87-b1caa38e5b2e",
+          "name": "get Cache Last-updated",
+          "request": {
+            "name": "get Cache Last-updated",
+            "description": {
+              "content": "Get cache key last updated metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cache",
+                "last-updated"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "073b09a8-b485-4b3f-bb70-26035f0790f8",
+              "name": "Metadata for a cache key. `lastUpdated` is null when no metadata has been written yet.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cache",
+                    "last-updated"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key\": \"string\",\n  \"lastUpdated\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8787",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "834eaea9-db7c-41cb-80bd-fb7968021afb",
+    "name": "defi-analytics account cache API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for defi-analytics",
+      "type": "text/plain"
+    }
+  }
+}

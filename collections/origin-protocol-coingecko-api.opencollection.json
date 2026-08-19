@@ -1,0 +1,184 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "defi-analytics account coingecko API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "coingecko",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiV2CoingeckoNetworks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/coingecko/networks"
+          },
+          "docs": "Get coingecko networks"
+        },
+        {
+          "info": {
+            "name": "getApiV2CoingeckoPoolsByNetworkTokenByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/coingecko/pools/:network/token/:token",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get pools for a token and a chain"
+        },
+        {
+          "info": {
+            "name": "getApiV2CoingeckoOhlcvsByNetworkTokenByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/coingecko/ohlcvs/:network/token/:token",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get ohlcvs for a token"
+        },
+        {
+          "info": {
+            "name": "getApiV2CoingeckoOhlcvsByTokenId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/coingecko/ohlcvs/:tokenId",
+            "params": [
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get ohlcvs for a tokenId"
+        },
+        {
+          "info": {
+            "name": "getApiV2CoingeckoWatchlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/coingecko/watchlist",
+            "params": [
+              {
+                "name": "all",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get watchlist"
+        },
+        {
+          "info": {
+            "name": "postApiV2CoingeckoWatchlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8787/api/v2/coingecko/watchlist",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add token to watchlist"
+        },
+        {
+          "info": {
+            "name": "patchApiV2CoingeckoWatchlistByTokenId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://localhost:8787/api/v2/coingecko/watchlist/:tokenId",
+            "params": [
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add or remove token from watchlist"
+        },
+        {
+          "info": {
+            "name": "deleteApiV2CoingeckoWatchlistByTokenId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8787/api/v2/coingecko/watchlist/:tokenId",
+            "params": [
+              {
+                "name": "tokenId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove token from watchlist"
+        },
+        {
+          "info": {
+            "name": "getApiV2CoingeckoPriceByToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8787/api/v2/coingecko/price/:token",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get token price call data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
