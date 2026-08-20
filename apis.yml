@@ -43,6 +43,16 @@ tags:
 - DeFi
 - Analytics
 - Ethereum
+- Stablecoins
+- Liquid Staking
+- Yield
+- Blockchain
+tags_raw:
+- Company
+- Crypto
+- DeFi
+- Analytics
+- Ethereum
 - Stablecoin
 - Liquid Staking
 - Yield
@@ -54,6 +64,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Account
+  tags_raw:
   - account
   properties:
   - type: OpenAPI
@@ -78,6 +90,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - ARM
+  tags_raw:
   - arm
   properties:
   - type: OpenAPI
@@ -126,6 +140,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Cache
+  tags_raw:
   - cache
   properties:
   - type: OpenAPI
@@ -150,6 +166,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - CoinGecko
+  tags_raw:
   - coingecko
   properties:
   - type: OpenAPI
@@ -174,6 +192,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - DeFiLlama
+  tags_raw:
   - defillama
   properties:
   - type: OpenAPI
@@ -222,6 +242,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Hyperliquid
+  tags_raw:
   - hyperliquid
   properties:
   - type: OpenAPI
@@ -294,6 +316,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - OFAC
+  tags_raw:
   - ofac
   properties:
   - type: OpenAPI
@@ -342,6 +366,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Protocol
+  tags_raw:
   - protocol
   properties:
   - type: OpenAPI
@@ -366,6 +392,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Reports
+  tags_raw:
   - reports
   properties:
   - type: OpenAPI
@@ -414,6 +442,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Supply
+  tags_raw:
   - supply
   properties:
   - type: OpenAPI
@@ -438,6 +468,8 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
+  - Token
+  tags_raw:
   - token
   properties:
   - type: OpenAPI
