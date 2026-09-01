@@ -54,7 +54,7 @@ tags:
 - DeFi
 - Analytics
 - Ethereum
-- Stablecoin
+- Stablecoins
 - Liquid Staking
 - Yield
 - Blockchain
@@ -101,7 +101,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - arm
+  - ARM
   tags_raw:
   - arm
   properties:
@@ -151,7 +151,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - cache
+  - Cache
   tags_raw:
   - cache
   properties:
@@ -177,7 +177,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - coingecko
+  - CoinGecko
   tags_raw:
   - coingecko
   properties:
@@ -203,7 +203,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - defillama
+  - DeFiLlama
   tags_raw:
   - defillama
   properties:
@@ -253,7 +253,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - hyperliquid
+  - Hyperliquid
   tags_raw:
   - hyperliquid
   properties:
@@ -327,7 +327,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - ofac
+  - OFAC
   tags_raw:
   - ofac
   properties:
@@ -377,7 +377,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - protocol
+  - Protocol
   tags_raw:
   - protocol
   properties:
@@ -455,7 +455,7 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - supply
+  - Supply
   tags_raw:
   - supply
   properties:
