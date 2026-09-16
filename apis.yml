@@ -1,14 +1,12 @@
 aid: origin-protocol
 name: Origin Protocol
-description: 'Origin Protocol builds permissionless DeFi infrastructure for yield-bearing
-  tokens on Ethereum and L2s. Its products include Origin Ether (OETH) and Super OETH
-  liquid-staking tokens, the Origin Dollar (OUSD) yield-bearing stablecoin, Origin
-  Sonic (OS), the Automated Redemption Manager (ARM) arbitrage vaults, and the OGN
-  governance/value-accrual token backed by protocol-revenue buybacks. Origin publishes
-  a public read-only Analytics REST API (api.originprotocol.com) that wraps its
-  origin-squid indexer, exposing yield, supply, collateral, revenue, and buyback
-  data. Backed by Pantera Capital; surfaced into the API Evangelist network and
-  enriched from Origin''s own developer surfaces.'
+description: Origin Protocol builds permissionless DeFi infrastructure for yield-bearing tokens on Ethereum
+  and L2s. Its products include Origin Ether (OETH) and Super OETH liquid-staking tokens, the Origin Dollar
+  (OUSD) yield-bearing stablecoin, Origin Sonic (OS), the Automated Redemption Manager (ARM) arbitrage
+  vaults, and the OGN governance/value-accrual token backed by protocol-revenue buybacks. Origin publishes
+  a public read-only Analytics REST API (api.originprotocol.com) that wraps its origin-squid indexer,
+  exposing yield, supply, collateral, revenue, and buyback data. Backed by Pantera Capital; surfaced into
+  the API Evangelist network and enriched from Origin's own developer surfaces.
 url: https://raw.githubusercontent.com/api-evangelist/origin-protocol/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -46,7 +44,7 @@ x-enrichment:
   artifacts_added: 12
   pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-09-16'
 image: https://docs.originprotocol.com/~gitbook/image
 tags:
 - Company
@@ -372,7 +370,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-protocol-api
-  name: Origin Protocol protocol API
+  name: Origin Protocol API
   description: The protocol API from Origin Protocol — 8 operation(s) for protocol.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -509,7 +507,10 @@ maintainers:
 common:
 - type: X-MCPServerCandidate
   url: mcp/origin-protocol-mcp.yml
-  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate
+    — a tool list derived from the published API contracts, not an existing server. The scorer already
+    read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type
+    surfaces with a server that does not exist.'
 - type: Overlay
   url: overlays/origin-protocol-openapi-overlay.yaml
 - type: Website
