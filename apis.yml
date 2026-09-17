@@ -169,32 +169,6 @@ apis:
     url: conformance/origin-protocol-conformance.yml
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
-- aid: origin-protocol:origin-protocol-coingecko-api
-  name: Origin Protocol coingecko API
-  description: The coingecko API from Origin Protocol — 7 operation(s) for coingecko.
-  humanURL: https://docs.originprotocol.com/registry/api.md
-  baseURL: https://api.originprotocol.com
-  tags:
-  - CoinGecko
-  tags_raw:
-  - coingecko
-  properties:
-  - type: OpenAPI
-    url: openapi/origin-protocol-coingecko-api-openapi.yml
-  - type: APIReference
-    url: https://api.originprotocol.com/scalar
-  - type: Documentation
-    url: https://docs.originprotocol.com/registry/api.md
-  - type: Authentication
-    url: authentication/origin-protocol-authentication.yml
-  - type: ErrorCatalog
-    url: errors/origin-protocol-problem-types.yml
-  - type: Conventions
-    url: conventions/origin-protocol-conventions.yml
-  - type: Conformance
-    url: conformance/origin-protocol-conformance.yml
-  - type: Lifecycle
-    url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-defillama-api
   name: Origin Protocol defillama API
   description: The defillama API from Origin Protocol — 2 operation(s) for defillama.
@@ -485,6 +459,30 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/origin-protocol-token-api-openapi.yml
+  - type: APIReference
+    url: https://api.originprotocol.com/scalar
+  - type: Documentation
+    url: https://docs.originprotocol.com/registry/api.md
+  - type: Authentication
+    url: authentication/origin-protocol-authentication.yml
+  - type: ErrorCatalog
+    url: errors/origin-protocol-problem-types.yml
+  - type: Conventions
+    url: conventions/origin-protocol-conventions.yml
+  - type: Conformance
+    url: conformance/origin-protocol-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/origin-protocol-lifecycle.yml
+- aid: origin-protocol:origin-protocol-coin-gecko-api
+  name: Origin Protocol coin gecko API
+  description: The coin gecko API from Origin Protocol — 7 operation(s) for coin gecko.
+  humanURL: https://docs.originprotocol.com/registry/api.md
+  baseURL: https://api.originprotocol.com
+  tags:
+  - coin gecko
+  properties:
+  - type: OpenAPI
+    url: openapi/origin-protocol-coin-gecko-api-openapi.yml
   - type: APIReference
     url: https://api.originprotocol.com/scalar
   - type: Documentation
