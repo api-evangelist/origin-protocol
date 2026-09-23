@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account hyperliquid API
+  title: defi-analytics Hyperliquid API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -9,7 +9,7 @@ servers:
 - url: https://api.originprotocol.com
   description: Production server
 tags:
-- name: hyperliquid
+- name: Hyperliquid
 paths:
   /api/v2/hyperliquid/funding_rates/{coin}:
     get:
@@ -48,7 +48,7 @@ paths:
                 type: string
       operationId: getApiV2HyperliquidFunding_ratesByCoin
       tags:
-      - hyperliquid
+      - Hyperliquid
       parameters:
       - in: path
         name: coin
@@ -82,6 +82,8 @@ paths:
           - 'true'
           - 'false'
       description: Get hyperliquid funding rates
+      summary: Get api V2 hyperliquid funding rates by coin
+      x-summary-source: derived
   /api/v2/hyperliquid/liquidity_by_coin/{coin}:
     get:
       responses:
@@ -134,7 +136,7 @@ paths:
                 type: string
       operationId: getApiV2HyperliquidLiquidity_by_coinByCoin
       tags:
-      - hyperliquid
+      - Hyperliquid
       parameters:
       - in: path
         name: coin
@@ -180,6 +182,8 @@ paths:
           - median_slippage_30000
           - median_slippage_100000
       description: Get hyperliquid liquidity by coin
+      summary: Get api V2 hyperliquid liquidity by coin by coin
+      x-summary-source: derived
   /api/v2/hyperliquid/open_interests/{coin}:
     get:
       responses:
@@ -214,7 +218,7 @@ paths:
                 type: string
       operationId: getApiV2HyperliquidOpen_interestsByCoin
       tags:
-      - hyperliquid
+      - Hyperliquid
       parameters:
       - in: path
         name: coin
@@ -248,3 +252,5 @@ paths:
           - 'true'
           - 'false'
       description: Get hyperliquid open interests
+      summary: Get api V2 hyperliquid open interests by coin
+      x-summary-source: derived

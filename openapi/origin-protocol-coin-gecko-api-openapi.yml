@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account coingecko API
+  title: defi-analytics Coingecko API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -9,7 +9,7 @@ servers:
 - url: https://api.originprotocol.com
   description: Production server
 tags:
-- name: coingecko
+- name: coin gecko
 paths:
   /api/v2/coingecko/networks:
     get:
@@ -45,9 +45,11 @@ paths:
                   additionalProperties: false
       operationId: getApiV2CoingeckoNetworks
       tags:
-      - coingecko
+      - coin gecko
       parameters: []
       description: Get coingecko networks
+      summary: Get api V2 coingecko networks
+      x-summary-source: derived
   /api/v2/coingecko/pools/{network}/token/{token}:
     get:
       responses:
@@ -187,7 +189,7 @@ paths:
                   additionalProperties: false
       operationId: getApiV2CoingeckoPoolsByNetworkTokenByToken
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: path
         name: network
@@ -200,6 +202,8 @@ paths:
           type: string
         required: true
       description: Get pools for a token and a chain
+      summary: Get api V2 coingecko pools by network token by token
+      x-summary-source: derived
   /api/v2/coingecko/ohlcvs/{network}/token/{token}:
     get:
       responses:
@@ -264,7 +268,7 @@ paths:
                   description: Ohlcvs
       operationId: getApiV2CoingeckoOhlcvsByNetworkTokenByToken
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: path
         name: network
@@ -277,6 +281,8 @@ paths:
           type: string
         required: true
       description: Get ohlcvs for a token
+      summary: Get api V2 coingecko ohlcvs by network token by token
+      x-summary-source: derived
   /api/v2/coingecko/ohlcvs/{tokenId}:
     get:
       responses:
@@ -341,7 +347,7 @@ paths:
                   description: Ohlcvs
       operationId: getApiV2CoingeckoOhlcvsByTokenId
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: path
         name: tokenId
@@ -349,6 +355,8 @@ paths:
           type: string
         required: true
       description: Get ohlcvs for a tokenId
+      summary: Get api V2 coingecko ohlcvs by token id
+      x-summary-source: derived
   /api/v2/coingecko/watchlist:
     get:
       responses:
@@ -383,7 +391,7 @@ paths:
                   description: Tokens
       operationId: getApiV2CoingeckoWatchlist
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: query
         name: all
@@ -393,6 +401,8 @@ paths:
           - 'true'
           - 'false'
       description: Get watchlist
+      summary: Get api V2 coingecko watchlist
+      x-summary-source: derived
     post:
       responses:
         '200':
@@ -424,7 +434,7 @@ paths:
                 description: Tokens
       operationId: postApiV2CoingeckoWatchlist
       tags:
-      - coingecko
+      - coin gecko
       parameters: []
       description: Add token to watchlist
       requestBody:
@@ -448,6 +458,8 @@ paths:
               - network
               - symbol
               additionalProperties: false
+      summary: Post api V2 coingecko watchlist
+      x-summary-source: derived
   /api/v2/coingecko/watchlist/{tokenId}:
     patch:
       responses:
@@ -480,7 +492,7 @@ paths:
                 description: Tokens
       operationId: patchApiV2CoingeckoWatchlistByTokenId
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: path
         name: tokenId
@@ -499,6 +511,8 @@ paths:
               required:
               - isWatchlisted
               additionalProperties: false
+      summary: Patch api V2 coingecko watchlist by token id
+      x-summary-source: derived
     delete:
       responses:
         '200':
@@ -530,7 +544,7 @@ paths:
                 description: Tokens
       operationId: deleteApiV2CoingeckoWatchlistByTokenId
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: path
         name: tokenId
@@ -538,6 +552,8 @@ paths:
           type: string
         required: true
       description: Remove token from watchlist
+      summary: Delete api V2 coingecko watchlist by token id
+      x-summary-source: derived
   /api/v2/coingecko/price/{token}:
     get:
       responses:
@@ -569,7 +585,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2CoingeckoPriceByToken
       tags:
-      - coingecko
+      - coin gecko
       parameters:
       - in: path
         name: token
@@ -582,3 +598,5 @@ paths:
           - wos
         required: true
       description: Get token price call data
+      summary: Get api V2 coingecko price by token
+      x-summary-source: derived

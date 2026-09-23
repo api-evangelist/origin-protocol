@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account oeth API
+  title: defi-analytics Oeth API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -42,3 +42,5 @@ paths:
       - oeth
       parameters: []
       description: Get OETH collateral
+      summary: Get api V2 oeth collateral
+      x-summary-source: derived

@@ -1,23 +1,7 @@
 {
   "provider": "origin-protocol",
   "sources": [
-    "origin-protocol-account-api-openapi.yml",
-    "origin-protocol-arm-api-openapi.yml",
-    "origin-protocol-beacon-chain-api-openapi.yml",
-    "origin-protocol-cache-api-openapi.yml",
-    "origin-protocol-coingecko-api-openapi.yml",
-    "origin-protocol-defillama-api-openapi.yml",
-    "origin-protocol-dune-api-openapi.yml",
-    "origin-protocol-hyperliquid-api-openapi.yml",
-    "origin-protocol-merkl-api-openapi.yml",
-    "origin-protocol-oeth-api-openapi.yml",
-    "origin-protocol-ofac-api-openapi.yml",
-    "origin-protocol-ogn-api-openapi.yml",
-    "origin-protocol-protocol-api-openapi.yml",
-    "origin-protocol-reports-api-openapi.yml",
-    "origin-protocol-strapi-api-openapi.yml",
-    "origin-protocol-supply-api-openapi.yml",
-    "origin-protocol-token-api-openapi.yml"
+    "_original/origin-protocol-openapi.json"
   ],
   "outputs": [
     "origin-protocol-account-api-openapi.yml",
@@ -38,9 +22,51 @@
     "origin-protocol-supply-api-openapi.yml",
     "origin-protocol-token-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "origin-protocol-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "origin-protocol-openapi.json: declared missing tag: account",
+    "origin-protocol-openapi.json: declared missing tag: arm",
+    "origin-protocol-openapi.json: declared missing tag: beacon-chain",
+    "origin-protocol-openapi.json: declared missing tag: cache",
+    "origin-protocol-openapi.json: declared missing tag: coingecko",
+    "origin-protocol-openapi.json: declared missing tag: defillama",
+    "origin-protocol-openapi.json: declared missing tag: dune",
+    "origin-protocol-openapi.json: declared missing tag: hyperliquid",
+    "origin-protocol-openapi.json: declared missing tag: merkl",
+    "origin-protocol-openapi.json: declared missing tag: oeth",
+    "origin-protocol-openapi.json: declared missing tag: ofac",
+    "origin-protocol-openapi.json: declared missing tag: ogn",
+    "origin-protocol-openapi.json: declared missing tag: protocol",
+    "origin-protocol-openapi.json: declared missing tag: reports",
+    "origin-protocol-openapi.json: declared missing tag: strapi",
+    "origin-protocol-openapi.json: declared missing tag: supply",
+    "origin-protocol-openapi.json: declared missing tag: token",
+    "superseded outputs removed: origin-protocol-coin-gecko-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 17 total)"
+  ],
+  "skipped": [
+    "origin-protocol-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-arm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-beacon-chain-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-cache-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-coin-gecko-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-defillama-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-dune-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-hyperliquid-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-merkl-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-oeth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-ofac-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-ogn-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-protocol-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-strapi-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-supply-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "origin-protocol-token-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

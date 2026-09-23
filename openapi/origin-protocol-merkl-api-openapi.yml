@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account merkl API
+  title: defi-analytics Merkl API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -403,6 +403,8 @@ paths:
           type: string
         required: true
       description: Get Merkl rewards
+      summary: Get api V2 merkl campaign by token id
+      x-summary-source: derived
   /api/v2/merkl/opportunity/{tokenId}:
     get:
       responses:
@@ -1379,6 +1381,8 @@ paths:
           type: string
         required: true
       description: Get Merkl opportunity
+      summary: Get api V2 merkl opportunity by token id
+      x-summary-source: derived
   /api/v2/merkl/{user}/rewards/{tokenId}:
     get:
       responses:
@@ -1488,6 +1492,8 @@ paths:
           - 'true'
           - 'false'
       description: Get available, claimed, and pending Merkl rewards for a user and a product id
+      summary: Get api V2 merkl by user rewards by token id
+      x-summary-source: derived
   /api/v2/merkl/{user}/rewards/{tokenId}/claim-transaction:
     get:
       responses:
@@ -1539,3 +1545,5 @@ paths:
           type: string
         required: true
       description: Get Merkl reward claim transaction data for a user to sign in a dapp
+      summary: Get api V2 merkl by user rewards by token id claim transaction
+      x-summary-source: derived

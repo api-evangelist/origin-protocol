@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account ogn API
+  title: defi-analytics Ogn API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -59,6 +59,8 @@ paths:
         schema:
           type: number
       description: Get buyback stats
+      summary: Get api V2 ogn buyback stats
+      x-summary-source: derived
   /api/v2/ogn/buybacks:
     get:
       responses:
@@ -110,6 +112,8 @@ paths:
         schema:
           type: number
       description: Get buybacks
+      summary: Get api V2 ogn buybacks
+      x-summary-source: derived
   /api/v2/ogn/daily_buybacks:
     get:
       responses:
@@ -165,6 +169,8 @@ paths:
         schema:
           type: number
       description: Get daily buybacks
+      summary: Get api V2 ogn daily buybacks
+      x-summary-source: derived
   /api/v2/ogn/price:
     get:
       responses:
@@ -181,6 +187,8 @@ paths:
       - ogn
       parameters: []
       description: Get OGN price in USD from CoinGecko (cached to respect rate limits)
+      summary: Get api V2 ogn price
+      x-summary-source: derived
   /api/v2/ogn/lockup_stats:
     get:
       responses:
@@ -213,6 +221,8 @@ paths:
       - ogn
       parameters: []
       description: Get lockup stats
+      summary: Get api V2 ogn lockup stats
+      x-summary-source: derived
   /api/v2/ogn/staking:
     get:
       responses:
@@ -239,6 +249,8 @@ paths:
       - ogn
       parameters: []
       description: Get staking data
+      summary: Get api V2 ogn staking
+      x-summary-source: derived
   /api/v2/ogn/supply:
     get:
       responses:
@@ -262,3 +274,5 @@ paths:
       - ogn
       parameters: []
       description: Get OGN supply
+      summary: Get api V2 ogn supply
+      x-summary-source: derived

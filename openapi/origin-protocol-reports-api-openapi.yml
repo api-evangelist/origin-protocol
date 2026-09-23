@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account reports API
+  title: defi-analytics Reports API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -9,7 +9,7 @@ servers:
 - url: https://api.originprotocol.com
   description: Production server
 tags:
-- name: reports
+- name: Reports
 paths:
   /reports/weekly/unsubscribe/{id}:
     get:
@@ -22,7 +22,7 @@ paths:
                 type: string
       operationId: getReportsWeeklyUnsubscribeById
       tags:
-      - reports
+      - Reports
       parameters:
       - in: path
         name: id
@@ -30,6 +30,8 @@ paths:
           type: string
         required: true
       description: Unsubscribe confirmation page
+      summary: Get reports weekly unsubscribe by id
+      x-summary-source: derived
   /reports/weekly/unsubscribe:
     post:
       responses:
@@ -49,7 +51,7 @@ paths:
           description: Error unsubscribing
       operationId: postReportsWeeklyUnsubscribe
       tags:
-      - reports
+      - Reports
       parameters: []
       description: Perform unsubscribe action
       requestBody:
@@ -63,6 +65,8 @@ paths:
               required:
               - id
               additionalProperties: false
+      summary: Post reports weekly unsubscribe
+      x-summary-source: derived
   /reports/weekly/{year}/{week}:
     get:
       responses:
@@ -78,7 +82,7 @@ paths:
           description: Weekly report not found
       operationId: getReportsWeeklyByYearByWeek
       tags:
-      - reports
+      - Reports
       parameters:
       - in: path
         name: year
@@ -91,3 +95,5 @@ paths:
           type: number
         required: true
       description: Get weekly report
+      summary: Get reports weekly by year by week
+      x-summary-source: derived

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account beacon-chain API
+  title: defi-analytics Beacon Chain API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -49,3 +49,5 @@ paths:
       - beacon-chain
       parameters: []
       description: Get validator exit time
+      summary: Get api V2 beacon chain exit time
+      x-summary-source: derived

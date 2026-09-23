@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account defillama API
+  title: defi-analytics Defillama API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -159,6 +159,8 @@ paths:
       - defillama
       parameters: []
       description: Get DefiLlama protocols
+      summary: Get api V2 defillama protocols
+      x-summary-source: derived
   /api/v2/defillama/protocols/apy:
     get:
       responses:
@@ -238,3 +240,5 @@ paths:
         schema:
           type: string
       description: Get DefiLlama protocol APYs computed from revenue and TVL
+      summary: Get api V2 defillama protocols apy
+      x-summary-source: derived

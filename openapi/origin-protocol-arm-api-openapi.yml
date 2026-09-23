@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: defi-analytics account arm API
+  title: defi-analytics Arm API
   description: API for defi-analytics
   version: 1.0.0
 servers:
@@ -9,7 +9,7 @@ servers:
 - url: https://api.originprotocol.com
   description: Production server
 tags:
-- name: arm
+- name: Arm
 paths:
   /api/v2/arm/daily_stats/{token}:
     get:
@@ -182,7 +182,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmDaily_statsByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -198,6 +198,8 @@ paths:
         schema:
           type: number
       description: Get ARM daily stats
+      summary: Get api V2 arm daily stats by token
+      x-summary-source: derived
   /api/v2/arm/daily_protocol_revenue/{token}:
     get:
       responses:
@@ -256,7 +258,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmDaily_protocol_revenueByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -272,6 +274,8 @@ paths:
         schema:
           type: number
       description: Get ARM daily protocol revenue
+      summary: Get api V2 arm daily protocol revenue by token
+      x-summary-source: derived
   /api/v2/arm/trading-volume/{token}:
     get:
       responses:
@@ -330,7 +334,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmTrading-volumeByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -342,6 +346,8 @@ paths:
         schema:
           type: number
       description: Get ARM trading volume
+      summary: Get api V2 arm trading volume by token
+      x-summary-source: derived
   /api/v2/arm/swaps/{token}:
     get:
       responses:
@@ -415,7 +421,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmSwapsByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -431,6 +437,8 @@ paths:
         schema:
           type: number
       description: Get ARM swaps
+      summary: Get api V2 arm swaps by token
+      x-summary-source: derived
   /api/v2/arm/withdrawal_requests/{token}:
     get:
       responses:
@@ -494,7 +502,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmWithdrawal_requestsByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -506,6 +514,8 @@ paths:
         schema:
           type: string
       description: Get ARM withdrawal requests
+      summary: Get api V2 arm withdrawal requests by token
+      x-summary-source: derived
   /api/v2/arm/withdrawal_stats/{token}:
     get:
       responses:
@@ -565,7 +575,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmWithdrawal_statsByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -573,6 +583,8 @@ paths:
           type: string
         required: true
       description: Get ARM withdrawal stats
+      summary: Get api V2 arm withdrawal stats by token
+      x-summary-source: derived
   /api/v2/arm/lending-market-daily-apy/{token}:
     get:
       responses:
@@ -607,7 +619,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmLending-market-daily-apyByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -623,6 +635,8 @@ paths:
         schema:
           type: number
       description: Get ARM lending market apy
+      summary: Get api V2 arm lending market daily apy by token
+      x-summary-source: derived
   /api/v2/arm/all-arms-trading-volume-usd:
     get:
       responses:
@@ -634,9 +648,11 @@ paths:
                 type: number
       operationId: getApiV2ArmAll-arms-trading-volume-usd
       tags:
-      - arm
+      - Arm
       parameters: []
       description: Get total USD trading volume for all arms
+      summary: Get api V2 arm all arms trading volume usd
+      x-summary-source: derived
   /api/v2/arm/coingecko/{token}:
     get:
       responses:
@@ -680,7 +696,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2ArmCoingeckoByToken
       tags:
-      - arm
+      - Arm
       parameters:
       - in: path
         name: token
@@ -693,6 +709,8 @@ paths:
           - arm-susde-usde
         required: true
       description: Get ARM price call data
+      summary: Get api V2 arm coingecko by token
+      x-summary-source: derived
   /api/v2/historical_trades:
     get:
       responses:
@@ -727,7 +745,7 @@ paths:
                   additionalProperties: false
       operationId: getApiV2Historical_trades
       tags:
-      - arm
+      - Arm
       parameters:
       - in: query
         name: ticker_id
@@ -763,6 +781,8 @@ paths:
           type: string
         required: false
       description: Get ARM historical trades
+      summary: Get api V2 historical trades
+      x-summary-source: derived
   /api/v2/tickers:
     get:
       responses:
@@ -827,7 +847,7 @@ paths:
                 additionalProperties: false
       operationId: getApiV2Tickers
       tags:
-      - arm
+      - Arm
       parameters:
       - in: query
         name: chainId
@@ -836,3 +856,5 @@ paths:
           type: number
         required: true
       description: Get ARM tickers
+      summary: Get api V2 tickers
+      x-summary-source: derived
