@@ -68,7 +68,7 @@ tags_raw:
 - Blockchain
 apis:
 - aid: origin-protocol:origin-protocol-account-api
-  name: Origin Protocol account API
+  name: Origin Protocol Account API
   description: The account API from Origin Protocol — 2 operation(s) for account.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -94,7 +94,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-arm-api
-  name: Origin Protocol arm API
+  name: Origin Protocol Arm API
   description: The arm API from Origin Protocol — 11 operation(s) for arm.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -120,7 +120,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-beacon-chain-api
-  name: Origin Protocol beacon-chain API
+  name: Origin Protocol Beacon Chain API
   description: The beacon-chain API from Origin Protocol — 1 operation(s) for beacon-chain.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -144,7 +144,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-cache-api
-  name: Origin Protocol cache API
+  name: Origin Protocol Cache API
   description: The cache API from Origin Protocol — 1 operation(s) for cache.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -170,7 +170,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-defillama-api
-  name: Origin Protocol defillama API
+  name: Origin Protocol Defillama API
   description: The defillama API from Origin Protocol — 2 operation(s) for defillama.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -196,7 +196,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-dune-api
-  name: Origin Protocol dune API
+  name: Origin Protocol Dune API
   description: The dune API from Origin Protocol — 1 operation(s) for dune.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -220,7 +220,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-hyperliquid-api
-  name: Origin Protocol hyperliquid API
+  name: Origin Protocol Hyperliquid API
   description: The hyperliquid API from Origin Protocol — 3 operation(s) for hyperliquid.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -246,7 +246,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-merkl-api
-  name: Origin Protocol merkl API
+  name: Origin Protocol Merkl API
   description: The merkl API from Origin Protocol — 4 operation(s) for merkl.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -270,7 +270,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-oeth-api
-  name: Origin Protocol oeth API
+  name: Origin Protocol Oeth API
   description: The oeth API from Origin Protocol — 1 operation(s) for oeth.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -294,7 +294,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-ofac-api
-  name: Origin Protocol ofac API
+  name: Origin Protocol Ofac API
   description: The ofac API from Origin Protocol — 1 operation(s) for ofac.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -320,7 +320,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-ogn-api
-  name: Origin Protocol ogn API
+  name: Origin Protocol Ogn API
   description: The ogn API from Origin Protocol — 7 operation(s) for ogn.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -370,7 +370,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-reports-api
-  name: Origin Protocol reports API
+  name: Origin Protocol Reports API
   description: The reports API from Origin Protocol — 3 operation(s) for reports.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -396,7 +396,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-strapi-api
-  name: Origin Protocol strapi API
+  name: Origin Protocol Strapi API
   description: The strapi API from Origin Protocol — 1 operation(s) for strapi.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -422,7 +422,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-supply-api
-  name: Origin Protocol supply API
+  name: Origin Protocol Supply API
   description: The supply API from Origin Protocol — 9 operation(s) for supply.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -448,7 +448,7 @@ apis:
   - type: Lifecycle
     url: lifecycle/origin-protocol-lifecycle.yml
 - aid: origin-protocol:origin-protocol-token-api
-  name: Origin Protocol token API
+  name: Origin Protocol Token API
   description: The token API from Origin Protocol — 12 operation(s) for token.
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
@@ -479,8 +479,6 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - CoinGecko
-  tags_raw:
   - coin gecko
   properties:
   - type: OpenAPI
