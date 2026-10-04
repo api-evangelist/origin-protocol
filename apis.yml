@@ -479,8 +479,6 @@ apis:
   humanURL: https://docs.originprotocol.com/registry/api.md
   baseURL: https://api.originprotocol.com
   tags:
-  - CoinGecko
-  tags_raw:
   - coin gecko
   properties:
   - type: OpenAPI
