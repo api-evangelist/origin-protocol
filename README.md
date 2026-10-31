@@ -64,6 +64,139 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Origin Protocol is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+Origin Protocol builds permissionless DeFi infrastructure for yield-bearing tokens on Ethereum and L2s. Its products include Origin Ether (OETH) and Super OETH liquid-staking tokens, the Origin Dollar (OUSD) yield-bearing stablecoin, Origin Sonic (OS), the Automated Redemption Manager (ARM) arbitrage vaults, and the OGN governance/value-accrual token backed by protocol-revenue buybacks. Origin publishes a public read-only Analytics REST API (api.originprotocol.com) that wraps its origin-squid indexer, exposing yield, supply, collateral, revenue, and buyback data. Backed by Pantera Capital; surfaced into the API Evangelist network and enriched from Origin's own developer surfaces.
 
-Backed by: pantera-capital — https://www.originprotocol.com/en
+**Areas:** Company · Cryptocurrency · DeFi · Analytics · Ethereum · Stablecoins · Liquid Staking · Yield · Blockchain
+
+## Origin Protocol on APIs.io
+
+Everything profiled for Origin Protocol is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/origin-protocol/](https://apis.io/providers/origin-protocol/)** — or go straight to one of the APIs or properties below.
+
+### APIs (17)
+
+- [Origin Protocol Account API](https://apis.io/apis/origin-protocol/origin-protocol-account-api/) — The account API from Origin Protocol — 2 operation(s) for account.
+- [Origin Protocol Arm API](https://apis.io/apis/origin-protocol/origin-protocol-arm-api/) — The arm API from Origin Protocol — 11 operation(s) for arm.
+- [Origin Protocol Beacon Chain API](https://apis.io/apis/origin-protocol/origin-protocol-beacon-chain-api/) — The beacon-chain API from Origin Protocol — 1 operation(s) for beacon-chain.
+- [Origin Protocol Cache API](https://apis.io/apis/origin-protocol/origin-protocol-cache-api/) — The cache API from Origin Protocol — 1 operation(s) for cache.
+- [Origin Protocol Defillama API](https://apis.io/apis/origin-protocol/origin-protocol-defillama-api/) — The defillama API from Origin Protocol — 2 operation(s) for defillama.
+- [Origin Protocol Dune API](https://apis.io/apis/origin-protocol/origin-protocol-dune-api/) — The dune API from Origin Protocol — 1 operation(s) for dune.
+- [Origin Protocol Hyperliquid API](https://apis.io/apis/origin-protocol/origin-protocol-hyperliquid-api/) — The hyperliquid API from Origin Protocol — 3 operation(s) for hyperliquid.
+- [Origin Protocol Merkl API](https://apis.io/apis/origin-protocol/origin-protocol-merkl-api/) — The merkl API from Origin Protocol — 4 operation(s) for merkl.
+- [Origin Protocol Oeth API](https://apis.io/apis/origin-protocol/origin-protocol-oeth-api/) — The oeth API from Origin Protocol — 1 operation(s) for oeth.
+- [Origin Protocol Ofac API](https://apis.io/apis/origin-protocol/origin-protocol-ofac-api/) — The ofac API from Origin Protocol — 1 operation(s) for ofac.
+- [Origin Protocol Ogn API](https://apis.io/apis/origin-protocol/origin-protocol-ogn-api/) — The ogn API from Origin Protocol — 7 operation(s) for ogn.
+- [Origin Protocol API](https://apis.io/apis/origin-protocol/origin-protocol-protocol-api/) — The protocol API from Origin Protocol — 8 operation(s) for protocol.
+- [Origin Protocol Reports API](https://apis.io/apis/origin-protocol/origin-protocol-reports-api/) — The reports API from Origin Protocol — 3 operation(s) for reports.
+- [Origin Protocol Strapi API](https://apis.io/apis/origin-protocol/origin-protocol-strapi-api/) — The strapi API from Origin Protocol — 1 operation(s) for strapi.
+- [Origin Protocol Supply API](https://apis.io/apis/origin-protocol/origin-protocol-supply-api/) — The supply API from Origin Protocol — 9 operation(s) for supply.
+- [Origin Protocol Token API](https://apis.io/apis/origin-protocol/origin-protocol-token-api/) — The token API from Origin Protocol — 12 operation(s) for token.
+- [Origin Protocol coin gecko API](https://apis.io/apis/origin-protocol/origin-protocol-coin-gecko-api/) — The coin gecko API from Origin Protocol — 7 operation(s) for coin gecko.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [origin-protocol-mcp.yml](https://apis.io/servers/origin-protocol/origin-protocol-mcp-yml/)
+
+#### Collections (17)
+
+Postman and Open Collection request collections.
+
+- [defi-analytics account API](https://apis.io/collections/origin-protocol/open-origin-protocol-account-api/)
+- [defi-analytics account arm API](https://apis.io/collections/origin-protocol/open-origin-protocol-arm-api/)
+- [defi-analytics account beacon-chain API](https://apis.io/collections/origin-protocol/open-origin-protocol-beacon-chain-api/)
+- [defi-analytics account cache API](https://apis.io/collections/origin-protocol/open-origin-protocol-cache-api/)
+- [defi-analytics account coingecko API](https://apis.io/collections/origin-protocol/open-origin-protocol-coingecko-api/)
+- [defi-analytics account defillama API](https://apis.io/collections/origin-protocol/open-origin-protocol-defillama-api/)
+- [defi-analytics account dune API](https://apis.io/collections/origin-protocol/open-origin-protocol-dune-api/)
+- [defi-analytics account hyperliquid API](https://apis.io/collections/origin-protocol/open-origin-protocol-hyperliquid-api/)
+- [defi-analytics account merkl API](https://apis.io/collections/origin-protocol/open-origin-protocol-merkl-api/)
+- [defi-analytics account oeth API](https://apis.io/collections/origin-protocol/open-origin-protocol-oeth-api/)
+- [defi-analytics account ofac API](https://apis.io/collections/origin-protocol/open-origin-protocol-ofac-api/)
+- [defi-analytics account ogn API](https://apis.io/collections/origin-protocol/open-origin-protocol-ogn-api/)
+- [defi-analytics account protocol API](https://apis.io/collections/origin-protocol/open-origin-protocol-protocol-api/)
+- [defi-analytics account reports API](https://apis.io/collections/origin-protocol/open-origin-protocol-reports-api/)
+- [defi-analytics account strapi API](https://apis.io/collections/origin-protocol/open-origin-protocol-strapi-api/)
+- [defi-analytics account supply API](https://apis.io/collections/origin-protocol/open-origin-protocol-supply-api/)
+- [defi-analytics account token API](https://apis.io/collections/origin-protocol/open-origin-protocol-token-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Origin Protocol Openapi Overlay](https://apis.io/overlays/origin-protocol/origin-protocol-openapi-overlay/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Origin Protocol Authentication](https://apis.io/security/origin-protocol/origin-protocol-authentication/)
+- [Origin Protocol Domain Security](https://apis.io/security/origin-protocol/origin-protocol-domain-security/)
+- [Origin Protocol Vulnerability Disclosure](https://apis.io/security/origin-protocol/origin-protocol-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.originprotocol.com)
+- [Documentation](https://docs.originprotocol.com)
+- [API reference](https://api.originprotocol.com/scalar)
+- [Blog](https://www.originprotocol.com/blog)
+- [GitHub](https://github.com/OriginProtocol)
+
+## API Evangelist rating
+
+**Kin Score 29.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 44.2 |
+| Contract governance | 4.5 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 42.3 |
+| Access clarity | 0.0 |
+
+**Agent readiness 17.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/origin-protocol/](https://apis.io/providers/origin-protocol/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Origin Protocol: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/origin-protocol/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
